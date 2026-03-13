@@ -31,6 +31,7 @@ import TextGradient from "./components/TextGradient.vue";
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 10rem;
 }
 
 .hero-text {
@@ -40,6 +41,7 @@ import TextGradient from "./components/TextGradient.vue";
 p {
   font-size: 1.25rem;
   color: #777;
+  margin-bottom: 1rem;
 }
 
 .nav-link {

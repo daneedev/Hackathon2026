@@ -20,7 +20,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 2rem;
-  background-color: #141212;
   border-radius: 12px;
   margin: 1rem;
   box-shadow: 0px 0px 12px var(--primary-color);
