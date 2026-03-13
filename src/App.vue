@@ -1,5 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Web90 from './web90s.vue'
+</script>
+
 
 <template>
-  <h1>Ahoj svete</h1>
+  <web90 />
 </template>
