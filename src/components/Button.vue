@@ -14,19 +14,26 @@ const props = defineProps<{
 
 <style scoped>
 button {
-  background: none;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  border-radius: 12px;
-  padding: 1rem 2rem;
-  font-size: 1.25rem;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  border: 1px solid var(--primary-color);
+  background: linear-gradient(120deg, #1b2d1d, #111);
+  color: #eaffec;
+  padding: 0.8rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 rgba(63, 163, 77, 0);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    filter 0.22s ease;
 }
 
 button:hover {
-  background: var(--primary-color);
-  color: #fff;
-  cursor: pointer;
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 10px 24px rgba(63, 163, 77, 0.28);
+  filter: brightness(1.08);
 }
 </style>

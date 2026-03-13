@@ -2,6 +2,9 @@
 import Button from "./components/Button.vue";
 import Navbar from "./components/Navbar.vue";
 import TextGradient from "./components/TextGradient.vue";
+import Slider from "./components/Slider.vue";
+import { SwiperSlide } from "swiper/vue";
+import Slide from "./components/Slide.vue";
 </script>
 
 <template>
@@ -23,6 +26,99 @@ import TextGradient from "./components/TextGradient.vue";
     </p>
     <Button icon="fa-solid fa-eye" label="Začít prozkoumávat" />
   </section>
+  <Slider>
+    <SwiperSlide>
+      <Slide
+        title="90. leta"
+        summary="Internet byl pomalejsi, ale kazde pripojeni bylo male dobrodruzstvi. Rodily se prvni weby, chaty i online komunity."
+        :highlights="[
+          'Dial-up pripojeni a zvuk modemu',
+          'Prvni diskuzni fora a emailove seznamy',
+          'ICQ, GeoCities a Yahoo era',
+        ]"
+        :websites="[
+          { name: 'Space Jam 1996', url: 'https://www.spacejam.com/1996/' },
+          {
+            name: 'CNN 1998 (Web Archive)',
+            url: 'https://web.archive.org/web/19981212015610/http://www.cnn.com/',
+          },
+          {
+            name: 'Yahoo 1997 (Web Archive)',
+            url: 'https://web.archive.org/web/19970110121110/http://www.yahoo.com/',
+          },
+        ]"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <Slide
+        title="2000. leta"
+        summary="Web se zrychlil, prisel broadband a socialni site. Internet se z nadseneckeho prostoru stal beznou soucasti kazdeho dne."
+        :highlights="[
+          'Nastup broadbandu a Wi-Fi',
+          'Blogy, fora a zacatky socialnich siti',
+          'YouTube, Wikipedia a prvni viralni obsah',
+        ]"
+        :websites="[
+          {
+            name: 'YouTube 2006 (Web Archive)',
+            url: 'https://web.archive.org/web/20060701000000*/youtube.com',
+          },
+          {
+            name: 'Wikipedia 2004 (Web Archive)',
+            url: 'https://web.archive.org/web/20040801000000*/wikipedia.org',
+          },
+          {
+            name: 'MySpace 2005 (Web Archive)',
+            url: 'https://web.archive.org/web/20050901000000*/myspace.com',
+          },
+        ]"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <Slide
+        title="90. leta"
+        summary="Internet byl pomalejsi, ale kazde pripojeni bylo male dobrodruzstvi. Rodily se prvni weby, chaty i online komunity."
+        :highlights="[
+          'Dial-up pripojeni a zvuk modemu',
+          'Prvni diskuzni fora a emailove seznamy',
+          'ICQ, GeoCities a Yahoo era',
+        ]"
+        :websites="[
+          { name: 'Space Jam 1996', url: 'https://www.spacejam.com/1996/' },
+          {
+            name: 'CNN 1998 (Web Archive)',
+            url: 'https://web.archive.org/web/19981212015610/http://www.cnn.com/',
+          },
+          {
+            name: 'Yahoo 1997 (Web Archive)',
+            url: 'https://web.archive.org/web/19970110121110/http://www.yahoo.com/',
+          },
+        ]"
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <Slide
+        title="90. leta"
+        summary="Internet byl pomalejsi, ale kazde pripojeni bylo male dobrodruzstvi. Rodily se prvni weby, chaty i online komunity."
+        :highlights="[
+          'Dial-up pripojeni a zvuk modemu',
+          'Prvni diskuzni fora a emailove seznamy',
+          'ICQ, GeoCities a Yahoo era',
+        ]"
+        :websites="[
+          { name: 'Space Jam 1996', url: 'https://www.spacejam.com/1996/' },
+          {
+            name: 'CNN 1998 (Web Archive)',
+            url: 'https://web.archive.org/web/19981212015610/http://www.cnn.com/',
+          },
+          {
+            name: 'Yahoo 1997 (Web Archive)',
+            url: 'https://web.archive.org/web/19970110121110/http://www.yahoo.com/',
+          },
+        ]"
+      />
+    </SwiperSlide>
+  </Slider>
 </template>
 
 <style scoped>
@@ -31,7 +127,7 @@ import TextGradient from "./components/TextGradient.vue";
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10rem;
+  height: 100vh;
 }
 
 .hero-text {

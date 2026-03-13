@@ -18,7 +18,7 @@ import TextGradient from "./TextGradient.vue";
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0.5rem 2rem;
   border-radius: 12px;
   margin: 1rem;
