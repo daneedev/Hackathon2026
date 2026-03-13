@@ -25,6 +25,9 @@ const openWeb90 = () => {
 const openWeb2000 = () => {
   router.push("/web2000");
 };
+const openWeb2020 = () => {
+  router.push("/web2020");
+};
 
 function changeLocale() {
   if (locale.value === "cs") {
@@ -151,6 +154,7 @@ const getHighlights = (key: string) => tm(key) as string[];
             getHighlights('homepage.timeline.slidePresent.highlights')
           "
           :button-label="t('homepage.timeline.slidePresent.buttonLabel')"
+          :on-button-click="openWeb2020"
           model-src="/models/headset.glb"
           :model-rotation="Math.PI"
         />
