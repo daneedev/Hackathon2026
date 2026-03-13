@@ -1,4 +1,4 @@
-export function useRetroSound() {
+export function useSoundPlayer() {
   const playSound = (url: string, startTime = 0, endTime?: number) => {
     const audio = new Audio(url);
 
