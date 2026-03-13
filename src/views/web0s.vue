@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import ZerosNewsCard from "./components/ZerosNewsCard.vue";
-import ZerosNewsModel from "./components/ZerosNewsModel.vue";
-import percentageBar from "./components/percentageBar.vue";
+import ZerosNewsCard from "../components/ZerosNewsCard.vue";
+import ZerosNewsModel from "../components/ZerosNewsModel.vue";
+import percentageBar from "../components/percentageBar.vue";
 
 import { useRouter } from "vue-router";
 const router = useRouter();
@@ -119,7 +119,7 @@ const router = useRouter();
 </template>
 <style scoped lang="css">
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap");
-@import "assetts/reset.css";
+@import "../assetts/reset.css";
 
 .container {
   width: 100%;
