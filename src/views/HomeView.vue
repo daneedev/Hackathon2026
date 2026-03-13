@@ -135,21 +135,12 @@ const getHighlights = (key: string) => tm(key) as string[];
       </SwiperSlide>
       <SwiperSlide>
         <Slide
-          title="2010. léta"
-          label="Mobilní revoluce"
-          button-label="Prozkoumat web 2010. let"
-          :on-button-click="openWeb2010"
-          summary="Mobilní revoluce a sociální sítě změnily způsob, jakým komunikujeme a konzumujeme obsah. Internet se stal všudypřítomným."
-          :highlights="[
-            'Nástup smartphonů a mobilního internetu',
-            'Boom sociálních sítí a influencerů',
-            'Streaming, cloud',
-          ]"
           :title="t('homepage.timeline.slide2010s.title')"
           :label="t('homepage.timeline.slide2010s.label')"
           :summary="t('homepage.timeline.slide2010s.summary')"
           :highlights="getHighlights('homepage.timeline.slide2010s.highlights')"
           :button-label="t('homepage.timeline.slide2010s.buttonLabel')"
+          :on-button-click="openWeb2010"
           model-src="/models/Phone.glb"
           :model-rotation="Math.PI * 2"
         />
