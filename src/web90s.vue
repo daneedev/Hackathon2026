@@ -1,5 +1,6 @@
 <script setup>
-import ExhibitCard from './components/exhibitCard.vue';
+import { RouterLink } from "vue-router";
+import ExhibitCard from "./components/exhibitCard.vue";
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import ExhibitCard from './components/exhibitCard.vue';
     <aside class="sidebar">
       <h2>Navigace:</h2>
       <nav>
-        <a href="#">Domovská stránka</a>
+        <RouterLink to="/">Domovská stránka</RouterLink>
         <a href="#mouse">Myš</a>
         <a href="#monitor">Monitor</a>
         <a href="#floppy">Disketa</a>
@@ -33,32 +34,45 @@ import ExhibitCard from './components/exhibitCard.vue';
         <p>🌐 Internet v 90. letech 🌐</p>
       </article>
       <article class="info">
-        <p>Devadesátá léta byla zlomovým obdobím pro technologie. Osobní počítače se začaly objevovat v domácnostech, internet začal propojovat lidi po celém světě a mnoho zařízení, která používáme dodnes, začalo získávat svou podobu. Technologie byly sice pomalejší a méně výkonné než dnes, ale přinesly revoluční možnosti – e-mail, prohlížení webu a digitální komunikaci. <br><br> Tato expozice vás zavede do doby, kdy se internet teprve rozvíjel. Objevte zařízení a technologie, které formovaly digitální svět 90. let.</p>
+        <p>
+          Devadesátá léta byla zlomovým obdobím pro technologie. Osobní počítače
+          se začaly objevovat v domácnostech, internet začal propojovat lidi po
+          celém světě a mnoho zařízení, která používáme dodnes, začalo získávat
+          svou podobu. Technologie byly sice pomalejší a méně výkonné než dnes,
+          ale přinesly revoluční možnosti – e-mail, prohlížení webu a digitální
+          komunikaci. <br /><br />
+          Tato expozice vás zavede do doby, kdy se internet teprve rozvíjel.
+          Objevte zařízení a technologie, které formovaly digitální svět 90.
+          let.
+        </p>
       </article>
       <article class="exhibition">
         <h1>Exponáty</h1>
         <section>
-          <ExhibitCard id="mouse"
+          <ExhibitCard
+            id="mouse"
             title="Počítačová myš"
             description="Počítačová myš z 90. let byla základním nástrojem pro interakci s počítačem. V té době byly myši často vybaveny kuličkou, která se otáčela při pohybu a přenášela informace o pohybu na počítač. Tyto myši měly obvykle dva nebo tři tlačítka a někdy i kolečko pro posouvání. Byly nezbytné pro navigaci v grafickém uživatelském rozhraní a umožňovaly uživatelům snadno ovládat své počítače."
             modelSrc="/models/Rat.glb"
             :rotation="Math.PI + 1"
             :scale="0.07"
-            />
-          <ExhibitCard id="monitor"
+          />
+          <ExhibitCard
+            id="monitor"
             title="Monitor"
             description="Počítačové monitory v 90. letech byly velké a těžké CRT obrazovky (katodové trubice). Vypadaly podobně jako staré televizory a mohly vážit i více než 15 kilogramů. Měly nižší rozlišení než dnešní obrazovky a někdy lehce blikaly. Přesto umožňovaly zobrazovat barevná grafická rozhraní, hry a první webové stránky."
             modelSrc="/models/CRT.glb"
             :rotation="Math.PI - 0.5"
             :scale="1"
-            />
-          <ExhibitCard id="floppy"
+          />
+          <ExhibitCard
+            id="floppy"
             title="Disketa"
             description="Disketa (nejčastěji 3,5palcová) byla v 90. letech běžným médiem pro ukládání a přenos dat. Měla kapacitu 1,44 MB, takže se na ni vešly dokumenty, menší programy nebo uložené pozice ve hrách. Používala se také pro instalaci software a přenos souborů mezi počítači. Přestože byla praktická, byla citlivá na poškození a magnetické pole."
-            modelSrc="/models/floppy.glb" 
+            modelSrc="/models/floppy.glb"
             :rotation="Math.PI - 0.5"
-            :scale="0.2"          
-            />
+            :scale="0.2"
+          />
         </section>
       </article>
     </main>
@@ -66,10 +80,10 @@ import ExhibitCard from './components/exhibitCard.vue';
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap");
 
 .sidebar a:hover {
-    color: rgb(255, 255, 89);
+  color: rgb(255, 255, 89);
 }
 
 .welcome p {
@@ -93,7 +107,7 @@ import ExhibitCard from './components/exhibitCard.vue';
   background-size: 300px;
   background-repeat: repeat;
   cursor: url(/cursor90.jpg), auto;
-  font-family: 'Bitcount Single', monospace;
+  font-family: "Bitcount Single", monospace;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1rem;
@@ -186,8 +200,6 @@ main {
   border: 2px solid black;
   width: 80%;
   max-width: 100%;
-
-
 }
 
 .exhibition {
@@ -227,7 +239,6 @@ main {
 }
 
 @media (max-width: 480px) {
-
   .underConstruction {
     padding: 0.4rem 0.6rem;
     font-size: 0.82rem;
