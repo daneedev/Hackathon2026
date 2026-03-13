@@ -14,17 +14,20 @@
 
       <Button icon="fa-solid fa-globe" label="Vstoupit do éry" />
     </div>
+    <Model v-if="modelSrc" :modelSrc="modelSrc" />
   </section>
 </template>
 
 <script setup lang="ts">
 import Button from "./Button.vue";
+import Model from "./Model.vue";
 
 const props = defineProps<{
   title: string;
   summary: string;
   highlights: string[];
   label?: string;
+  modelSrc?: string;
 }>();
 </script>
 

@@ -29,24 +29,15 @@ import Slide from "./components/Slide.vue";
   <Slider>
     <SwiperSlide>
       <Slide
-        title="90. leta"
+        title="90. léta"
+        label="První krůčky"
         summary="Internet byl pomalejsi, ale kazde pripojeni bylo male dobrodruzstvi. Rodily se prvni weby, chaty i online komunity."
         :highlights="[
           'Dial-up pripojeni a zvuk modemu',
           'Prvni diskuzni fora a emailove seznamy',
           'ICQ, GeoCities a Yahoo era',
         ]"
-        :websites="[
-          { name: 'Space Jam 1996', url: 'https://www.spacejam.com/1996/' },
-          {
-            name: 'CNN 1998 (Web Archive)',
-            url: 'https://web.archive.org/web/19981212015610/http://www.cnn.com/',
-          },
-          {
-            name: 'Yahoo 1997 (Web Archive)',
-            url: 'https://web.archive.org/web/19970110121110/http://www.yahoo.com/',
-          },
-        ]"
+        model-src="/models/CRT.glb"
       />
     </SwiperSlide>
     <SwiperSlide>

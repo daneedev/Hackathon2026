@@ -1,6 +1,6 @@
 <template>
   <Swiper
-    :modules="[Mousewheel, Navigation, Keyboard, Pagination]"
+    :modules="[Navigation, Keyboard, Pagination]"
     :direction="'horizontal'"
     :pagination="{
       type: 'progressbar',
@@ -8,7 +8,7 @@
     }"
     :navigation="true"
     :slides-per-view="1"
-    :mousewheel="{ enabled: true, forceToAxis: true, releaseOnEdges: true }"
+    :mousewheel="{ enabled: false }"
     :keyboard="{ enabled: true }"
     :loop="false"
     class="timeline-swiper"
@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
+import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 </script>
 

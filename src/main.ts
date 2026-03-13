@@ -9,4 +9,5 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 
 library.add(fas, far, fab);
 import "./assetts/reset.css";
+import "./assets/main.css";
 createApp(App).component("font-awesome-icon", FontAwesomeIcon).mount("#app");
