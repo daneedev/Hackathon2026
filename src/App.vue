@@ -31,82 +31,27 @@ import Slide from "./components/Slide.vue";
       <Slide
         title="90. léta"
         label="První krůčky"
-        summary="Internet byl pomalejsi, ale kazde pripojeni bylo male dobrodruzstvi. Rodily se prvni weby, chaty i online komunity."
+        summary="Internet byl pomalejší, ale každé pripojení bylo malé dobrodružství. Rodily se první weby, chaty i online komunity."
         :highlights="[
-          'Dial-up pripojeni a zvuk modemu',
-          'Prvni diskuzni fora a emailove seznamy',
-          'ICQ, GeoCities a Yahoo era',
+          'Dial-up připojení a zvuk modemu',
+          'První diskuzní fora a emailové seznamy',
+          'ICQ, GeoCities a Yahoo éra',
         ]"
         model-src="/models/CRT.glb"
+        :model-rotation="Math.PI - 0.5"
       />
     </SwiperSlide>
     <SwiperSlide>
       <Slide
-        title="2000. leta"
-        summary="Web se zrychlil, prisel broadband a socialni site. Internet se z nadseneckeho prostoru stal beznou soucasti kazdeho dne."
+        title="2000. léta"
+        summary="Web se zrychlil, přišel broadband a sociální sítě. Internet se z nadšeneckého prostoru stal běžnou součástí každého dne."
         :highlights="[
-          'Nastup broadbandu a Wi-Fi',
-          'Blogy, fora a zacatky socialnich siti',
-          'YouTube, Wikipedia a prvni viralni obsah',
+          'Nástup broadbandu a Wi-Fi',
+          'Blogy, fora a záčatky sociálních siti',
+          'YouTube, Wikipedia a první viralní obsah',
         ]"
-        :websites="[
-          {
-            name: 'YouTube 2006 (Web Archive)',
-            url: 'https://web.archive.org/web/20060701000000*/youtube.com',
-          },
-          {
-            name: 'Wikipedia 2004 (Web Archive)',
-            url: 'https://web.archive.org/web/20040801000000*/wikipedia.org',
-          },
-          {
-            name: 'MySpace 2005 (Web Archive)',
-            url: 'https://web.archive.org/web/20050901000000*/myspace.com',
-          },
-        ]"
-      />
-    </SwiperSlide>
-    <SwiperSlide>
-      <Slide
-        title="90. leta"
-        summary="Internet byl pomalejsi, ale kazde pripojeni bylo male dobrodruzstvi. Rodily se prvni weby, chaty i online komunity."
-        :highlights="[
-          'Dial-up pripojeni a zvuk modemu',
-          'Prvni diskuzni fora a emailove seznamy',
-          'ICQ, GeoCities a Yahoo era',
-        ]"
-        :websites="[
-          { name: 'Space Jam 1996', url: 'https://www.spacejam.com/1996/' },
-          {
-            name: 'CNN 1998 (Web Archive)',
-            url: 'https://web.archive.org/web/19981212015610/http://www.cnn.com/',
-          },
-          {
-            name: 'Yahoo 1997 (Web Archive)',
-            url: 'https://web.archive.org/web/19970110121110/http://www.yahoo.com/',
-          },
-        ]"
-      />
-    </SwiperSlide>
-    <SwiperSlide>
-      <Slide
-        title="90. leta"
-        summary="Internet byl pomalejsi, ale kazde pripojeni bylo male dobrodruzstvi. Rodily se prvni weby, chaty i online komunity."
-        :highlights="[
-          'Dial-up pripojeni a zvuk modemu',
-          'Prvni diskuzni fora a emailove seznamy',
-          'ICQ, GeoCities a Yahoo era',
-        ]"
-        :websites="[
-          { name: 'Space Jam 1996', url: 'https://www.spacejam.com/1996/' },
-          {
-            name: 'CNN 1998 (Web Archive)',
-            url: 'https://web.archive.org/web/19981212015610/http://www.cnn.com/',
-          },
-          {
-            name: 'Yahoo 1997 (Web Archive)',
-            url: 'https://web.archive.org/web/19970110121110/http://www.yahoo.com/',
-          },
-        ]"
+        model-src="/models/TV.glb"
+        :model-rotation="Math.PI + 1.25"
       />
     </SwiperSlide>
   </Slider>

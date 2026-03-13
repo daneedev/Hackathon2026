@@ -14,7 +14,7 @@
 
       <Button icon="fa-solid fa-globe" label="Vstoupit do éry" />
     </div>
-    <Model v-if="modelSrc" :modelSrc="modelSrc" />
+    <Model v-if="modelSrc" :modelSrc="modelSrc" :rotation="modelRotation" />
   </section>
 </template>
 
@@ -28,6 +28,7 @@ const props = defineProps<{
   highlights: string[];
   label?: string;
   modelSrc?: string;
+  modelRotation?: number;
 }>();
 </script>
 
