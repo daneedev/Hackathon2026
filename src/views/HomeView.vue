@@ -8,11 +8,14 @@ import Slide from "../components/Slide.vue";
 import PreviewCard from "../components/PreviewCard.vue";
 import "../assets/main.css";
 import { useI18n } from "vue-i18n";
-const { t, tm, locale } = useI18n();
+import { useRetroSound } from "../composables/useSoundPlayer";
+const { t, tm } = useI18n();
+const { playSound } = useRetroSound();
 
 const router = useRouter();
 
 const goToTimeline = () => {
+  playSound("/sounds/whoosh.mp3", 4.5, 4.7);
   document.getElementById("timeline")?.scrollIntoView({
     behavior: "smooth",
     block: "start",
@@ -20,42 +23,28 @@ const goToTimeline = () => {
 };
 
 const openWeb90 = () => {
+  playSound("/sounds/mouse-click.mp3", 0.7, 0.9);
   router.push("/web90");
 };
 const openWeb2000 = () => {
+  playSound("/sounds/mouse-click.mp3", 0.7, 0.9);
   router.push("/web2000");
 };
 const openWeb2020 = () => {
+  playSound("/sounds/mouse-click.mp3", 0.7, 0.9);
   router.push("/web2020");
 };
 
 const openWeb2010 = () => {
+  playSound("/sounds/mouse-click.mp3");
   router.push("/web2010");
 };
-function changeLocale() {
-  if (locale.value === "cs") {
-    locale.value = "en";
-  } else {
-    locale.value = "cs";
-  }
-}
 
 const getHighlights = (key: string) => tm(key) as string[];
 </script>
 
 <template>
   <main>
-    <section class="lang-switcher">
-      <Button
-        icon="fa-solid fa-globe"
-        :label="
-          locale === 'cs'
-            ? t('homepage.langSwitcher.toEn')
-            : t('homepage.langSwitcher.toCs')
-        "
-        :on-click="changeLocale"
-      />
-    </section>
     <section class="hero-section">
       <div class="hero-content">
         <p class="hero-kicker">{{ t("homepage.heroKicker") }}</p>
