@@ -1,4 +1,5 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import Start from "./components/Start.vue";
 
-createApp(App).mount("#app");
+createApp(Start).mount("#app");
