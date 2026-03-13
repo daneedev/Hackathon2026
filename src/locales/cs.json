@@ -1,9 +1,84 @@
 {
     "homepage": {
         "welcomeText": "Vítejte v muzeu",
-        "internet": "internetu"
+        "internet": "internetu",
+        "heroSubtitle": "Interaktivní prohlídka od modemového pískotu 90. let po AI současnost. Každou éru otevřes přes vlastní model a dobový obsah.",
+        "heroKicker": "Digitální expozice",
+        "heroButton": "Spustit prohlídku",
+        "stats": {
+            "eras": "Éry"
+        },
+        "langSwitcher": {
+            "toEn": "EN",
+            "toCs": "CZ"
+        },
+        "heroStats": {
+            "erasValue": "4 éry",
+            "erasLabel": "90s, 2000s, 2010s, současnost",
+            "modelsValue": "3D",
+            "modelsLabel": "Interaktivní modely",
+            "exhibitsValue": "10+",
+            "exhibitsLabel": "modelů a exponátů"
+        },
+        "heroPreview": {
+            "ariaLabel": "Nahled er",
+            "ninetiesValue": "90. léta",
+            "ninetiesLabel": "CRT, modem, první komunity.",
+            "twoThousandsValue": "2000s",
+            "twoThousandsLabel": "Broadband, fora, socialni boom.",
+            "twoTensValue": "2010s",
+            "twoTensLabel": "Smartphony a streaming kultura.",
+            "twoTwentiesValue": "2020s",
+            "twoTwentiesLabel": "AI nastroje a hyper-propojeny web."
+        },
+        "timeline": {
+            "slide90s": {
+                "title": "90. léta",
+                "label": "První krůčky",
+                "summary": "Internet byl pomalejší, ale každé pripojení bylo malé dobrodružství. Rodily se první weby, chaty i online komunity.",
+                "buttonLabel": "Prozkoumat web 90. let",
+                "highlights": [
+                    "Dial-up připojení a zvuk modemu",
+                    "První diskuzní fora a emailové seznamy",
+                    "ICQ, GeoCities a Yahoo éra"
+                ]
+            },
+            "slide2000s": {
+                "title": "2000. léta",
+                "label": "Každodenní využití",
+                "summary": "Web se zrychlil, přišel broadband a sociální sítě. Internet se z nadšeneckého prostoru stal běžnou součástí každého dne.",
+                "buttonLabel": "Prozkoumat web 2000. let",
+                "highlights": [
+                    "Nástup broadbandu a Wi-Fi",
+                    "Blogy, fora a záčatky sociálních siti",
+                    "YouTube, Wikipedia a první viralní obsah"
+                ]
+            },
+            "slide2010s": {
+                "title": "2010. léta",
+                "label": "Mobilní revoluce",
+                "summary": "Mobilní revoluce a sociální sítě změnily způsob, jakým komunikujeme a konzumujeme obsah. Internet se stal všudypřítomným.",
+                "buttonLabel": "Prozkoumat web 2010. let",
+                "highlights": [
+                    "Nástup smartphonů a mobilního internetu",
+                    "Boom sociálních sítí a influencerů",
+                    "Streaming, cloud"
+                ]
+            },
+            "slidePresent": {
+                "title": "Současnost",
+                "label": "AI a metaverse",
+                "summary": "Internet je rychlejší, chytřejší a propojenější než kdy dřív. AI, metaverse a nové technologie formují budoucnost online světa.",
+                "buttonLabel": "Prozkoumat současný web",
+                "highlights": [
+                    "AI a strojové učení v každodenním životě",
+                    "Metaverse a virtuální světy",
+                    "Zvýšené zaměření na soukromí a bezpečnost"
+                ]
+            }
+        }
     },
     "web90s": {
-        
+
     }
 }

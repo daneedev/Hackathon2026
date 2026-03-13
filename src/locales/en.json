@@ -1,6 +1,81 @@
 {
     "homepage": {
         "welcomeText": "Welcome to the museum of",
-        "internet": "internet"
+        "internet": "internet",
+        "heroSubtitle": "An interactive tour from the modem squeal of the 90s to today's AI era. Open each period through its own model and authentic content.",
+        "heroKicker": "Digital Exhibition",
+        "heroButton": "Start the tour",
+        "stats": {
+            "eras": "Eras"
+        },
+        "langSwitcher": {
+            "toEn": "EN",
+            "toCs": "CZ"
+        },
+        "heroStats": {
+            "erasValue": "4 eras",
+            "erasLabel": "90s, 2000s, 2010s, present",
+            "modelsValue": "3D",
+            "modelsLabel": "Interactive models",
+            "exhibitsValue": "10+",
+            "exhibitsLabel": "models and exhibits"
+        },
+        "heroPreview": {
+            "ariaLabel": "Era preview",
+            "ninetiesValue": "90s",
+            "ninetiesLabel": "CRT, modem, first communities.",
+            "twoThousandsValue": "2000s",
+            "twoThousandsLabel": "Broadband, forums, social boom.",
+            "twoTensValue": "2010s",
+            "twoTensLabel": "Smartphones and streaming culture.",
+            "twoTwentiesValue": "2020s",
+            "twoTwentiesLabel": "AI tools and a hyper-connected web."
+        },
+        "timeline": {
+            "slide90s": {
+                "title": "90s",
+                "label": "First steps",
+                "summary": "The internet was slower, but every connection felt like a small adventure. The first websites, chats, and online communities were born.",
+                "buttonLabel": "Explore the web of the 90s",
+                "highlights": [
+                    "Dial-up connection and modem sound",
+                    "First discussion forums and email lists",
+                    "ICQ, GeoCities, and the Yahoo era"
+                ]
+            },
+            "slide2000s": {
+                "title": "2000s",
+                "label": "Everyday use",
+                "summary": "The web got faster with broadband and social networks. The internet moved from enthusiast circles into everyday life.",
+                "buttonLabel": "Explore the web of the 2000s",
+                "highlights": [
+                    "Rise of broadband and Wi-Fi",
+                    "Blogs, forums, and early social networks",
+                    "YouTube, Wikipedia, and early viral content"
+                ]
+            },
+            "slide2010s": {
+                "title": "2010s",
+                "label": "Mobile revolution",
+                "summary": "The mobile revolution and social media changed how we communicate and consume content. The internet became omnipresent.",
+                "buttonLabel": "Explore the web of the 2010s",
+                "highlights": [
+                    "Rise of smartphones and mobile internet",
+                    "Boom of social networks and influencers",
+                    "Streaming, cloud"
+                ]
+            },
+            "slidePresent": {
+                "title": "Present",
+                "label": "AI and metaverse",
+                "summary": "The internet is faster, smarter, and more connected than ever before. AI, the metaverse, and new technologies are shaping the future of the online world.",
+                "buttonLabel": "Explore today's web",
+                "highlights": [
+                    "AI and machine learning in everyday life",
+                    "Metaverse and virtual worlds",
+                    "Increased focus on privacy and security"
+                ]
+            }
+        }
     }
 }
