@@ -2,25 +2,30 @@
 import ZerosNewsCard from "../components/ZerosNewsCard.vue";
 import ZerosNewsModel from "../components/ZerosNewsModel.vue";
 import percentageBar from "../components/percentageBar.vue";
+import { useI18n } from "vue-i18n";
 
 import { useRouter } from "vue-router";
 const router = useRouter();
+const { t, tm } = useI18n();
+const getTags = () => tm("web0s.sidebar.tags") as string[];
 </script>
 <template>
   <div class="container">
     <header>
       <div class="header-content">
-        <a href="#" class="logo">&#127757; RetroNet</a>
+        <a href="#" class="logo">{{ t("web0s.header.logo") }}</a>
         <div class="header-navigations">
-          <button class="nav-btn" @click="() => router.push('/')">Domů</button>
+          <button class="nav-btn" @click="() => router.push('/')">
+            {{ t("web0s.header.home") }}
+          </button>
           <button class="nav-btn" @click="() => router.push('/web90')">
-            90s
+            {{ t("web0s.header.nav90s") }}
           </button>
           <button class="nav-btn" @click="() => router.push('/web2010')">
-            10s
+            {{ t("web0s.header.nav10s") }}
           </button>
           <button class="nav-btn" @click="() => router.push('/web2020')">
-            20s
+            {{ t("web0s.header.nav20s") }}
           </button>
         </div>
       </div>
@@ -29,88 +34,78 @@ const router = useRouter();
       <section class="news">
         <section class="news-card">
           <ZerosNewsModel
-            title="🎵 iPod přináší hudbu přímo do kapsy"
-            content="Současné modely iPodu umožňují přehrávání tisíců skladeb v kompaktním a lehkém designu. Díky moderním displejům a intuitivnímu ovládání je přístup k hudbě rychlejší a pohodlnější než u starších přenosných přehrávačů z doby před rokem 2000."
-            comments="34"
+            :title="t('web0s.news.ipod.title')"
+            :content="t('web0s.news.ipod.content')"
+            :comments="t('web0s.news.ipod.comments')"
             modelSrc="/models/iPod.glb"
           />
-          <p>✨ Vítejte ve Web 2.0!</p>
+          <p>{{ t("web0s.hero.title") }}</p>
           <p>
-            Internet se změnil. Uživatelé už nejsou jen čtenáři – jsou tvůrci
-            obsahu! Blogy, sociální sítě a sdílení obsahu změnily vše.
+            {{ t("web0s.hero.description") }}
           </p>
           <div class="buttons">
-            <button class="btn">👍Like</button>
-            <button class="btn">🔗Share</button>
+            <button class="btn">{{ t("web0s.hero.likeButton") }}</button>
+            <button class="btn">{{ t("web0s.hero.shareButton") }}</button>
           </div>
         </section>
         <ZerosNewsCard
-          title="📰 MySpace & Facebook mění sociální sítě"
-          content="Internet se změnil. Uživatelé už nejsou jen čtenáři – jsou tvůrci obsahu! Blogy, sociální sítě a sdílení obsahu změnily vše."
-          comments="12"
+          :title="t('web0s.news.myspaceFacebook.title')"
+          :content="t('web0s.news.myspaceFacebook.content')"
+          :comments="t('web0s.news.myspaceFacebook.comments')"
           modelSrc=""
         />
         <ZerosNewsCard
-          title="📹 YouTube: Revoluce videa"
-          content="Od garáže k miliardám zhlédnutí. YouTube změnil způsob, jakým konzumujeme média. Každou minutu se nahraje 10 hodin videa!"
-          comments="11"
+          :title="t('web0s.news.youtube.title')"
+          :content="t('web0s.news.youtube.content')"
+          :comments="t('web0s.news.youtube.comments')"
           modelSrc=""
         />
         <ZerosNewsModel
-          title="📱 iPhone představen!"
-          content="Apple právě představil revoluční zařízení. Je to iPod, telefon a internetové zařízení v jednom!"
-          comments="7"
+          :title="t('web0s.news.iphone.title')"
+          :content="t('web0s.news.iphone.content')"
+          :comments="t('web0s.news.iphone.comments')"
           modelSrc="/models/cell-phone.glb"
         />
         <ZerosNewsModel
-          title="🖱️ Nová generace počítačových myší posouvá přesnost i pohodlí"
-          content="Moderní počítačové myši dnes přinášejí výrazně vyšší přesnost, rychlejší odezvu a lepší ergonomii než modely z let před rokem 2000. Díky pokročilým senzorům, bezdrátovým technologiím a novým materiálům se práce i hraní na počítači stává pohodlnější a přesnější než kdy dříve."
-          comments="9"
+          :title="t('web0s.news.mouse.title')"
+          :content="t('web0s.news.mouse.content')"
+          :comments="t('web0s.news.mouse.comments')"
           modelSrc="/models/computer-mouse.glb"
         />
         <ZerosNewsModel
-          title="🖥️ Monitory nové generace přinášejí ostřejší obraz a větší pohodlí"
-          content="Moderní počítačové monitory dnes nabízejí výrazně vyšší rozlišení, lepší barvy a rychlejší obnovovací frekvence než modely před rokem 2000. Díky novým typům panelů a tenčím konstrukcím je práce i sledování médií příjemnější a obraz je mnohem ostřejší."
-          comments="5"
+          :title="t('web0s.news.monitor.title')"
+          :content="t('web0s.news.monitor.content')"
+          :comments="t('web0s.news.monitor.comments')"
           modelSrc="/models/TV.glb"
         />
         <ZerosNewsModel
-          title="💾 Flash disky mění způsob ukládání dat"
-          content="Současné USB flash drive nabízejí mnohem větší kapacitu a rychlejší přenos dat než starší přenosná úložiště z doby před rokem 2000. Díky malým rozměrům a jednoduchému připojení přes USB umožňují snadno přenášet soubory mezi počítači a dalšími zařízeními."
-          comments="8"
+          :title="t('web0s.news.flashDrive.title')"
+          :content="t('web0s.news.flashDrive.content')"
+          :comments="t('web0s.news.flashDrive.comments')"
           modelSrc="/models/flash-drive.glb"
         />
       </section>
       <aside>
         <section class="profile">
           <img src="/cool-emoji.png" />
-          <p class="profile-name">xXWebMasterXx</p>
-          <p class="status">Online právě teď</p>
+          <p class="profile-name">{{ t("web0s.sidebar.profileName") }}</p>
+          <p class="status">{{ t("web0s.sidebar.status") }}</p>
           <div>⭐⭐⭐⭐⭐</div>
         </section>
         <section class="tag-section">
-          <p class="profile-name">🏷️ Tag Cloud</p>
+          <p class="profile-name">{{ t("web0s.sidebar.tagCloudTitle") }}</p>
           <div class="tags">
-            <div class="tag">Web 2.0</div>
-            <div class="tag">Ajax</div>
-            <div class="tag">RSS</div>
-            <div class="tag">Blog</div>
-            <div class="tag">Podcast</div>
-            <div class="tag">Wiki</div>
-            <div class="tag">Social</div>
-            <div class="tag">Mashup</div>
-            <div class="tag">API</div>
-            <div class="tag">Beta</div>
+            <div v-for="tag in getTags()" :key="tag" class="tag">{{ tag }}</div>
           </div>
         </section>
         <section class="poll">
-          <p class="poll-title">📊 Anketa</p>
-          <p class="poll-desc">Nejlepší prohlížeč:</p>
+          <p class="poll-title">{{ t("web0s.sidebar.pollTitle") }}</p>
+          <p class="poll-desc">{{ t("web0s.sidebar.pollDescription") }}</p>
           <div class="stats">
-            <percentageBar title="Firefox🦊" :percentage="45" />
-            <percentageBar title="IDE 6🔵" :percentage="30" />
-            <percentageBar title="Opera🔴" :percentage="15" />
-            <percentageBar title="Safari🧭" :percentage="10" />
+            <percentageBar :title="t('web0s.sidebar.pollOptions.firefox')" :percentage="45" />
+            <percentageBar :title="t('web0s.sidebar.pollOptions.ie6')" :percentage="30" />
+            <percentageBar :title="t('web0s.sidebar.pollOptions.opera')" :percentage="15" />
+            <percentageBar :title="t('web0s.sidebar.pollOptions.safari')" :percentage="10" />
           </div>
         </section>
       </aside>
