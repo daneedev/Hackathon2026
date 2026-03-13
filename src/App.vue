@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar.vue";
 import TextGradient from "./components/TextGradient.vue";
 </script>
 
-<template>
+<!--<template>
   <Navbar>
     <a class="nav-link" href="#">90.léta</a>
     <a class="nav-link" href="#">2000.léta</a>
@@ -51,4 +51,4 @@ p {
   font-weight: bold;
   transition: all 0.3s ease;
 }
-</style>
+</style>-->
