@@ -5,7 +5,6 @@ import Button from "./components/Button.vue";
 <template>
   <section class="hero-section">
     <h1 class="hero-text">Vítejte v muzeu internetu</h1>
-    <Button label="Klikni mě" />
   </section>
 </template>
 
