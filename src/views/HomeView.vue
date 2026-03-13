@@ -8,9 +8,9 @@ import Slide from "../components/Slide.vue";
 import PreviewCard from "../components/PreviewCard.vue";
 import "../assets/main.css";
 import { useI18n } from "vue-i18n";
-import { useRetroSound } from "../composables/useSoundPlayer";
+import { useSoundPlayer } from "../composables/useSoundPlayer";
 const { t, tm } = useI18n();
-const { playSound } = useRetroSound();
+const { playSound } = useSoundPlayer();
 
 const router = useRouter();
 
@@ -36,7 +36,7 @@ const openWeb2020 = () => {
 };
 
 const openWeb2010 = () => {
-  playSound("/sounds/mouse-click.mp3");
+  playSound("/sounds/mouse-click.mp3", 0.7, 0.9);
   router.push("/web2010");
 };
 
