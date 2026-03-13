@@ -4,6 +4,33 @@
         "internet": "internetu"
     },
     "web90s": {
-        
+        "underConstruction": "🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧",
+        "sidebar": {
+            "navigationTitle": "Navigace:",
+            "home": "Domovská stránka",
+            "mouse": "Myš",
+            "monitor": "Monitor",
+            "floppy": "Disketa",
+            "visitors": "Návštěvníků:",
+            "badgePrefix": "🏆 Best viewed with",
+            "badgeBrowser": "Netscape Navigator"
+        },
+        "welcomeTitle": "🌐 Internet v 90. letech 🌐",
+        "infoText": "Devadesátá léta byla zlomovým obdobím pro technologie. Osobní počítače se začaly objevovat v domácnostech, internet začal propojovat lidi po celém světě a mnoho zařízení, která používáme dodnes, začalo získávat svou podobu. Technologie byly sice pomalejší a méně výkonné než dnes, ale přinesly revoluční možnosti – e-mail, prohlížení webu a digitální komunikaci. Tato expozice vás zavede do doby, kdy se internet teprve rozvíjel. Objevte zařízení a technologie, které formovaly digitální svět 90. let.",
+        "exhibitionTitle": "Exponáty",
+        "exhibits": {
+            "mouse": {
+                "title": "Počítačová myš",
+                "description": "Počítačová myš z 90. let byla základním nástrojem pro interakci s počítačem. V té době byly myši často vybaveny kuličkou, která se otáčela při pohybu a přenášela informace o pohybu na počítač. Tyto myši měly obvykle dva nebo tři tlačítka a někdy i kolečko pro posouvání. Byly nezbytné pro navigaci v grafickém uživatelském rozhraní a umožňovaly uživatelům snadno ovládat své počítače."
+            },
+            "monitor": {
+                "title": "Monitor",
+                "description": "Počítačové monitory v 90. letech byly velké a těžké CRT obrazovky (katodové trubice). Vypadaly podobně jako staré televizory a mohly vážit i více než 15 kilogramů. Měly nižší rozlišení než dnešní obrazovky a někdy lehce blikaly. Přesto umožňovaly zobrazovat barevná grafická rozhraní, hry a první webové stránky."
+            },
+            "floppy": {
+                "title": "Disketa",
+                "description": "Disketa (nejčastěji 3,5palcová) byla v 90. letech běžným médiem pro ukládání a přenos dat. Měla kapacitu 1,44 MB, takže se na ni vešly dokumenty, menší programy nebo uložené pozice ve hrách. Používala se také pro instalaci software a přenos souborů mezi počítači. Přestože byla praktická, byla citlivá na poškození a magnetické pole."
+            }
+        }
     }
 }
