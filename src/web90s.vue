@@ -1,74 +1,69 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import { useI18n } from "vue-i18n";
 import ExhibitCard from "./components/exhibitCard.vue";
+
+const { t } = useI18n();
 </script>
 
 <template>
   <section class="underConstruction">
-    <p>🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧</p>
+    <p>{{ t("web90s.underConstruction") }}</p>
   </section>
 
   <div class="pageLayout">
     <aside class="sidebar">
-      <h2>Navigace:</h2>
+      <h2>{{ t("web90s.sidebar.navigationTitle") }}</h2>
       <nav>
-        <RouterLink to="/">Domovská stránka</RouterLink>
-        <a href="#mouse" >Myš</a>
-        <a href="#monitor" >Monitor</a>
-        <a href="#floppy">Disketa</a>
+        <RouterLink to="/">{{ t("web90s.sidebar.home") }}</RouterLink>
+        <a href="#mouse">{{ t("web90s.sidebar.mouse") }}</a>
+        <a href="#monitor">{{ t("web90s.sidebar.monitor") }}</a>
+        <a href="#floppy">{{ t("web90s.sidebar.floppy") }}</a>
       </nav>
 
       <div class="counterBox">
-        <p>Návštěvníků:</p>
+        <p>{{ t("web90s.sidebar.visitors") }}</p>
         <div class="counter">001337</div>
       </div>
 
       <div class="badge">
-        <p>🏆 Best viewed with</p>
-        <strong>Netscape Navigator</strong>
+        <p>{{ t("web90s.sidebar.badgePrefix") }}</p>
+        <strong>{{ t("web90s.sidebar.badgeBrowser") }}</strong>
       </div>
     </aside>
 
     <main>
       <article class="welcome">
-        <p>🌐 Internet v 90. letech 🌐</p>
+        <p>{{ t("web90s.welcomeTitle") }}</p>
       </article>
       <article class="info">
         <p>
-          Devadesátá léta byla zlomovým obdobím pro technologie. Osobní počítače
-          se začaly objevovat v domácnostech, internet začal propojovat lidi po
-          celém světě a mnoho zařízení, která používáme dodnes, začalo získávat
-          svou podobu. Technologie byly sice pomalejší a méně výkonné než dnes,
-          ale přinesly revoluční možnosti – e-mail, prohlížení webu a digitální
-          komunikaci. <br /><br />
-          Tato expozice vás zavede do doby, kdy se internet teprve rozvíjel.
-          Objevte zařízení a technologie, které formovaly digitální svět 90.
-          let.
+          {{ t("web90s.infoText") }}
         </p>
       </article>
       <article class="exhibition">
-        <h1>Exponáty</h1>
+        <h1>{{ t("web90s.exhibitionTitle") }}</h1>
         <section>
           <ExhibitCard
             id="mouse"
-            title="Počítačová myš"
-            description="Počítačová myš z 90. let byla základním nástrojem pro interakci s počítačem. V té době byly myši často vybaveny kuličkou, která se otáčela při pohybu a přenášela informace o pohybu na počítač. Tyto myši měly obvykle dva nebo tři tlačítka a někdy i kolečko pro posouvání. Byly nezbytné pro navigaci v grafickém uživatelském rozhraní a umožňovaly uživatelům snadno ovládat své počítače."
+            :title="t('web90s.exhibits.mouse.title')"
+            :description="t('web90s.exhibits.mouse.description')"
             modelSrc="/models/Rat.glb"
             :rotation="Math.PI + 1"
             :scale="0.07"
           />
           <ExhibitCard
             id="monitor"
-            title="Monitor"
-            description="Počítačové monitory v 90. letech byly velké a těžké CRT obrazovky (katodové trubice). Vypadaly podobně jako staré televizory a mohly vážit i více než 15 kilogramů. Měly nižší rozlišení než dnešní obrazovky a někdy lehce blikaly. Přesto umožňovaly zobrazovat barevná grafická rozhraní, hry a první webové stránky."
+            :title="t('web90s.exhibits.monitor.title')"
+            :description="t('web90s.exhibits.monitor.description')"
             modelSrc="/models/CRT.glb"
             :rotation="Math.PI - 0.5"
             :scale="1"
           />
           <ExhibitCard
             id="floppy"
-            title="Disketa"
-            description="Disketa (nejčastěji 3,5palcová) byla v 90. letech běžným médiem pro ukládání a přenos dat. Měla kapacitu 1,44 MB, takže se na ni vešly dokumenty, menší programy nebo uložené pozice ve hrách. Používala se také pro instalaci software a přenos souborů mezi počítači. Přestože byla praktická, byla citlivá na poškození a magnetické pole."
+            :title="t('web90s.exhibits.floppy.title')"
+            :description="t('web90s.exhibits.floppy.description')"
             modelSrc="/models/floppy.glb"
             :rotation="Math.PI - 0.5"
             :scale="0.2"

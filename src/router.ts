@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "./views/HomeView.vue";
 import Web90s from "./web90s.vue";
 import Web0s from "./web0s.vue";
+import web10s from "./web10s.vue"
 
 const router = createRouter({
   history: createWebHistory(),
@@ -36,6 +37,11 @@ const router = createRouter({
       name: "web2000",
       component: Web0s,
     },
+    {
+      path: "/web2010",
+      name: "web2010",
+      component: web10s,
+    }
   ],
 });
 
