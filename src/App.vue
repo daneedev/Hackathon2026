@@ -1,8 +1,16 @@
 <script setup lang="ts">
-import Web90 from './web90s.vue'
+import Button from "./components/Button.vue";
 </script>
 
-
 <template>
-  <web90 />
+  <section class="hero-section">
+    <h1 class="hero-text">Vítejte v muzeu internetu</h1>
+  </section>
 </template>
+
+<style>
+.hero-text {
+  font-size: 3rem;
+  font-family: "Archivo Black", sans-serif;
+}
+</style>
