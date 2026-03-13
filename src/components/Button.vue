@@ -21,7 +21,7 @@ button {
   border-radius: 10px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  cursor: pointer;
+  cursor: url("/cursor-32.png") 3 3, pointer;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 0 rgba(63, 163, 77, 0);

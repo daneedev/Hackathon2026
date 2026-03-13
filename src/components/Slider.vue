@@ -35,7 +35,6 @@ import "swiper/swiper-bundle.css";
 <style scoped>
 .timeline-swiper {
   width: 100%;
-  height: 100vh;
   margin: 0 auto;
   overflow: hidden;
 }

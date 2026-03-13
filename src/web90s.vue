@@ -207,7 +207,7 @@ main {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .pageLayout {
     grid-template-columns: 1fr;
     padding: 0.75rem;
@@ -223,15 +223,6 @@ main {
   .info,
   .exhibition {
     width: 100%;
-  }
-}
-
-@media (min-width: 900px) and (max-width: 1000px) {
-  .info {
-    width: 60%;
-  }
-  .exhibition {
-    width: 60%;
   }
 }
 
