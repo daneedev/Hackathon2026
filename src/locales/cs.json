@@ -1,0 +1,112 @@
+{
+    "homepage": {
+        "welcomeText": "Vítejte v muzeu",
+        "internet": "internetu",
+        "heroSubtitle": "Interaktivní prohlídka od modemového pískotu 90. let po AI současnost. Každou éru otevřes přes vlastní model a dobový obsah.",
+        "heroKicker": "Digitální expozice",
+        "heroButton": "Spustit prohlídku",
+        "stats": {
+            "eras": "Éry"
+        },
+        "langSwitcher": {
+            "toEn": "EN",
+            "toCs": "CZ"
+        },
+        "heroStats": {
+            "erasValue": "4 éry",
+            "erasLabel": "90s, 2000s, 2010s, současnost",
+            "modelsValue": "3D",
+            "modelsLabel": "Interaktivní modely",
+            "exhibitsValue": "10+",
+            "exhibitsLabel": "modelů a exponátů"
+        },
+        "heroPreview": {
+            "ariaLabel": "Nahled er",
+            "ninetiesValue": "90. léta",
+            "ninetiesLabel": "CRT, modem, první komunity.",
+            "twoThousandsValue": "2000s",
+            "twoThousandsLabel": "Broadband, fora, socialni boom.",
+            "twoTensValue": "2010s",
+            "twoTensLabel": "Smartphony a streaming kultura.",
+            "twoTwentiesValue": "2020s",
+            "twoTwentiesLabel": "AI nastroje a hyper-propojeny web."
+        },
+        "timeline": {
+            "slide90s": {
+                "title": "90. léta",
+                "label": "První krůčky",
+                "summary": "Internet byl pomalejší, ale každé pripojení bylo malé dobrodružství. Rodily se první weby, chaty i online komunity.",
+                "buttonLabel": "Prozkoumat web 90. let",
+                "highlights": [
+                    "Dial-up připojení a zvuk modemu",
+                    "První diskuzní fora a emailové seznamy",
+                    "ICQ, GeoCities a Yahoo éra"
+                ]
+            },
+            "slide2000s": {
+                "title": "2000. léta",
+                "label": "Každodenní využití",
+                "summary": "Web se zrychlil, přišel broadband a sociální sítě. Internet se z nadšeneckého prostoru stal běžnou součástí každého dne.",
+                "buttonLabel": "Prozkoumat web 2000. let",
+                "highlights": [
+                    "Nástup broadbandu a Wi-Fi",
+                    "Blogy, fora a záčatky sociálních siti",
+                    "YouTube, Wikipedia a první viralní obsah"
+                ]
+            },
+            "slide2010s": {
+                "title": "2010. léta",
+                "label": "Mobilní revoluce",
+                "summary": "Mobilní revoluce a sociální sítě změnily způsob, jakým komunikujeme a konzumujeme obsah. Internet se stal všudypřítomným.",
+                "buttonLabel": "Prozkoumat web 2010. let",
+                "highlights": [
+                    "Nástup smartphonů a mobilního internetu",
+                    "Boom sociálních sítí a influencerů",
+                    "Streaming, cloud"
+                ]
+            },
+            "slidePresent": {
+                "title": "Současnost",
+                "label": "AI a metaverse",
+                "summary": "Internet je rychlejší, chytřejší a propojenější než kdy dřív. AI, metaverse a nové technologie formují budoucnost online světa.",
+                "buttonLabel": "Prozkoumat současný web",
+                "highlights": [
+                    "AI a strojové učení v každodenním životě",
+                    "Metaverse a virtuální světy",
+                    "Zvýšené zaměření na soukromí a bezpečnost"
+                ]
+            }
+        }
+    },
+    "web90s": {
+        "underConstruction": "🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧",
+        "sidebar": {
+            "navigationTitle": "Navigace:",
+            "home": "Domovská stránka",
+            "mouse": "Myš",
+            "monitor": "Monitor",
+            "floppy": "Disketa",
+            "visitors": "Návštěvníků:",
+            "badgePrefix": "🏆 Best viewed with",
+            "badgeBrowser": "Netscape Navigator"
+        },
+        "welcomeTitle": "🌐 Internet v 90. letech 🌐",
+        "infoText": "Devadesátá léta byla zlomovým obdobím pro technologie. Osobní počítače se začaly objevovat v domácnostech, internet začal propojovat lidi po celém světě a mnoho zařízení, která používáme dodnes, začalo získávat svou podobu. Technologie byly sice pomalejší a méně výkonné než dnes, ale přinesly revoluční možnosti – e-mail, prohlížení webu a digitální komunikaci. Tato expozice vás zavede do doby, kdy se internet teprve rozvíjel. Objevte zařízení a technologie, které formovaly digitální svět 90. let.",
+        "exhibitionTitle": "Exponáty",
+        "exhibits": {
+            "mouse": {
+                "title": "Počítačová myš",
+                "description": "Počítačová myš z 90. let byla základním nástrojem pro interakci s počítačem. V té době byly myši často vybaveny kuličkou, která se otáčela při pohybu a přenášela informace o pohybu na počítač. Tyto myši měly obvykle dva nebo tři tlačítka a někdy i kolečko pro posouvání. Byly nezbytné pro navigaci v grafickém uživatelském rozhraní a umožňovaly uživatelům snadno ovládat své počítače."
+            },
+            "monitor": {
+                "title": "Monitor",
+                "description": "Počítačové monitory v 90. letech byly velké a těžké CRT obrazovky (katodové trubice). Vypadaly podobně jako staré televizory a mohly vážit i více než 15 kilogramů. Měly nižší rozlišení než dnešní obrazovky a někdy lehce blikaly. Přesto umožňovaly zobrazovat barevná grafická rozhraní, hry a první webové stránky."
+            },
+            "floppy": {
+                "title": "Disketa",
+                "description": "Disketa (nejčastěji 3,5palcová) byla v 90. letech běžným médiem pro ukládání a přenos dat. Měla kapacitu 1,44 MB, takže se na ni vešly dokumenty, menší programy nebo uložené pozice ve hrách. Používala se také pro instalaci software a přenos souborů mezi počítači. Přestože byla praktická, byla citlivá na poškození a magnetické pole."
+            }
+        }
+
+    }
+}

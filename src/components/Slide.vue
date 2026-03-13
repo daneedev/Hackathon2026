@@ -12,7 +12,11 @@
         </li>
       </ul>
 
-      <Button icon="fa-solid fa-globe" label="Vstoupit do éry" />
+      <Button
+        icon="fa-solid fa-globe"
+        :label="buttonLabel ?? 'Vstoupit do éry'"
+        :on-click="onButtonClick"
+      />
     </div>
     <Model v-if="modelSrc" :modelSrc="modelSrc" :rotation="modelRotation" />
   </section>
@@ -27,8 +31,10 @@ const props = defineProps<{
   summary: string;
   highlights: string[];
   label?: string;
+  buttonLabel?: string;
   modelSrc?: string;
   modelRotation?: number;
+  onButtonClick?: () => void;
 }>();
 </script>
 
