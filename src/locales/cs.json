@@ -108,5 +108,33 @@
             }
         }
 
+    },
+    "web10s": {
+        "nav": {
+            "home": "DOMOV",
+            "web90": "90. LÉTA",
+            "web2000": "2000. LÉTA",
+            "present": "SOUCASNOST"
+        },
+        "hero": {
+            "title": "Vítejte na webu 2010. let",
+            "subtitle": "Virtuální expozice pohlíží na jedinečné technologie a trendy, které definovaly tuto dobu.",
+            "cta": "Vstoupit do expozice"
+        },
+        "exhibitionTitle": "Exponáty 2010. let",
+        "exhibits": {
+            "smartphones": {
+                "title": "Smartphony a mobilní revoluce",
+                "description": "- Smartphone se stal hlavním centrem každodenního života – od budíku po bankovnictví\n- Mobilní internet 4G umožnil streamování videa, hudby i živé vysílání téměř odkudkoli\n- App Store a Google Play odstartovaly éru aplikací na míru pro práci, školu i volný čas\n- Vestavěné fotoaparáty proměnily telefon na nástroj pro dokumentování momentů v reálném čase\n- Dotykové ovládání, notifikace a biometrie nastavily nový standard uživatelského komfortu"
+            },
+            "socialMedia": {
+                "title": "Sociální média a digitální komunikace",
+                "description": "- Sociální sítě změnily internet z pasivního čtení na nepřetržitou interakci mezi lidmi\n- Facebook, Instagram, X a TikTok vytvořily nové formy komunikace, zábavy i sebevyjádření\n- Stories, reels a krátká videa zrychlily tempo obsahu a posunuly pozornost uživatelů\n- Influencer marketing přetvořil reklamu na autentické doporučení od konkrétních osobností\n- Virální trendy dokázaly během hodin ovlivnit hudbu, módu, politiku i veřejnou debatu"
+            },
+            "cloud": {
+                "title": "Cloud computing a online služby",
+                "description": "- Cloud přesunul data a výpočetní výkon z lokálních počítačů do online infrastruktury\n- Služby jako Google Drive, OneDrive nebo Dropbox zpřístupnily soubory odkudkoli během sekund\n- Webové aplikace nahradily část klasického softwaru a snížily závislost na instalaci programů\n- Týmová spolupráce v reálném čase (dokumenty, chaty, tabulky) zásadně zrychlila pracovní procesy\n- Synchronizace mezi telefonem, notebookem a tabletem vytvořila plynulý digitální ekosystém"
+            }
+        }
     }
 }

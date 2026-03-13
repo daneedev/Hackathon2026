@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import { useI18n } from "vue-i18n";
-import ExhibitCard from "./components/exhibitCard.vue";
+import ExhibitCard from "../components/exhibitCard.vue";
 
 const { t } = useI18n();
 </script>

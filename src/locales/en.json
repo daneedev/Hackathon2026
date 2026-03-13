@@ -107,6 +107,34 @@
                 "description": "The floppy disk (most commonly 3.5-inch) was a common medium in the 90s for storing and transferring data. It had a capacity of 1.44 MB, enough for documents, small programs, or saved game files. It was also used for software installation and file transfer between computers. Although practical, it was sensitive to physical damage and magnetic fields."
             }
         }
+    },
+    "web10s": {
+        "nav": {
+            "home": "HOME",
+            "web90": "90s",
+            "web2000": "2000s",
+            "present": "PRESENT"
+        },
+        "hero": {
+            "title": "Welcome to the web of the 2010s",
+            "subtitle": "This virtual exhibition explores the unique technologies and trends that defined this era.",
+            "cta": "Enter the exhibition"
+        },
+        "exhibitionTitle": "Exhibits of the 2010s",
+        "exhibits": {
+            "smartphones": {
+                "title": "Smartphones and the Mobile Revolution",
+                "description": "- The smartphone became the center of everyday life - from alarm clocks to banking\n- 4G mobile internet enabled streaming video, music, and live broadcasts from almost anywhere\n- The App Store and Google Play launched an era of custom apps for work, school, and free time\n- Built-in cameras turned phones into real-time tools for documenting moments\n- Touch controls, notifications, and biometrics set a new standard for user comfort"
+            },
+            "socialMedia": {
+                "title": "Social Media and Digital Communication",
+                "description": "- Social networks transformed the internet from passive reading into nonstop interaction\n- Facebook, Instagram, X, and TikTok introduced new ways to communicate, entertain, and express identity\n- Stories, reels, and short videos accelerated content pace and shifted user attention\n- Influencer marketing reshaped advertising into personality-driven recommendations\n- Viral trends could influence music, fashion, politics, and public debate within hours"
+            },
+            "cloud": {
+                "title": "Cloud Computing and Online Services",
+                "description": "- The cloud moved data storage and computing power from local machines to online infrastructure\n- Services like Google Drive, OneDrive, and Dropbox made files accessible from anywhere in seconds\n- Web apps replaced part of traditional software and reduced the need for local installations\n- Real-time collaboration (documents, chats, spreadsheets) dramatically sped up team workflows\n- Synchronization across phone, laptop, and tablet created a seamless digital ecosystem"
+            }
+        }
     }
 }
     

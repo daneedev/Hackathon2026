@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "./views/HomeView.vue";
-import Web90s from "./web90s.vue";
+import Web90s from "./views/web90s.vue";
 import Web0s from "./web0s.vue";
 import Web20s from "./views/web20s.vue";
-import web10s from "./web10s.vue";
+import web10s from "./views/web10s.vue";
 
 const router = createRouter({
   history: createWebHistory(),
