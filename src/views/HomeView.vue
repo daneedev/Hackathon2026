@@ -8,7 +8,7 @@ import Slide from "../components/Slide.vue";
 import PreviewCard from "../components/PreviewCard.vue";
 import "../assets/main.css";
 import { useI18n } from "vue-i18n";
-const { t, locale } = useI18n();
+const { t, tm, locale } = useI18n();
 
 const router = useRouter();
 
@@ -35,19 +35,25 @@ function changeLocale() {
     locale.value = "cs";
   }
 }
+
+const getHighlights = (key: string) => tm(key) as string[];
 </script>
 
 <template>
   <section class="lang-switcher">
     <Button
       icon="fa-solid fa-globe"
-      :label="locale === 'cs' ? 'EN' : 'CZ'"
+      :label="
+        locale === 'cs'
+          ? t('homepage.langSwitcher.toEn')
+          : t('homepage.langSwitcher.toCs')
+      "
       :on-click="changeLocale"
     />
   </section>
   <section class="hero-section">
     <div class="hero-content">
-      <p class="hero-kicker">Digitalni expozice</p>
+      <p class="hero-kicker">{{ t("homepage.heroKicker") }}</p>
       <h1 class="hero-text">
         {{ t("homepage.welcomeText") }} <br />
         <TextGradient primaryColor="#3FA34D" secondaryColor="#137547">
@@ -55,59 +61,74 @@ function changeLocale() {
         </TextGradient>
       </h1>
       <p class="hero-subtitle">
-        Interaktivní prohlídka od modemového pískotu 90. let po AI současnost.
-        Každou éru otevřes přes vlastní model a dobový obsah.
+        {{ t("homepage.heroSubtitle") }}
       </p>
       <div class="hero-actions">
         <Button
           icon="fa-solid fa-eye"
-          label="Spustit prohlidku"
+          :label="t('homepage.heroButton')"
           :on-click="goToTimeline"
         />
       </div>
       <div class="hero-stats">
-        <PreviewCard value="4 éry" label="90s, 2000s, 2010s, současnost" />
-        <PreviewCard value="3D" label="Interaktivní modely" />
-        <PreviewCard value="10+" label="modelů a exponátů" />
+        <PreviewCard
+          :value="t('homepage.heroStats.erasValue')"
+          :label="t('homepage.heroStats.erasLabel')"
+        />
+        <PreviewCard
+          :value="t('homepage.heroStats.modelsValue')"
+          :label="t('homepage.heroStats.modelsLabel')"
+        />
+        <PreviewCard
+          :value="t('homepage.heroStats.exhibitsValue')"
+          :label="t('homepage.heroStats.exhibitsLabel')"
+        />
       </div>
     </div>
-    <aside class="hero-preview" aria-label="Nahled er">
-      <PreviewCard value="90. léta" label="CRT, modem, první komunity." />
-      <PreviewCard value="2000s" label="Broadband, fora, socialni boom." />
-      <PreviewCard value="2010s" label="Smartphony a streaming kultura." />
-      <PreviewCard value="2020s" label="AI nastroje a hyper-propojeny web." />
+    <aside
+      class="hero-preview"
+      :aria-label="t('homepage.heroPreview.ariaLabel')"
+    >
+      <PreviewCard
+        :value="t('homepage.heroPreview.ninetiesValue')"
+        :label="t('homepage.heroPreview.ninetiesLabel')"
+      />
+      <PreviewCard
+        :value="t('homepage.heroPreview.twoThousandsValue')"
+        :label="t('homepage.heroPreview.twoThousandsLabel')"
+      />
+      <PreviewCard
+        :value="t('homepage.heroPreview.twoTensValue')"
+        :label="t('homepage.heroPreview.twoTensLabel')"
+      />
+      <PreviewCard
+        :value="t('homepage.heroPreview.twoTwentiesValue')"
+        :label="t('homepage.heroPreview.twoTwentiesLabel')"
+      />
     </aside>
   </section>
   <section id="timeline">
     <Slider>
       <SwiperSlide>
         <Slide
-          title="90. léta"
-          label="První krůčky"
-          summary="Internet byl pomalejší, ale každé pripojení bylo malé dobrodružství. Rodily se první weby, chaty i online komunity."
-          button-label="Prozkoumat web 90. let"
+          :title="t('homepage.timeline.slide90s.title')"
+          :label="t('homepage.timeline.slide90s.label')"
+          :summary="t('homepage.timeline.slide90s.summary')"
+          :button-label="t('homepage.timeline.slide90s.buttonLabel')"
           :on-button-click="openWeb90"
-          :highlights="[
-            'Dial-up připojení a zvuk modemu',
-            'První diskuzní fora a emailové seznamy',
-            'ICQ, GeoCities a Yahoo éra',
-          ]"
+          :highlights="getHighlights('homepage.timeline.slide90s.highlights')"
           model-src="/models/CRT.glb"
           :model-rotation="Math.PI - 0.5"
         />
       </SwiperSlide>
       <SwiperSlide>
         <Slide
-          title="2000. léta"
-          label="Každodenní využití"
-          summary="Web se zrychlil, přišel broadband a sociální sítě. Internet se z nadšeneckého prostoru stal běžnou součástí každého dne."
-          button-label="Prozkoumat web 2000. let"
+          :title="t('homepage.timeline.slide2000s.title')"
+          :label="t('homepage.timeline.slide2000s.label')"
+          :summary="t('homepage.timeline.slide2000s.summary')"
+          :button-label="t('homepage.timeline.slide2000s.buttonLabel')"
           :on-button-click="openWeb2000"
-          :highlights="[
-            'Nástup broadbandu a Wi-Fi',
-            'Blogy, fora a záčatky sociálních siti',
-            'YouTube, Wikipedia a první viralní obsah',
-          ]"
+          :highlights="getHighlights('homepage.timeline.slide2000s.highlights')"
           model-src="/models/TV.glb"
           :model-rotation="Math.PI + 1.25"
         />
@@ -124,20 +145,24 @@ function changeLocale() {
             'Boom sociálních sítí a influencerů',
             'Streaming, cloud',
           ]"
+          :title="t('homepage.timeline.slide2010s.title')"
+          :label="t('homepage.timeline.slide2010s.label')"
+          :summary="t('homepage.timeline.slide2010s.summary')"
+          :highlights="getHighlights('homepage.timeline.slide2010s.highlights')"
+          :button-label="t('homepage.timeline.slide2010s.buttonLabel')"
           model-src="/models/Phone.glb"
           :model-rotation="Math.PI * 2"
         />
       </SwiperSlide>
       <SwiperSlide>
         <Slide
-          title="Současnost"
-          label="AI a metaverse"
-          summary="Internet je rychlejší, chytřejší a propojenější než kdy dřív. AI, metaverse a nové technologie formují budoucnost online světa."
-          :highlights="[
-            'AI a strojové učení v každodenním životě',
-            'Metaverse a virtuální světy',
-            'Zvýšené zaměření na soukromí a bezpečnost',
-          ]"
+          :title="t('homepage.timeline.slidePresent.title')"
+          :label="t('homepage.timeline.slidePresent.label')"
+          :summary="t('homepage.timeline.slidePresent.summary')"
+          :highlights="
+            getHighlights('homepage.timeline.slidePresent.highlights')
+          "
+          :button-label="t('homepage.timeline.slidePresent.buttonLabel')"
           model-src="/models/headset.glb"
           :model-rotation="Math.PI"
         />
