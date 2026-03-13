@@ -13,8 +13,8 @@ import ExhibitCard from "./components/exhibitCard.vue";
       <h2>Navigace:</h2>
       <nav>
         <RouterLink to="/">Domovská stránka</RouterLink>
-        <a href="#mouse">Myš</a>
-        <a href="#monitor">Monitor</a>
+        <a href="#mouse" >Myš</a>
+        <a href="#monitor" >Monitor</a>
         <a href="#floppy">Disketa</a>
       </nav>
 
@@ -82,6 +82,8 @@ import ExhibitCard from "./components/exhibitCard.vue";
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap");
 
+
+
 .sidebar a:hover {
   color: rgb(255, 255, 89);
 }
@@ -115,6 +117,7 @@ import ExhibitCard from "./components/exhibitCard.vue";
   align-items: start;
   color: black;
   overflow-x: hidden;
+  cursor: url("/cursor90s.png") 3 3, auto;
 }
 
 .sidebar {
@@ -141,6 +144,15 @@ import ExhibitCard from "./components/exhibitCard.vue";
 .sidebar a {
   color: #001dff;
   text-decoration: underline;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+[role="button"] {
+  cursor: url("/cursor90s.png") 3 3, pointer;
 }
 
 .counterBox {
