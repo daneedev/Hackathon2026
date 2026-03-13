@@ -107,6 +107,83 @@
                 "description": "The floppy disk (most commonly 3.5-inch) was a common medium in the 90s for storing and transferring data. It had a capacity of 1.44 MB, enough for documents, small programs, or saved game files. It was also used for software installation and file transfer between computers. Although practical, it was sensitive to physical damage and magnetic fields."
             }
         }
+    },
+    "web0s": {
+        "header": {
+            "logo": "🌍 RetroNet",
+            "home": "Home",
+            "nav90s": "90s",
+            "nav10s": "10s",
+            "nav20s": "20s"
+        },
+        "hero": {
+            "title": "✨ Welcome to Web 2.0!",
+            "description": "The internet has changed. Users are no longer just readers - they are content creators! Blogs, social networks, and content sharing changed everything.",
+            "likeButton": "👍Like",
+            "shareButton": "🔗Share"
+        },
+        "news": {
+            "ipod": {
+                "title": "🎵 iPod brings music straight to your pocket",
+                "content": "Current iPod models let you play thousands of songs in a compact and lightweight design. Thanks to modern displays and intuitive controls, access to music is faster and more convenient than with older portable players from before 2000.",
+                "comments": "34"
+            },
+            "myspaceFacebook": {
+                "title": "📰 MySpace & Facebook are changing social networks",
+                "content": "The internet has changed. Users are no longer just readers - they are content creators! Blogs, social networks, and content sharing changed everything.",
+                "comments": "12"
+            },
+            "youtube": {
+                "title": "📹 YouTube: Video Revolution",
+                "content": "From a garage to billions of views. YouTube changed how we consume media. Every minute, 10 hours of video are uploaded!",
+                "comments": "11"
+            },
+            "iphone": {
+                "title": "📱 iPhone unveiled!",
+                "content": "Apple has just introduced a revolutionary device. It is an iPod, a phone, and an internet device all in one!",
+                "comments": "7"
+            },
+            "mouse": {
+                "title": "🖱️ A new generation of computer mice boosts precision and comfort",
+                "content": "Modern computer mice now deliver much higher precision, faster response, and better ergonomics than models from before 2000. Thanks to advanced sensors, wireless technologies, and new materials, both work and gaming are more comfortable and accurate than ever.",
+                "comments": "9"
+            },
+            "monitor": {
+                "title": "🖥️ New-generation monitors bring sharper visuals and better comfort",
+                "content": "Modern computer monitors now offer significantly higher resolution, better colors, and faster refresh rates than models before 2000. Thanks to newer panel types and slimmer designs, both work and media viewing are more pleasant and visuals are much sharper.",
+                "comments": "5"
+            },
+            "flashDrive": {
+                "title": "💾 Flash drives are changing data storage",
+                "content": "Current USB flash drives offer much larger capacity and faster data transfer than older portable storage from before 2000. Thanks to their small size and simple USB connection, they make it easy to move files between computers and other devices.",
+                "comments": "8"
+            }
+        },
+        "sidebar": {
+            "profileName": "xXWebMasterXx",
+            "status": "Online right now",
+            "tagCloudTitle": "🏷️ Tag Cloud",
+            "tags": [
+                "Web 2.0",
+                "Ajax",
+                "RSS",
+                "Blog",
+                "Podcast",
+                "Wiki",
+                "Social",
+                "Mashup",
+                "API",
+                "Beta"
+            ],
+            "pollTitle": "📊 Poll",
+            "pollDescription": "Best browser:",
+            "pollOptions": {
+                "firefox": "Firefox🦊",
+                "ie6": "IE 6🔵",
+                "opera": "Opera🔴",
+                "safari": "Safari🧭"
+            }
+        }
     }
 }
     

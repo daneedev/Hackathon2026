@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import { useI18n } from "vue-i18n";
-import ExhibitCard from "./components/exhibitCard.vue";
+import ExhibitCard from "../components/exhibitCard.vue";
 
 const { t } = useI18n();
 </script>
@@ -77,8 +77,6 @@ const { t } = useI18n();
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap");
 
-
-
 .sidebar a:hover {
   color: rgb(255, 255, 89);
 }
@@ -112,7 +110,9 @@ const { t } = useI18n();
   align-items: start;
   color: black;
   overflow-x: hidden;
-  cursor: url("/cursor90s.png") 3 3, auto;
+  cursor:
+    url("/cursor90s.png") 3 3,
+    auto;
 }
 
 .sidebar {
@@ -147,7 +147,9 @@ input,
 select,
 textarea,
 [role="button"] {
-  cursor: url("/cursor90s.png") 3 3, pointer;
+  cursor:
+    url("/cursor90s.png") 3 3,
+    pointer;
 }
 
 .counterBox {
