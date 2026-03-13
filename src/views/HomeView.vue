@@ -8,6 +8,7 @@ import Slide from "../components/Slide.vue";
 import PreviewCard from "../components/PreviewCard.vue";
 import "../assets/main.css";
 import { useI18n } from "vue-i18n";
+
 const { t, tm, locale } = useI18n();
 
 const router = useRouter();
