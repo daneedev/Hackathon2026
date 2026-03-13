@@ -8,7 +8,7 @@ import Slide from "../components/Slide.vue";
 import PreviewCard from "../components/PreviewCard.vue";
 import "../assets/main.css";
 import { useI18n } from "vue-i18n";
-const { t, tm, locale } = useI18n();
+const { t, tm } = useI18n();
 
 const router = useRouter();
 
@@ -32,30 +32,12 @@ const openWeb2020 = () => {
 const openWeb2010 = () => {
   router.push("/web2010");
 };
-function changeLocale() {
-  if (locale.value === "cs") {
-    locale.value = "en";
-  } else {
-    locale.value = "cs";
-  }
-}
 
 const getHighlights = (key: string) => tm(key) as string[];
 </script>
 
 <template>
   <main>
-    <section class="lang-switcher">
-      <Button
-        icon="fa-solid fa-globe"
-        :label="
-          locale === 'cs'
-            ? t('homepage.langSwitcher.toEn')
-            : t('homepage.langSwitcher.toCs')
-        "
-        :on-click="changeLocale"
-      />
-    </section>
     <section class="hero-section">
       <div class="hero-content">
         <p class="hero-kicker">{{ t("homepage.heroKicker") }}</p>
