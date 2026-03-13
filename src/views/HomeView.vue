@@ -6,6 +6,9 @@ import Slider from "../components/Slider.vue";
 import { SwiperSlide } from "swiper/vue";
 import Slide from "../components/Slide.vue";
 import PreviewCard from "../components/PreviewCard.vue";
+import "../assets/main.css";
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
 
 const router = useRouter();
 
@@ -22,16 +25,31 @@ const openWeb90 = () => {
 const openWeb2000 = () => {
   router.push("/web2000");
 };
+
+function changeLocale() {
+  if (locale.value === "cs") {
+    locale.value = "en";
+  } else {
+    locale.value = "cs";
+  }
+}
 </script>
 
 <template>
+  <section class="lang-switcher">
+    <Button
+      icon="fa-solid fa-globe"
+      :label="locale === 'cs' ? 'EN' : 'CZ'"
+      :on-click="changeLocale"
+    />
+  </section>
   <section class="hero-section">
     <div class="hero-content">
       <p class="hero-kicker">Digitalni expozice</p>
       <h1 class="hero-text">
-        Vítejte v muzeu
+        {{ t("homepage.welcomeText") }} <br />
         <TextGradient primaryColor="#3FA34D" secondaryColor="#137547">
-          internetu
+          {{ t("homepage.internet") }}
         </TextGradient>
       </h1>
       <p class="hero-subtitle">
