@@ -17,6 +17,7 @@ const props = defineProps<{
         <p class="comments">💬 {{comments}} Komentářů</p>
         </div>
         <!--<img :src="img">-->
+      <Model :modelSrc="modelSrc" :rotation="Math.PI + 2"/>
     </section>
 </template>
 <style scoped lang="css">
