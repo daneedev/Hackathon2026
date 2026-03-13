@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-color: #191716;
+    --text-color: #F2F2F2;
+    --primary-color: #3FA34D;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Archivo", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
