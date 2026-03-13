@@ -107,81 +107,33 @@
                 "description": "Disketa (nejčastěji 3,5palcová) byla v 90. letech běžným médiem pro ukládání a přenos dat. Měla kapacitu 1,44 MB, takže se na ni vešly dokumenty, menší programy nebo uložené pozice ve hrách. Používala se také pro instalaci software a přenos souborů mezi počítači. Přestože byla praktická, byla citlivá na poškození a magnetické pole."
             }
         }
+
     },
-    "web0s": {
-        "header": {
-            "logo": "🌍 RetroNet",
-            "home": "Domů",
-            "nav90s": "90s",
-            "nav10s": "10s",
-            "nav20s": "20s"
+    "web10s": {
+        "nav": {
+            "home": "DOMOV",
+            "web90": "90. LÉTA",
+            "web2000": "2000. LÉTA",
+            "present": "SOUCASNOST"
         },
         "hero": {
-            "title": "✨ Vítejte ve Web 2.0!",
-            "description": "Internet se změnil. Uživatelé už nejsou jen čtenáři – jsou tvůrci obsahu! Blogy, sociální sítě a sdílení obsahu změnily vše.",
-            "likeButton": "👍Like",
-            "shareButton": "🔗Share"
+            "title": "Vítejte na webu 2010. let",
+            "subtitle": "Virtuální expozice pohlíží na jedinečné technologie a trendy, které definovaly tuto dobu.",
+            "cta": "Vstoupit do expozice"
         },
-        "news": {
-            "ipod": {
-                "title": "🎵 iPod přináší hudbu přímo do kapsy",
-                "content": "Současné modely iPodu umožňují přehrávání tisíců skladeb v kompaktním a lehkém designu. Díky moderním displejům a intuitivnímu ovládání je přístup k hudbě rychlejší a pohodlnější než u starších přenosných přehrávačů z doby před rokem 2000.",
-                "comments": "34"
+        "exhibitionTitle": "Exponáty 2010. let",
+        "exhibits": {
+            "smartphones": {
+                "title": "Smartphony a mobilní revoluce",
+                "description": "- Smartphone se stal hlavním centrem každodenního života – od budíku po bankovnictví\n- Mobilní internet 4G umožnil streamování videa, hudby i živé vysílání téměř odkudkoli\n- App Store a Google Play odstartovaly éru aplikací na míru pro práci, školu i volný čas\n- Vestavěné fotoaparáty proměnily telefon na nástroj pro dokumentování momentů v reálném čase\n- Dotykové ovládání, notifikace a biometrie nastavily nový standard uživatelského komfortu"
             },
-            "myspaceFacebook": {
-                "title": "📰 MySpace & Facebook mění sociální sítě",
-                "content": "Internet se změnil. Uživatelé už nejsou jen čtenáři – jsou tvůrci obsahu! Blogy, sociální sítě a sdílení obsahu změnily vše.",
-                "comments": "12"
+            "socialMedia": {
+                "title": "Sociální média a digitální komunikace",
+                "description": "- Sociální sítě změnily internet z pasivního čtení na nepřetržitou interakci mezi lidmi\n- Facebook, Instagram, X a TikTok vytvořily nové formy komunikace, zábavy i sebevyjádření\n- Stories, reels a krátká videa zrychlily tempo obsahu a posunuly pozornost uživatelů\n- Influencer marketing přetvořil reklamu na autentické doporučení od konkrétních osobností\n- Virální trendy dokázaly během hodin ovlivnit hudbu, módu, politiku i veřejnou debatu"
             },
-            "youtube": {
-                "title": "📹 YouTube: Revoluce videa",
-                "content": "Od garáže k miliardám zhlédnutí. YouTube změnil způsob, jakým konzumujeme média. Každou minutu se nahraje 10 hodin videa!",
-                "comments": "11"
-            },
-            "iphone": {
-                "title": "📱 iPhone představen!",
-                "content": "Apple právě představil revoluční zařízení. Je to iPod, telefon a internetové zařízení v jednom!",
-                "comments": "7"
-            },
-            "mouse": {
-                "title": "🖱️ Nová generace počítačových myší posouvá přesnost i pohodlí",
-                "content": "Moderní počítačové myši dnes přinášejí výrazně vyšší přesnost, rychlejší odezvu a lepší ergonomii než modely z let před rokem 2000. Díky pokročilým senzorům, bezdrátovým technologiím a novým materiálům se práce i hraní na počítači stává pohodlnější a přesnější než kdy dříve.",
-                "comments": "9"
-            },
-            "monitor": {
-                "title": "🖥️ Monitory nové generace přinášejí ostřejší obraz a větší pohodlí",
-                "content": "Moderní počítačové monitory dnes nabízejí výrazně vyšší rozlišení, lepší barvy a rychlejší obnovovací frekvence než modely před rokem 2000. Díky novým typům panelů a tenčím konstrukcím je práce i sledování médií příjemnější a obraz je mnohem ostřejší.",
-                "comments": "5"
-            },
-            "flashDrive": {
-                "title": "💾 Flash disky mění způsob ukládání dat",
-                "content": "Současné USB flash drive nabízejí mnohem větší kapacitu a rychlejší přenos dat než starší přenosná úložiště z doby před rokem 2000. Díky malým rozměrům a jednoduchému připojení přes USB umožňují snadno přenášet soubory mezi počítači a dalšími zařízeními.",
-                "comments": "8"
-            }
-        },
-        "sidebar": {
-            "profileName": "xXWebMasterXx",
-            "status": "Online právě teď",
-            "tagCloudTitle": "🏷️ Tag Cloud",
-            "tags": [
-                "Web 2.0",
-                "Ajax",
-                "RSS",
-                "Blog",
-                "Podcast",
-                "Wiki",
-                "Social",
-                "Mashup",
-                "API",
-                "Beta"
-            ],
-            "pollTitle": "📊 Anketa",
-            "pollDescription": "Nejlepší prohlížeč:",
-            "pollOptions": {
-                "firefox": "Firefox🦊",
-                "ie6": "IDE 6🔵",
-                "opera": "Opera🔴",
-                "safari": "Safari🧭"
+            "cloud": {
+                "title": "Cloud computing a online služby",
+                "description": "- Cloud přesunul data a výpočetní výkon z lokálních počítačů do online infrastruktury\n- Služby jako Google Drive, OneDrive nebo Dropbox zpřístupnily soubory odkudkoli během sekund\n- Webové aplikace nahradily část klasického softwaru a snížily závislost na instalaci programů\n- Týmová spolupráce v reálném čase (dokumenty, chaty, tabulky) zásadně zrychlila pracovní procesy\n- Synchronizace mezi telefonem, notebookem a tabletem vytvořila plynulý digitální ekosystém"
             }
         }
     }
