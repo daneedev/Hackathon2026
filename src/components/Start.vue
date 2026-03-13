@@ -5,7 +5,7 @@
                 <h1>Start</h1>
                 <div className="start-section">
                     <div class="run-cta">
-                        <img src="../assets/right-green-arrow.png">
+                        <img src="../../public/right-green-arrow.png">
                         <a href="">Run RetroNet.exe</a>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ main {
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
-    background-image: url(../assets/crt-monitor.png);
+    background-image: url(../../public/crt-monitor.png);
     background-size: cover;
 }
 .start-section {
