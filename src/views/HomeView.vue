@@ -44,130 +44,142 @@ const getHighlights = (key: string) => tm(key) as string[];
 </script>
 
 <template>
-  <section class="lang-switcher">
-    <Button
-      icon="fa-solid fa-globe"
-      :label="
-        locale === 'cs'
-          ? t('homepage.langSwitcher.toEn')
-          : t('homepage.langSwitcher.toCs')
-      "
-      :on-click="changeLocale"
-    />
-  </section>
-  <section class="hero-section">
-    <div class="hero-content">
-      <p class="hero-kicker">{{ t("homepage.heroKicker") }}</p>
-      <h1 class="hero-text">
-        {{ t("homepage.welcomeText") }} <br />
-        <TextGradient primaryColor="#3FA34D" secondaryColor="#137547">
-          {{ t("homepage.internet") }}
-        </TextGradient>
-      </h1>
-      <p class="hero-subtitle">
-        {{ t("homepage.heroSubtitle") }}
-      </p>
-      <div class="hero-actions">
-        <Button
-          icon="fa-solid fa-eye"
-          :label="t('homepage.heroButton')"
-          :on-click="goToTimeline"
-        />
+  <main>
+    <section class="lang-switcher">
+      <Button
+        icon="fa-solid fa-globe"
+        :label="
+          locale === 'cs'
+            ? t('homepage.langSwitcher.toEn')
+            : t('homepage.langSwitcher.toCs')
+        "
+        :on-click="changeLocale"
+      />
+    </section>
+    <section class="hero-section">
+      <div class="hero-content">
+        <p class="hero-kicker">{{ t("homepage.heroKicker") }}</p>
+        <h1 class="hero-text">
+          {{ t("homepage.welcomeText") }} <br />
+          <TextGradient primaryColor="#3FA34D" secondaryColor="#137547">
+            {{ t("homepage.internet") }}
+          </TextGradient>
+        </h1>
+        <p class="hero-subtitle">
+          {{ t("homepage.heroSubtitle") }}
+        </p>
+        <div class="hero-actions">
+          <Button
+            icon="fa-solid fa-eye"
+            :label="t('homepage.heroButton')"
+            :on-click="goToTimeline"
+          />
+        </div>
+        <div class="hero-stats">
+          <PreviewCard
+            :value="t('homepage.heroStats.erasValue')"
+            :label="t('homepage.heroStats.erasLabel')"
+          />
+          <PreviewCard
+            :value="t('homepage.heroStats.modelsValue')"
+            :label="t('homepage.heroStats.modelsLabel')"
+          />
+          <PreviewCard
+            :value="t('homepage.heroStats.exhibitsValue')"
+            :label="t('homepage.heroStats.exhibitsLabel')"
+          />
+        </div>
       </div>
-      <div class="hero-stats">
+      <aside
+        class="hero-preview"
+        :aria-label="t('homepage.heroPreview.ariaLabel')"
+      >
         <PreviewCard
-          :value="t('homepage.heroStats.erasValue')"
-          :label="t('homepage.heroStats.erasLabel')"
+          :value="t('homepage.heroPreview.ninetiesValue')"
+          :label="t('homepage.heroPreview.ninetiesLabel')"
         />
         <PreviewCard
-          :value="t('homepage.heroStats.modelsValue')"
-          :label="t('homepage.heroStats.modelsLabel')"
+          :value="t('homepage.heroPreview.twoThousandsValue')"
+          :label="t('homepage.heroPreview.twoThousandsLabel')"
         />
         <PreviewCard
-          :value="t('homepage.heroStats.exhibitsValue')"
-          :label="t('homepage.heroStats.exhibitsLabel')"
+          :value="t('homepage.heroPreview.twoTensValue')"
+          :label="t('homepage.heroPreview.twoTensLabel')"
         />
-      </div>
-    </div>
-    <aside
-      class="hero-preview"
-      :aria-label="t('homepage.heroPreview.ariaLabel')"
-    >
-      <PreviewCard
-        :value="t('homepage.heroPreview.ninetiesValue')"
-        :label="t('homepage.heroPreview.ninetiesLabel')"
-      />
-      <PreviewCard
-        :value="t('homepage.heroPreview.twoThousandsValue')"
-        :label="t('homepage.heroPreview.twoThousandsLabel')"
-      />
-      <PreviewCard
-        :value="t('homepage.heroPreview.twoTensValue')"
-        :label="t('homepage.heroPreview.twoTensLabel')"
-      />
-      <PreviewCard
-        :value="t('homepage.heroPreview.twoTwentiesValue')"
-        :label="t('homepage.heroPreview.twoTwentiesLabel')"
-      />
-    </aside>
-  </section>
-  <section id="timeline">
-    <Slider>
-      <SwiperSlide>
-        <Slide
-          :title="t('homepage.timeline.slide90s.title')"
-          :label="t('homepage.timeline.slide90s.label')"
-          :summary="t('homepage.timeline.slide90s.summary')"
-          :button-label="t('homepage.timeline.slide90s.buttonLabel')"
-          :on-button-click="openWeb90"
-          :highlights="getHighlights('homepage.timeline.slide90s.highlights')"
-          model-src="/models/CRT.glb"
-          :model-rotation="Math.PI - 0.5"
+        <PreviewCard
+          :value="t('homepage.heroPreview.twoTwentiesValue')"
+          :label="t('homepage.heroPreview.twoTwentiesLabel')"
         />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Slide
-          :title="t('homepage.timeline.slide2000s.title')"
-          :label="t('homepage.timeline.slide2000s.label')"
-          :summary="t('homepage.timeline.slide2000s.summary')"
-          :button-label="t('homepage.timeline.slide2000s.buttonLabel')"
-          :on-button-click="openWeb2000"
-          :highlights="getHighlights('homepage.timeline.slide2000s.highlights')"
-          model-src="/models/TV.glb"
-          :model-rotation="Math.PI + 1.25"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Slide
-          :title="t('homepage.timeline.slide2010s.title')"
-          :label="t('homepage.timeline.slide2010s.label')"
-          :summary="t('homepage.timeline.slide2010s.summary')"
-          :highlights="getHighlights('homepage.timeline.slide2010s.highlights')"
-          :button-label="t('homepage.timeline.slide2010s.buttonLabel')"
-          :on-button-click="openWeb2010"
-          model-src="/models/Phone.glb"
-          :model-rotation="Math.PI * 2"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Slide
-          :title="t('homepage.timeline.slidePresent.title')"
-          :label="t('homepage.timeline.slidePresent.label')"
-          :summary="t('homepage.timeline.slidePresent.summary')"
-          :highlights="
-            getHighlights('homepage.timeline.slidePresent.highlights')
-          "
-          :button-label="t('homepage.timeline.slidePresent.buttonLabel')"
-          :on-button-click="openWeb2020"
-          model-src="/models/headset.glb"
-          :model-rotation="Math.PI"
-        />
-      </SwiperSlide>
-    </Slider>
-  </section>
+      </aside>
+    </section>
+    <section id="timeline">
+      <Slider>
+        <SwiperSlide>
+          <Slide
+            :title="t('homepage.timeline.slide90s.title')"
+            :label="t('homepage.timeline.slide90s.label')"
+            :summary="t('homepage.timeline.slide90s.summary')"
+            :button-label="t('homepage.timeline.slide90s.buttonLabel')"
+            :on-button-click="openWeb90"
+            :highlights="getHighlights('homepage.timeline.slide90s.highlights')"
+            model-src="/models/CRT.glb"
+            :model-rotation="Math.PI - 0.5"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Slide
+            :title="t('homepage.timeline.slide2000s.title')"
+            :label="t('homepage.timeline.slide2000s.label')"
+            :summary="t('homepage.timeline.slide2000s.summary')"
+            :button-label="t('homepage.timeline.slide2000s.buttonLabel')"
+            :on-button-click="openWeb2000"
+            :highlights="
+              getHighlights('homepage.timeline.slide2000s.highlights')
+            "
+            model-src="/models/TV.glb"
+            :model-rotation="Math.PI + 1.25"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Slide
+            :title="t('homepage.timeline.slide2010s.title')"
+            :label="t('homepage.timeline.slide2010s.label')"
+            :summary="t('homepage.timeline.slide2010s.summary')"
+            :highlights="
+              getHighlights('homepage.timeline.slide2010s.highlights')
+            "
+            :button-label="t('homepage.timeline.slide2010s.buttonLabel')"
+            :on-button-click="openWeb2010"
+            model-src="/models/Phone.glb"
+            :model-rotation="Math.PI * 2"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Slide
+            :title="t('homepage.timeline.slidePresent.title')"
+            :label="t('homepage.timeline.slidePresent.label')"
+            :summary="t('homepage.timeline.slidePresent.summary')"
+            :highlights="
+              getHighlights('homepage.timeline.slidePresent.highlights')
+            "
+            :button-label="t('homepage.timeline.slidePresent.buttonLabel')"
+            :on-button-click="openWeb2020"
+            model-src="/models/headset.glb"
+            :model-rotation="Math.PI"
+          />
+        </SwiperSlide>
+      </Slider>
+    </section>
+  </main>
 </template>
 
 <style scoped>
+main {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Archivo", sans-serif;
+  min-height: 100vh;
+}
 .hero-section {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
