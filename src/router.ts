@@ -5,6 +5,21 @@ import Web0s from "./web0s.vue";
 
 const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior(to, _from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+
+    if (to.hash) {
+      return {
+        el: to.hash,
+        top: 16,
+        behavior: "smooth",
+      };
+    }
+
+    return { top: 0, left: 0 };
+  },
   routes: [
     {
       path: "/",
