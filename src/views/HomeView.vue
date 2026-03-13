@@ -29,6 +29,9 @@ const openWeb2020 = () => {
   router.push("/web2020");
 };
 
+const openWeb2010 = () => {
+  router.push("/web2010");
+};
 function changeLocale() {
   if (locale.value === "cs") {
     locale.value = "en";
@@ -141,6 +144,7 @@ const getHighlights = (key: string) => tm(key) as string[];
           :summary="t('homepage.timeline.slide2010s.summary')"
           :highlights="getHighlights('homepage.timeline.slide2010s.highlights')"
           :button-label="t('homepage.timeline.slide2010s.buttonLabel')"
+          :on-button-click="openWeb2010"
           model-src="/models/Phone.glb"
           :model-rotation="Math.PI * 2"
         />

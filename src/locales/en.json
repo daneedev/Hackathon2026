@@ -77,5 +77,36 @@
                 ]
             }
         }
+    },
+    "web90s": {
+        "underConstruction": "🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧",
+        "sidebar": {
+            "navigationTitle": "Navigation:",
+            "home": "Home page",
+            "mouse": "Mouse",
+            "monitor": "Monitor",
+            "floppy": "Floppy disk",
+            "visitors": "Visitors:",
+            "badgePrefix": "🏆 Best viewed with",
+            "badgeBrowser": "Netscape Navigator"
+        },
+        "welcomeTitle": "🌐 Internet in the 90s 🌐",
+        "infoText": "The 1990s were a turning point for technology. Personal computers began appearing in homes, the internet started connecting people across the world, and many devices we still use today began to take shape. Technologies were slower and less powerful than today, but they brought revolutionary possibilities - e-mail, web browsing, and digital communication. This exhibition takes you back to the era when the internet was just beginning to grow. Discover the devices and technologies that shaped the digital world of the 90s.",
+        "exhibitionTitle": "Exhibits",
+        "exhibits": {
+            "mouse": {
+                "title": "Computer Mouse",
+                "description": "A 90s computer mouse was a basic tool for interacting with a computer. At that time, mice were often equipped with a ball that rotated while moving and transmitted movement data to the computer. These mice usually had two or three buttons, and sometimes a wheel for scrolling. They were essential for navigating graphical user interfaces and allowed users to control their computers more easily."
+            },
+            "monitor": {
+                "title": "Monitor",
+                "description": "Computer monitors in the 90s were large and heavy CRT screens (cathode-ray tubes). They looked similar to old televisions and could weigh more than 15 kilograms. They had lower resolution than modern displays and sometimes flickered slightly. Even so, they enabled colorful graphical interfaces, games, and the first web pages."
+            },
+            "floppy": {
+                "title": "Floppy Disk",
+                "description": "The floppy disk (most commonly 3.5-inch) was a common medium in the 90s for storing and transferring data. It had a capacity of 1.44 MB, enough for documents, small programs, or saved game files. It was also used for software installation and file transfer between computers. Although practical, it was sensitive to physical damage and magnetic fields."
+            }
+        }
     }
 }
+    
