@@ -35,20 +35,20 @@ main {
     justify-content: center;
     width: 15em;
     height: 10em;
-    border: 1px solid green;
+    border: 1px solid var(--primary-color);
     background-color: black;
-    color: green;
+    color: var(--primary-color);
 }
 .start h1 {
     font-size: 1.5em;
-    background-color: green;
+    background-color: var(--primary-color);
     color: black;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 .start a {
-    color: green;
+    color: var(--primary-color);
     text-decoration: none;
 }
 .run-cta {

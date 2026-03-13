@@ -6,12 +6,27 @@
     --primary-color: #3FA34D;
 }
 
+html,
 body {
-  background-color: var(--bg-color);
+  cursor: url("/cursor-32.png") 3 3, auto;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+[role="button"] {
+  cursor: url("/cursor-32.png") 3 3, pointer;
+}
+
+body {
+background-color: var(--bg-color);
   color: var(--text-color);
   font-family: "Archivo", sans-serif;
   min-height: 100vh;
 }
+
 a {
   color: var(--text-color);
   text-decoration: none;

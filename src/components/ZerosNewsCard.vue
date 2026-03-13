@@ -1,0 +1,56 @@
+<template>
+    <section class="news-card">
+        <p>{{title}}</p>
+        <p>{{content}}</p>
+        <div class="buttons">
+        <a class="readMore">Číst dál →</a>
+        <p class="comments">💬 {{comments}} Komentářů</p>
+        </div>
+        <img :src="img">
+    </section>
+</template>
+<script setup lang="ts">
+const props = defineProps<{
+    title: string;
+    content: string;
+    comments: string;
+    img: string;
+}>();
+</script>
+<style scoped lang="css">
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+.btn
+{
+  display: flex;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  background: linear-gradient(#014cfc, #0198fc);
+  color: white;
+}
+.buttons{
+  display: flex;
+  gap: 1em;
+}
+.news-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  background-color: white;
+}
+.news-card p:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.readMore {
+  color: #0198fc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.comments {
+  color: #777;
+}
+</style>
