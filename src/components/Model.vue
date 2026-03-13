@@ -13,6 +13,7 @@ const container = ref(null);
 const props = defineProps({
   modelSrc: String,
   rotation: Number,
+  scale: Number,
 });
 
 onMounted(() => {
@@ -71,6 +72,8 @@ onMounted(() => {
 
   loader.load(props.modelSrc, (gltf) => {
     gltf.scene.rotation.y = props.rotation;
+    const modelScale = props.scale ?? 1;
+    gltf.scene.scale.setScalar(modelScale);
 
     scene.add(gltf.scene);
   });
