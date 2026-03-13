@@ -54,10 +54,6 @@ const props = defineProps<{
         }
     }
 
-    article section :deep(.viewer) {
-        height: 100%;
-    }
-
     @media (max-width: 900px) {
         article section {
             flex-direction: column;
