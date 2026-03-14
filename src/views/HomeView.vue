@@ -8,11 +8,14 @@ import Slide from "../components/Slide.vue";
 import PreviewCard from "../components/PreviewCard.vue";
 import "../assets/main.css";
 import { useI18n } from "vue-i18n";
+import { useSoundPlayer } from "../composables/useSoundPlayer";
 const { t, tm } = useI18n();
+const { playSound } = useSoundPlayer();
 
 const router = useRouter();
 
 const goToTimeline = () => {
+  playSound("/sounds/whoosh.mp3", 4.5, 4.7);
   document.getElementById("timeline")?.scrollIntoView({
     behavior: "smooth",
     block: "start",
@@ -20,16 +23,20 @@ const goToTimeline = () => {
 };
 
 const openWeb90 = () => {
+  playSound("/sounds/mouse-click.mp3", 0.7, 0.9);
   router.push("/web90");
 };
 const openWeb2000 = () => {
+  playSound("/sounds/mouse-click.mp3", 0.7, 0.9);
   router.push("/web2000");
 };
 const openWeb2020 = () => {
+  playSound("/sounds/mouse-click.mp3", 0.7, 0.9);
   router.push("/web2020");
 };
 
 const openWeb2010 = () => {
+  playSound("/sounds/mouse-click.mp3", 0.7, 0.9);
   router.push("/web2010");
 };
 
