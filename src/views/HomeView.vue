@@ -48,6 +48,13 @@ const getHighlights = (key: string) => tm(key) as string[];
     <section class="hero-section">
       <div class="hero-content">
         <p class="hero-kicker">{{ t("homepage.heroKicker") }}</p>
+        <vue-typed-js
+          :strings="[t('homepage.heroTitle')]"
+          :type-speed="50"
+          :cursor-char="'|'"
+          class="hero-text"
+        />
+
         <h1 class="hero-text">
           {{ t("homepage.welcomeText") }} <br />
           <TextGradient primaryColor="#3FA34D" secondaryColor="#137547">

@@ -2,6 +2,18 @@
 import { RouterLink } from "vue-router";
 import { useI18n } from "vue-i18n";
 import ExhibitCard from "../components/exhibitCard.vue";
+import { onMounted } from "vue";
+import { useSoundPlayer } from "../composables/useSoundPlayer";
+
+const { playSound } = useSoundPlayer();
+
+onMounted(() => {
+  playSound("/sounds/modem.mp3", 5, 12);
+});
+
+function playClickSound() {
+  playSound("/sounds/mouse-click.mp3", 0.7, 0.9);
+}
 
 const { t } = useI18n();
 </script>
@@ -15,10 +27,18 @@ const { t } = useI18n();
     <aside class="sidebar">
       <h2>{{ t("web90s.sidebar.navigationTitle") }}</h2>
       <nav>
-        <RouterLink to="/">{{ t("web90s.sidebar.home") }}</RouterLink>
-        <a href="#mouse">{{ t("web90s.sidebar.mouse") }}</a>
-        <a href="#monitor">{{ t("web90s.sidebar.monitor") }}</a>
-        <a href="#floppy">{{ t("web90s.sidebar.floppy") }}</a>
+        <RouterLink @click="playClickSound" to="/">{{
+          t("web90s.sidebar.home")
+        }}</RouterLink>
+        <a href="#mouse" @click="playClickSound">{{
+          t("web90s.sidebar.mouse")
+        }}</a>
+        <a href="#monitor" @click="playClickSound">{{
+          t("web90s.sidebar.monitor")
+        }}</a>
+        <a href="#floppy" @click="playClickSound">{{
+          t("web90s.sidebar.floppy")
+        }}</a>
       </nav>
 
       <div class="counterBox">

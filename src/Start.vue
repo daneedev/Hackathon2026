@@ -21,8 +21,12 @@ const emit = defineEmits<{
   (event: "enter"): void;
 }>();
 
+import { useSoundPlayer } from "./composables/useSoundPlayer";
+const { playSound } = useSoundPlayer();
+
 function enterWebsite() {
   emit("enter");
+  playSound("/sounds/whoosh.mp3", 4.6, 4.8);
 }
 </script>
 
