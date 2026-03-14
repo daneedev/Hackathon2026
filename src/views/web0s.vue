@@ -102,10 +102,22 @@ const getTags = () => tm("web0s.sidebar.tags") as string[];
           <p class="poll-title">{{ t("web0s.sidebar.pollTitle") }}</p>
           <p class="poll-desc">{{ t("web0s.sidebar.pollDescription") }}</p>
           <div class="stats">
-            <percentageBar :title="t('web0s.sidebar.pollOptions.firefox')" :percentage="45" />
-            <percentageBar :title="t('web0s.sidebar.pollOptions.ie6')" :percentage="30" />
-            <percentageBar :title="t('web0s.sidebar.pollOptions.opera')" :percentage="15" />
-            <percentageBar :title="t('web0s.sidebar.pollOptions.safari')" :percentage="10" />
+            <percentageBar
+              :title="t('web0s.sidebar.pollOptions.firefox')"
+              :percentage="45"
+            />
+            <percentageBar
+              :title="t('web0s.sidebar.pollOptions.ie6')"
+              :percentage="30"
+            />
+            <percentageBar
+              :title="t('web0s.sidebar.pollOptions.opera')"
+              :percentage="15"
+            />
+            <percentageBar
+              :title="t('web0s.sidebar.pollOptions.safari')"
+              :percentage="10"
+            />
           </div>
         </section>
       </aside>
