@@ -68,6 +68,7 @@ import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import Badge from "../components/Badge.vue";
 import TextGradient from "../components/TextGradient.vue";
+import "../assets/animations.css";
 
 type WebBadge = {
   label: string;
@@ -125,6 +126,7 @@ main {
   background-color: rgba(73, 184, 243, 0.12);
   transition: transform 150ms ease;
   cursor: pointer;
+  animation: fadeInLeft 0.8s ease;
 }
 
 .back-button:hover,
@@ -158,12 +160,14 @@ main {
   font-size: 3rem;
   font-family: "Archivo Black", sans-serif;
   line-height: 1.05;
+  animation: fadeInDown 0.8s ease;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   color: #a5a5a5;
   max-width: 56ch;
+  animation: fadeInUp 0.8s ease;
 }
 
 .hero-kicker {
@@ -173,6 +177,7 @@ main {
   font-size: 0.8rem;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
+  animation: fadeInLeft 0.8s ease;
 }
 
 .grid-container {
@@ -187,6 +192,7 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 1rem;
+  animation: fadeInDown 0.8s ease;
 }
 
 .grid-double {
