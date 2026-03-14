@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue"
 
+const AUDIO_START_TIME = 5
+
 const emit = defineEmits(["complete"])
 
 const step = ref(0)
@@ -29,8 +31,17 @@ onMounted(() => {
   const audio = audioEl.value
   if (audio) {
     audio.volume = 0.3
-    audio.currentTime = 5
-    void audio.play().catch(() => {})
+
+    const startAudio = () => {
+      audio.currentTime = AUDIO_START_TIME
+      void audio.play().catch(() => {})
+    }
+
+    if (audio.readyState >= 1) {
+      startAudio()
+    } else {
+      audio.addEventListener("loadedmetadata", startAudio, { once: true })
+    }
   }
 
   timers = messages.map((_, i) =>
@@ -58,7 +69,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-<audio ref="audioEl" src="/sounds/modem.mp3#t=5,9.2"></audio>
+<audio ref="audioEl" src="/sounds/modem.mp3"></audio>
   <div class="dialup-overlay">
     <div class="dialup-window dialup-open">
 
