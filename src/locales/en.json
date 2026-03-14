@@ -447,6 +447,10 @@
                     "title": "AI agents and multimodal models"
                 }
             ]
+        },
+        "headsetExhibit": {
+            "title": "Immersive Headsets and the Spatial Web",
+            "description": "Modern headsets combine VR, AR, and mixed reality into one device, moving the internet from flat pages into interactive 3D spaces. They are used in gaming, design workflows, education, virtual events, and remote collaboration, where people can share the same digital scene in real time. This is one of the defining trends of the 2020s: online experiences feel less like browsing and more like presence."
         }
     }
 }

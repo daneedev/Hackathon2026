@@ -59,6 +59,15 @@
           </li>
         </ul>
       </section>
+      <section class="modelContainer">
+      <exhibitCard10s
+      :title="t('web20s.headsetExhibit.title')"
+      :description="t('web20s.headsetExhibit.description')"
+      model-src="./models/headset.glb"
+      :rotation="Math.PI"
+      :scale="1"
+      />
+      </section>
     </section>
   </main>
 </template>
@@ -69,6 +78,7 @@ import { useI18n } from "vue-i18n";
 import Badge from "../components/Badge.vue";
 import TextGradient from "../components/TextGradient.vue";
 import "../assets/animations.css";
+import exhibitCard10s from "../components/exhibitCard10s.vue";
 
 type WebBadge = {
   label: string;
@@ -186,6 +196,14 @@ main {
   gap: 2rem;
   padding: 0 2rem;
   margin: 1rem 0;
+}
+
+.modelContainer {
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.05);

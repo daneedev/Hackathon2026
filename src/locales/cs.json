@@ -447,6 +447,10 @@
                     "title": "AI agenti a multimodální modely"
                 }
             ]
+        },
+        "headsetExhibit": {
+            "title": "Imerzivní headsety a prostorový web",
+            "description": "Moderní headsety spojují VR, AR i mixed reality do jednoho zařízení a posouvají internet z plochých stránek do interaktivních 3D prostorů. Využívají se ve hrách, designu, vzdělávání, virtuálních akcích i vzdálené spolupráci, kde mohou uživatelé sdílet stejnou digitální scénu v reálném čase. Jde o jeden z klíčových trendů 20. let: online prostředí se mění z pouhého prohlížení na skutečný pocit přítomnosti."
         }
     }
 }
