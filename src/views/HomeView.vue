@@ -14,6 +14,7 @@ import DialupLoading from "../components/DialupLoading.vue";
 import { useCursorEffects } from "../composables/useCursorEffects";
 const { t, tm } = useI18n();
 const { playSound } = useSoundPlayer();
+import "../assets/animations.css";
 
 const { trailCanvas, cursorStyle } = useCursorEffects();
 void trailCanvas;
@@ -56,7 +57,7 @@ const getHighlights = (key: string) => tm(key) as string[];
 </script>
 
 <template>
-    <DialupLoading v-if="loading" @complete="done" />
+  <DialupLoading v-if="loading" @complete="done" />
   <main :style="cursorStyle">
     <div class="cursor-glow" aria-hidden="true"></div>
     <canvas ref="trailCanvas" class="cursor-trail" aria-hidden="true"></canvas>
@@ -237,12 +238,14 @@ main {
   letter-spacing: 0.14em;
   font-size: 0.8rem;
   margin-bottom: 0.75rem;
+  animation: fadeInLeft 0.8s ease-out;
 }
 
 .hero-text {
   font-size: clamp(2.2rem, 6vw, 4.25rem);
   font-family: "Archivo Black", sans-serif;
   line-height: 1.05;
+  animation: fadeInDown 0.8s ease-out;
 }
 
 .hero-subtitle {
@@ -250,6 +253,7 @@ main {
   color: #a5a5a5;
   margin: 1rem 0 1.25rem;
   max-width: 56ch;
+  animation: fadeInDown 0.8s ease-out;
 }
 
 .hero-actions {
@@ -263,12 +267,14 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  animation: fadeInLeft 0.8s ease-out;
 }
 
 .hero-preview {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
+  animation: fadeInDown 0.8s ease-out;
 }
 
 #timeline {
