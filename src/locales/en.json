@@ -189,6 +189,10 @@
             "floppy": {
                 "title": "Floppy Disk",
                 "description": "The floppy disk (most commonly 3.5-inch) was a common medium in the 90s for storing and transferring data. It had a capacity of 1.44 MB, enough for documents, small programs, or saved game files. It was also used for software installation and file transfer between computers. Although practical, it was sensitive to physical damage and magnetic fields."
+            },
+            "javascript": {
+                "title": "The Release of JavaScript",
+                "description": "JavaScript was introduced in 1995 at Netscape, and Brendan Eich built its first version in roughly ten days. The language was first called Mocha, then LiveScript, and it was renamed JavaScript largely because Java was extremely popular at the time. Its main purpose was to bring interactivity to web pages, such as click reactions, simple form validation, and changing content without relying only on HTML. In the 90s it laid the groundwork for the modern frontend and became one of the most influential languages on the internet."
             }
         }
     },
