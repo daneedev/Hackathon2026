@@ -110,6 +110,16 @@ function playClickSound() {
   --primary-dark: #2980b9;
   --header-text: #ffffff;
 }
+.exhibitsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+#first-exhibit {
+    text-align: center;
+    margin: 2rem;
+}
 a {
   text-decoration: none;
   font-weight: 600;
