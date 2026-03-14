@@ -134,6 +134,32 @@
                 "title": "Cloud Computing and Online Services",
                 "description": "- The cloud moved data storage and computing power from local machines to online infrastructure\n- Services like Google Drive, OneDrive, and Dropbox made files accessible from anywhere in seconds\n- Web apps replaced part of traditional software and reduced the need for local installations\n- Real-time collaboration (documents, chats, spreadsheets) dramatically sped up team workflows\n- Synchronization across phone, laptop, and tablet created a seamless digital ecosystem"
             }
+        },
+        "milestones": {
+            "title": "Milestones of the 2010s",
+            "intro": "A quick look at the events that most strongly reshaped how people used the internet during the decade.",
+            "items": {
+                "2010": {
+                    "year": "2010",
+                    "title": "Instagram and mobile photo culture",
+                    "description": "Photo sharing shifted to phones, and social content started to be created primarily on mobile."
+                },
+                "2012": {
+                    "year": "2012",
+                    "title": "Rise of 4G networks",
+                    "description": "Faster mobile internet accelerated video content, real-time maps, and cloud-powered apps."
+                },
+                "2016": {
+                    "year": "2016",
+                    "title": "Live streaming boom",
+                    "description": "Live video on social platforms made real-time broadcasting accessible to everyday users and brands."
+                },
+                "2019": {
+                    "year": "2019",
+                    "title": "Short videos become the main format",
+                    "description": "Vertical short-form videos started to dominate feeds and changed how people discover new content."
+                }
+            }
         }
     },
     "web0s": {

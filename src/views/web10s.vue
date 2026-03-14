@@ -97,6 +97,32 @@ function playClickSound() {
           />
         </article>
       </section>
+      <section class="milestonesSection">
+        <h2>{{ t("web10s.milestones.title") }}</h2>
+        <p class="milestonesIntro">{{ t("web10s.milestones.intro") }}</p>
+        <article class="milestonesGrid">
+          <div class="milestoneCard">
+            <span class="milestoneYear">{{ t("web10s.milestones.items.2010.year") }}</span>
+            <h3>{{ t("web10s.milestones.items.2010.title") }}</h3>
+            <p>{{ t("web10s.milestones.items.2010.description") }}</p>
+          </div>
+          <div class="milestoneCard">
+            <span class="milestoneYear">{{ t("web10s.milestones.items.2012.year") }}</span>
+            <h3>{{ t("web10s.milestones.items.2012.title") }}</h3>
+            <p>{{ t("web10s.milestones.items.2012.description") }}</p>
+          </div>
+          <div class="milestoneCard">
+            <span class="milestoneYear">{{ t("web10s.milestones.items.2016.year") }}</span>
+            <h3>{{ t("web10s.milestones.items.2016.title") }}</h3>
+            <p>{{ t("web10s.milestones.items.2016.description") }}</p>
+          </div>
+          <div class="milestoneCard">
+            <span class="milestoneYear">{{ t("web10s.milestones.items.2019.year") }}</span>
+            <h3>{{ t("web10s.milestones.items.2019.title") }}</h3>
+            <p>{{ t("web10s.milestones.items.2019.description") }}</p>
+          </div>
+        </article>
+      </section>
     </article>
   </main>
 </template>
@@ -128,11 +154,13 @@ a {
 main {
   background-color: var(--page-bg);
   font-family: "Open Sans", sans-serif;
+  cursor: default;
 }
 nav {
   background-color: #2c3e50;
   color: #ffffff;
   font-family: "Open Sans", sans-serif;
+  cursor: default;
 }
 nav header {
   display: flex;
@@ -255,6 +283,57 @@ nav header section:has(a:nth-child(4):focus-visible)::after {
   background-color: #354b63;
   border-color: #4e6987;
 }
+
+.milestonesSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.milestonesSection h2 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+}
+
+.milestonesIntro {
+  text-align: center;
+  color: #4f657a;
+  margin: 0 auto 1.5rem;
+  max-width: 740px;
+}
+
+.milestonesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.milestoneCard {
+  background-color: #2C3E50;
+  border: 1px solid #d4dce3;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.milestoneYear {
+  display: inline-block;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.4rem;
+}
+
+.milestoneCard h3 {
+  margin: 0 0 0.45rem;
+  color: #ffffff;
+}
+
+.milestoneCard p {
+  margin: 0;
+  color: #dcdcdc;
+  line-height: 1.45;
+}
+
 @media (max-width: 750px) {
   nav header {
     justify-content: space-between;
@@ -284,6 +363,10 @@ nav header section:has(a:nth-child(4):focus-visible)::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .milestonesGrid {
+    grid-template-columns: 1fr;
   }
 }
 </style>

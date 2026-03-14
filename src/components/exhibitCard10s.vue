@@ -41,6 +41,7 @@ const props = defineProps<{
 .exhibit-card {
     width: 70%;
     border: none;
+    border-radius: 4px;
     box-shadow: none;
     padding: 1.5rem 1.5rem;
     background-color: #2C3E50;
