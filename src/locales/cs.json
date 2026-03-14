@@ -189,6 +189,10 @@
             "floppy": {
                 "title": "Disketa",
                 "description": "Disketa (nejčastěji 3,5palcová) byla v 90. letech běžným médiem pro ukládání a přenos dat. Měla kapacitu 1,44 MB, takže se na ni vešly dokumenty, menší programy nebo uložené pozice ve hrách. Používala se také pro instalaci software a přenos souborů mezi počítači. Přestože byla praktická, byla citlivá na poškození a magnetické pole."
+            },
+            "javascript": {
+                "title": "Vydání jazyku JavaScript",
+                "description": "JavaScript vznikl v roce 1995 ve společnosti Netscape a Brendan Eich jeho první verzi vytvořil přibližně během deseti dnů. Původně se jazyk jmenoval Mocha, krátce poté LiveScript, a název JavaScript dostal hlavně kvůli tehdejší popularitě Javy. Jeho hlavním úkolem bylo přidat do webových stránek interaktivitu, například reakce na kliknutí, jednoduché formulářové kontroly nebo měnící se obsah bez nutnosti vytvářet vše jen v HTML. Právě v 90. letech tak položil základy moderního frontendu a stal se jedním z nejvlivnějších jazyků internetu."
             }
         }
     },

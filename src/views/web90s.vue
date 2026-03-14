@@ -89,6 +89,11 @@ const { t } = useI18n();
             :rotation="Math.PI - 0.5"
             :scale="0.2"
           />
+          <ExhibitCard
+            id="javascript"
+            :title="t('web90s.exhibits.javascript.title')"
+            :description="t('web90s.exhibits.javascript.description')"
+          />
         </section>
       </article>
     </main>
