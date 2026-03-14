@@ -196,7 +196,7 @@ header a {
   padding: 1rem;
   background-color: white;
 }
-.news-card p:first-child {
+.news-card h1 {
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -259,5 +259,68 @@ aside {
 .stats {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 320px) and (max-width: 680px)
+{
+  header{
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .header-content{
+    width: 100%;
+  }
+  .logo{
+    font-size: 1.25rem;
+    display: flex;
+  }
+  .header-navigations
+  {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .header-content button{
+    font-size: 0.75rem;
+  }
+  main{
+    width: 100%;
+  }
+  .news-card p:first-child{
+    font-size: 1.25rem;
+  }
+  .news-card{
+    font-size: 0.75rem;
+  }
+  .nav-btn
+  {
+    width: 3rem;
+  }
+  aside p, div{
+    font-size: 0.5rem;
+  }
+  .tags .tag p{
+    font-size: 0.5rem;
+  }
+}
+@media (min-width: 681px) and (max-width: 1100px)
+{
+  header{
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .header-content{
+    width: 100%;
+  }
+  .header-navigations
+  {
+    display: flex;
+    justify-content: flex-end;
+  }
+  main{
+    width: 100%;
+  }
+  .nav-btn
+  {
+    width: 5rem;
+  }
 }
 </style>
