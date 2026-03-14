@@ -128,6 +128,40 @@
             }
         }
     },
+    "start": {
+        "kicker": "Entry terminal",
+        "title": "Boot the internet museum",
+        "description": "Before entering the exhibition, visitors tune into four digital eras of the internet, from modem noise and CRT screens to today's AI tools and permanently connected web.",
+        "commandLabel": "Launch command",
+        "runButton": "Run RetroNet.exe",
+        "note": "Run RetroNet.exe to enter the exhibition and step through the key moments that shaped the internet.",
+        "arrowAlt": "Arrow pointing at the launch command",
+        "previewLabel": "Exhibition preview",
+        "footerStatus": "Museum boot sequence",
+        "tags": {
+            "timeline": "Evolution timeline",
+            "models": "3D exhibits",
+            "atmosphere": "Period atmosphere"
+        },
+        "eras": {
+            "nineties": {
+                "label": "First connections",
+                "description": "Modem screeches, CRT screens, and a web that is only beginning to speak to a mass audience."
+            },
+            "twoThousands": {
+                "label": "The everyday web",
+                "description": "Broadband, forums, and major platforms turn the internet into an ordinary part of daily life."
+            },
+            "twoTens": {
+                "label": "Mobile dominance",
+                "description": "Content moves into our pockets, social networks expand their influence, and streaming becomes standard."
+            },
+            "twoTwenties": {
+                "label": "The AI present",
+                "description": "A fast, connected, algorithm-driven web creates new possibilities and new questions at the same time."
+            }
+        }
+    },
     "web90s": {
         "underConstruction": "🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧",
         "sidebar": {

@@ -81,7 +81,7 @@ function playClickSound() {
           :content="t('web0s.news.iphone.content')"
           :comments="t('web0s.news.iphone.comments')"
           modelSrc="/models/cell-phone.glb"
-          :rotation="Math.PI + 2"
+          :rotation="2.2"
           :scale="1"
           :learnMore="t('web0s.news.iphone.learnMore')"
           :commentsTitle="t('web0s.news.iphone.commentsTitle')"
@@ -160,12 +160,24 @@ function playClickSound() {
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap");
 @import "../assetts/reset.css";
 
+a,
+button,
+input,
+select,
+textarea,
+[role="button"] {
+  cursor:
+    url("/cursor2000r.png") 3 3,
+    pointer;
+}
+
 .container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(225, 225, 225);
+  cursor: url("/cursor2000r.png") 3 3, auto;
 }
 header {
   font-family: "Inter", sans-serif;
