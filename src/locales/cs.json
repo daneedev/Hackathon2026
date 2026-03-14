@@ -21,15 +21,15 @@
             "exhibitsLabel": "modelů a exponátů"
         },
         "heroPreview": {
-            "ariaLabel": "Nahled er",
+            "ariaLabel": "Náhled",
             "ninetiesValue": "90. léta",
             "ninetiesLabel": "CRT, modem, první komunity.",
             "twoThousandsValue": "2000s",
-            "twoThousandsLabel": "Broadband, fora, socialni boom.",
+            "twoThousandsLabel": "Broadband, fóra, sociální boom.",
             "twoTensValue": "2010s",
             "twoTensLabel": "Smartphony a streaming kultura.",
             "twoTwentiesValue": "2020s",
-            "twoTwentiesLabel": "AI nastroje a hyper-propojeny web."
+            "twoTwentiesLabel": "AI nástroje a hyper-propojený web."
         },
         "timeline": {
             "slide90s": {
@@ -50,8 +50,8 @@
                 "buttonLabel": "Prozkoumat web 2000. let",
                 "highlights": [
                     "Nástup broadbandu a Wi-Fi",
-                    "Blogy, fora a záčatky sociálních siti",
-                    "YouTube, Wikipedia a první viralní obsah"
+                    "Blogy, fóra a záčatky sociálních sítí",
+                    "YouTube, Wikipedia a první virální obsah"
                 ]
             },
             "slide2010s": {
