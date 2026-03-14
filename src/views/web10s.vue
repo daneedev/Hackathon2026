@@ -36,6 +36,11 @@ const { playSound } = useSoundPlayer();
 function playClickSound() {
   playSound("/sounds/mouse-click.mp3", 0.7, 0.9);
 }
+
+function handleHeroCta() {
+  playClickSound();
+  goToFirstExhibit();
+}
 </script>
 
 <template>
@@ -45,7 +50,7 @@ function playClickSound() {
         class="hamburger"
         type="button"
         :aria-expanded="isMenuOpen"
-        aria-label="Toggle navigation"
+        :aria-label="t('web10s.nav.toggleMenu')"
         @click="toggleMenu"
       >
         ☰
@@ -71,7 +76,9 @@ function playClickSound() {
       <section class="heroSection">
         <h1>{{ t("web10s.hero.title") }}</h1>
         <p>{{ t("web10s.hero.subtitle") }}</p>
-        <div @click="goToFirstExhibit">{{ t("web10s.hero.cta") }}</div>
+        <button type="button" class="hero-cta" @click="handleHeroCta">
+          {{ t("web10s.hero.cta") }}
+        </button>
       </section>
       <section class="exhibitsSection">
         <h1 id="first-exhibit">{{ t("web10s.exhibitionTitle") }}</h1>
@@ -102,22 +109,30 @@ function playClickSound() {
         <p class="milestonesIntro">{{ t("web10s.milestones.intro") }}</p>
         <article class="milestonesGrid">
           <div class="milestoneCard">
-            <span class="milestoneYear">{{ t("web10s.milestones.items.2010.year") }}</span>
+            <span class="milestoneYear">{{
+              t("web10s.milestones.items.2010.year")
+            }}</span>
             <h3>{{ t("web10s.milestones.items.2010.title") }}</h3>
             <p>{{ t("web10s.milestones.items.2010.description") }}</p>
           </div>
           <div class="milestoneCard">
-            <span class="milestoneYear">{{ t("web10s.milestones.items.2012.year") }}</span>
+            <span class="milestoneYear">{{
+              t("web10s.milestones.items.2012.year")
+            }}</span>
             <h3>{{ t("web10s.milestones.items.2012.title") }}</h3>
             <p>{{ t("web10s.milestones.items.2012.description") }}</p>
           </div>
           <div class="milestoneCard">
-            <span class="milestoneYear">{{ t("web10s.milestones.items.2016.year") }}</span>
+            <span class="milestoneYear">{{
+              t("web10s.milestones.items.2016.year")
+            }}</span>
             <h3>{{ t("web10s.milestones.items.2016.title") }}</h3>
             <p>{{ t("web10s.milestones.items.2016.description") }}</p>
           </div>
           <div class="milestoneCard">
-            <span class="milestoneYear">{{ t("web10s.milestones.items.2019.year") }}</span>
+            <span class="milestoneYear">{{
+              t("web10s.milestones.items.2019.year")
+            }}</span>
             <h3>{{ t("web10s.milestones.items.2019.title") }}</h3>
             <p>{{ t("web10s.milestones.items.2019.description") }}</p>
           </div>
@@ -143,8 +158,8 @@ function playClickSound() {
   gap: 2rem;
 }
 #first-exhibit {
-    text-align: center;
-    margin: 2rem;
+  text-align: center;
+  margin: 2rem;
 }
 a {
   text-decoration: none;
@@ -257,7 +272,7 @@ nav header section:has(a:nth-child(4):focus-visible)::after {
 }
 .heroSection h1,
 .heroSection p,
-.heroSection div {
+.hero-cta {
   position: relative;
   z-index: 2;
 }
@@ -268,18 +283,21 @@ nav header section:has(a:nth-child(4):focus-visible)::after {
   font-size: 1.25rem;
   max-width: 600px;
 }
-.heroSection div {
+.hero-cta {
   background-color: #2c3e50;
   color: #ffffff;
   border: 1px solid #3f5872;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
+  font: inherit;
   transition:
     background-color 0.3s ease,
     border-color 0.3s ease;
 }
-.heroSection div:hover {
+
+.hero-cta:hover,
+.hero-cta:focus-visible {
   background-color: #354b63;
   border-color: #4e6987;
 }
@@ -310,7 +328,7 @@ nav header section:has(a:nth-child(4):focus-visible)::after {
 }
 
 .milestoneCard {
-  background-color: #2C3E50;
+  background-color: #2c3e50;
   border: 1px solid #d4dce3;
   border-radius: 4px;
   padding: 1rem;

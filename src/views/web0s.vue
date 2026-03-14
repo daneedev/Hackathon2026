@@ -73,8 +73,8 @@ function playClickSound() {
           :content="t('web0s.news.youtube.content')"
           :comments="t('web0s.news.youtube.comments')"
           modelSrc=""
-          :learnMore="t('web0s.news.flashDrive.learnMore')"
-          :commentsTitle="t('web0s.news.flashDrive.commentsTitle')"
+          :learnMore="t('web0s.news.youtube.learnMore')"
+          :commentsTitle="t('web0s.news.youtube.commentsTitle')"
         />
         <ZerosNewsModel
           :title="t('web0s.news.iphone.title')"
@@ -119,7 +119,10 @@ function playClickSound() {
       </section>
       <aside>
         <section class="profile">
-          <img src="/cool-emoji.png" />
+          <img
+            src="/cool-emoji.png"
+            :alt="t('web0s.sidebar.profileAvatarAlt')"
+          />
           <p class="profile-name">{{ t("web0s.sidebar.profileName") }}</p>
           <p class="status">{{ t("web0s.sidebar.status") }}</p>
           <div>⭐⭐⭐⭐⭐</div>

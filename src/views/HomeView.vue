@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from "vue";
+import {
+  computed,
+  defineAsyncComponent,
+  onBeforeUnmount,
+  onMounted,
+  ref,
+} from "vue";
 import { useRouter } from "vue-router";
 import Button from "../components/Button.vue";
 import TextGradient from "../components/TextGradient.vue";
-import Slider from "../components/Slider.vue";
 import { SwiperSlide } from "swiper/vue";
-import Slide from "../components/Slide.vue";
 import PreviewCard from "../components/PreviewCard.vue";
 import "../assets/main.css";
 import { useI18n } from "vue-i18n";
@@ -14,6 +18,9 @@ import { useCursorEffects } from "../composables/useCursorEffects";
 const { t, tm } = useI18n();
 const { playSound } = useSoundPlayer();
 import "../assets/animations.css";
+
+const Slider = defineAsyncComponent(() => import("../components/Slider.vue"));
+const Slide = defineAsyncComponent(() => import("../components/Slide.vue"));
 
 const { trailCanvas, cursorStyle } = useCursorEffects();
 void trailCanvas;

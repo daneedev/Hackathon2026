@@ -1,5 +1,10 @@
 <template>
-  <section class="period-slide">
+  <section
+    ref="slideRef"
+    class="period-slide"
+    @pointerenter="requestModelLoad"
+    @focusin="requestModelLoad"
+  >
     <div class="period-copy">
       <p class="period-label">{{ label }}</p>
       <h2>{{ title }}</h2>
@@ -18,13 +23,25 @@
         :on-click="onButtonClick"
       />
     </div>
-    <Model v-if="modelSrc" :modelSrc="modelSrc" :rotation="modelRotation" />
+    <div v-if="modelSrc" class="model-shell">
+      <Model
+        v-if="shouldLoadModel"
+        :modelSrc="modelSrc"
+        :rotation="modelRotation"
+        :model-aria-label="`3D model for ${title}`"
+      />
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { defineAsyncComponent, onBeforeUnmount, onMounted, ref } from "vue";
 import Button from "./Button.vue";
-import Model from "./Model.vue";
+
+const Model = defineAsyncComponent(() => import("./Model.vue"));
+const slideRef = ref<HTMLElement | null>(null);
+const shouldLoadModel = ref(false);
+let visibilityObserver: IntersectionObserver | null = null;
 
 const props = defineProps<{
   title: string;
@@ -36,6 +53,52 @@ const props = defineProps<{
   modelRotation?: number;
   onButtonClick?: () => void;
 }>();
+
+const requestModelLoad = () => {
+  if (!props.modelSrc || shouldLoadModel.value) {
+    return;
+  }
+
+  shouldLoadModel.value = true;
+  visibilityObserver?.disconnect();
+  visibilityObserver = null;
+};
+
+onMounted(() => {
+  if (!props.modelSrc) {
+    return;
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    requestModelLoad();
+    return;
+  }
+
+  visibilityObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting || entry.intersectionRatio < 0.35) {
+          continue;
+        }
+
+        requestModelLoad();
+        break;
+      }
+    },
+    {
+      threshold: [0.1, 0.35, 0.6],
+    },
+  );
+
+  if (slideRef.value) {
+    visibilityObserver.observe(slideRef.value);
+  }
+});
+
+onBeforeUnmount(() => {
+  visibilityObserver?.disconnect();
+  visibilityObserver = null;
+});
 </script>
 
 <style scoped>
@@ -91,6 +154,10 @@ li {
 
 li svg {
   color: var(--primary-color);
+}
+
+.model-shell {
+  min-height: 500px;
 }
 
 @media (max-width: 960px) {

@@ -163,7 +163,8 @@
             "home": "DOMOV",
             "web90": "90. LÉTA",
             "web2000": "2000. LÉTA",
-            "present": "SOUČASNOST"
+            "present": "SOUČASNOST",
+            "toggleMenu": "Přepnout navigaci"
         },
         "hero": {
             "title": "Vítejte na webu 2010. let",
@@ -279,6 +280,7 @@
         },
         "sidebar": {
             "profileName": "xXWebMasterXx",
+            "profileAvatarAlt": "Profilový avatar WebMaster",
             "status": "Online právě teď",
             "tagCloudTitle": "🏷️ Tag Cloud",
             "tags": [

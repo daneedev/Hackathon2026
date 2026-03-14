@@ -163,7 +163,8 @@
             "home": "HOME",
             "web90": "90s",
             "web2000": "2000s",
-            "present": "PRESENT"
+            "present": "PRESENT",
+            "toggleMenu": "Toggle navigation"
         },
         "hero": {
             "title": "Welcome to the web of the 2010s",
@@ -279,6 +280,7 @@
         },
         "sidebar": {
             "profileName": "xXWebMasterXx",
+            "profileAvatarAlt": "WebMaster profile avatar",
             "status": "Online right now",
             "tagCloudTitle": "🏷️ Tag Cloud",
             "tags": [
