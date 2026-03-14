@@ -25,10 +25,10 @@ function playClickSound() {
           <RouterLink class="nav-btn" to="/web90" @click="playClickSound">
             {{ t("web0s.header.nav90s") }}
           </RouterLink>
-          <RouterLink class="nav-btn" to="/web10" @click="playClickSound">
+          <RouterLink class="nav-btn" to="/web2010" @click="playClickSound">
             {{ t("web0s.header.nav10s") }}
           </RouterLink>
-          <RouterLink class="nav-btn" to="/web20" @click="playClickSound">
+          <RouterLink class="nav-btn" to="/web2020" @click="playClickSound">
             {{ t("web0s.header.nav20s") }}
           </RouterLink>
         </div>
