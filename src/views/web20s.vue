@@ -196,6 +196,7 @@ main {
   gap: 2rem;
   padding: 0 2rem;
   margin: 1rem 0;
+  box-sizing: border-box;
 }
 
 .modelContainer {
@@ -204,6 +205,23 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+@media (max-width: 700px) {
+    .modelContainer {
+      grid-column: 1 / 1;
+    grid-row: 3 / 4;
+    margin-top: 1rem;
+    }
+  }
+
+.modelContainer > * {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.05);
@@ -319,6 +337,18 @@ main {
   .grid-container {
     grid-template-columns: 1fr;
     padding: 0 1rem;
+    overflow-x: clip;
+  }
+
+  .modelContainer {
+    grid-column: span 1;
+    grid-row: auto;
+    width: 100%;
+  }
+
+  .modelContainer :deep(.exhibit-card) {
+    width: 100%;
+    max-width: 100%;
   }
 
   .grid-double,
@@ -376,9 +406,15 @@ main {
     gap: 0.75rem;
   }
 
+  .modelContainer {
+    width: 100%;
+    overflow-x: clip;
+  }
+
   .grid-item {
     padding: 0.75rem;
     border-radius: 10px;
+    min-width: 0;
   }
 
   .item-emoji {
@@ -433,6 +469,19 @@ main {
     margin: 0;
     padding: 0.35rem 0.6rem;
     font-size: 0.78rem;
+  }
+
+  .hero-section,
+  .hero-shadow,
+  .hero-content,
+  .grid-container,
+  .grid-item,
+  .item-title,
+  .item-description,
+  .grid-item ul,
+  .grid-item li {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 }
 </style>
