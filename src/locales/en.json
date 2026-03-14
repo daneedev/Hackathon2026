@@ -288,6 +288,112 @@
                 "safari": "Safari🧭"
             }
         }
+    },
+    "web20s": {
+        "backButton": "← Back to home",
+        "gridAriaLabel": "Overview of present-day web topics",
+        "hero": {
+            "kicker": "Modern web",
+            "titlePrefix": "Internet",
+            "titleAccent": "today",
+            "subtitle": "From mobile apps to AI, today's internet is everywhere around us. Minimal, fast, and constantly connected."
+        },
+        "featureCards": [
+            {
+                "id": "mobile-first",
+                "emoji": "📱",
+                "title": "Mobile first",
+                "description": "Today's web is designed primarily for mobile devices. Fast loading, clear interfaces, and touch-friendly interactions are the baseline of a good user experience.",
+                "span": "double",
+                "badges": [
+                    {
+                        "label": "React",
+                        "color": "#61DAFB",
+                        "backgroundColor": "#61DAFB33",
+                        "borderColor": "#61DAFB"
+                    },
+                    {
+                        "label": "Flutter",
+                        "color": "#00C5D1",
+                        "backgroundColor": "#00C5D133",
+                        "borderColor": "#00C5D1"
+                    },
+                    {
+                        "label": "SwiftUI",
+                        "color": "#FA7343",
+                        "backgroundColor": "#FA734333",
+                        "borderColor": "#FA7343"
+                    },
+                    {
+                        "label": "Kotlin",
+                        "color": "#73C34A",
+                        "backgroundColor": "#73C34A33",
+                        "borderColor": "#73C34A"
+                    }
+                ]
+            },
+            {
+                "id": "ai",
+                "emoji": "🤖",
+                "title": "AI and personalization",
+                "description": "The modern web uses artificial intelligence for recommendations, search, and direct user assistance. Chatbots, recommendation systems, and generative models are now part of mainstream services.",
+                "stat": {
+                    "value": "5.3B",
+                    "label": "internet users"
+                }
+            },
+            {
+                "id": "cloud",
+                "emoji": "☁️",
+                "title": "Cloud and edge computing",
+                "description": "Today's web runs in the cloud and increasingly relies on edge infrastructure for lower latency. Serverless services and CDNs help deliver content without long waits."
+            },
+            {
+                "id": "security",
+                "emoji": "🔒",
+                "title": "Cybersecurity",
+                "description": "As society depends more on internet services, security becomes critical. Data protection, encryption, and secure protocols are essential for user trust and reliable platforms."
+            },
+            {
+                "id": "web3",
+                "emoji": "🌐",
+                "title": "Web3 and decentralization",
+                "description": "The decentralized web promises stronger control over data and digital identity. Blockchain, digital assets, and distributed applications illustrate one possible direction for the next stage of the internet."
+            }
+        ],
+        "milestones": {
+            "title": "Milestones of the modern web",
+            "items": [
+                {
+                    "year": "2011",
+                    "title": "Responsive design"
+                },
+                {
+                    "year": "2013",
+                    "title": "React.js released by Facebook"
+                },
+                {
+                    "year": "2015",
+                    "title": "HTTP/2 introduced"
+                },
+                {
+                    "year": "2016",
+                    "title": "Progressive Web Apps (PWA)"
+                },
+                {
+                    "year": "2020",
+                    "title": "The pandemic accelerates cloud adoption and remote work"
+                },
+                {
+                    "year": "2022",
+                    "title": "ChatGPT changes the rules"
+                },
+                {
+                    "year": "2024",
+                    "title": "AI agents and multimodal models"
+                }
+            ]
+        }
     }
 }
     

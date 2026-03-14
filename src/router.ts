@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "./views/HomeView.vue";
-import Web90s from "./views/web90s.vue";
-import Web0s from "./views/web0s.vue";
-import Web20s from "./views/web20s.vue";
-import web10s from "./views/web10s.vue";
+
+const Web90s = () => import("./views/web90s.vue");
+const Web0s = () => import("./views/web0s.vue");
+const Web20s = () => import("./views/web20s.vue");
+const Web10s = () => import("./views/web10s.vue");
 
 const router = createRouter({
   history: createWebHistory(),
@@ -46,7 +47,7 @@ const router = createRouter({
     {
       path: "/web2010",
       name: "web2010",
-      component: web10s,
+      component: Web10s,
     },
   ],
 });

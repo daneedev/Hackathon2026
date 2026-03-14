@@ -1,145 +1,61 @@
 <template>
   <main>
-    <section class="hero-section">
+    <section class="hero-section" aria-labelledby="web20s-title">
       <div class="hero-shadow">
-                  <router-link :to="{ name: 'home' }" class="back-button"
-        >← Zpět na úvod</router-link
-        >
+        <router-link :to="{ name: 'home' }" class="back-button">
+          {{ t("web20s.backButton") }}
+        </router-link>
         <div class="hero-content">
-          <p class="hero-kicker">Moderní web</p>
-            <h1>
-              Internet
-              <TextGradient primaryColor="#49b8f3" secondaryColor="#1B5A9D"
-                >dneška</TextGradient
-              >
-            </h1>
-            <p class="hero-subtitle">
-              Od mobilních aplikací po AI — dnešní internet je všude kolem nás.
-              Minimalistický, rychlý, propojený.
-            </p>
+          <p class="hero-kicker">{{ t("web20s.hero.kicker") }}</p>
+          <h1 id="web20s-title">
+            {{ t("web20s.hero.titlePrefix") }}
+            <TextGradient primaryColor="#49b8f3" secondaryColor="#1B5A9D">
+              {{ t("web20s.hero.titleAccent") }}
+            </TextGradient>
+          </h1>
+          <p class="hero-subtitle">
+            {{ t("web20s.hero.subtitle") }}
+          </p>
         </div>
       </div>
     </section>
-    <section class="grid-container">
-      <section class="grid-item grid-double">
-        <p class="item-emoji">📱</p>
-        <h2 class="item-title">Mobile first</h2>
-        <p class="item-description">
-          Dnešní web je navržen pro mobilní zařízení. Rychlé načítání,
-          jednoduché rozhraní a optimalizace pro dotykové ovládání jsou klíčové.
-        </p>
-        <div class="badges">
+    <section class="grid-container" :aria-label="t('web20s.gridAriaLabel')">
+      <article
+        v-for="card in featureCards"
+        :key="card.id"
+        class="grid-item"
+        :class="{ 'grid-double': card.span === 'double' }"
+      >
+        <p class="item-emoji" aria-hidden="true">{{ card.emoji }}</p>
+        <h2 class="item-title">{{ card.title }}</h2>
+        <p class="item-description">{{ card.description }}</p>
+        <div v-if="card.badges?.length" class="badges">
           <Badge
-            label="React"
-            color="#61DAFB"
-            backgroundColor="#61DAFB33"
-            borderColor="#61DAFB"
-          />
-          <Badge
-            label="Flutter"
-            color="#00C5D1"
-            backgroundColor="#00C5D133"
-            borderColor="#00C5D1"
-          />
-          <Badge
-            label="SwiftUI"
-            color="#FA7343"
-            backgroundColor="#FA734333"
-            borderColor="#FA7343"
-          />
-          <Badge
-            label="Kotlin"
-            color="#73C34A"
-            backgroundColor="#73C34A33"
-            borderColor="#73C34A"
+            v-for="badge in card.badges"
+            :key="badge.label"
+            :label="badge.label"
+            :color="badge.color"
+            :background-color="badge.backgroundColor"
+            :border-color="badge.borderColor"
           />
         </div>
-      </section>
-      <section class="grid-item">
-        <p class="item-emoji">🤖</p>
-        <h2 class="item-title">AI & Personalizace</h2>
-        <p class="item-description">
-          Dnešní web využívá umělou inteligenci pro personalizaci obsahu,
-          doporučení a zlepšení uživatelského zážitku. Chatboti, doporučovací
-          algoritmy a generativní AI jsou běžnou součástí moderního webu.
-        </p>
-        <div class="item-stat">
-          <h1>5.3B</h1>
-          <p>uživatelů internetu</p>
+        <div v-else-if="card.stat" class="item-stat">
+          <h3>{{ card.stat.value }}</h3>
+          <p>{{ card.stat.label }}</p>
         </div>
-      </section>
-      <section class="grid-item">
-        <p class="item-emoji">☁️</p>
-        <h2 class="item-title">Cloud & Edge Computing</h2>
-        <p class="item-description">
-          Dnešní web běží na cloudu a využívá edge computing pro rychlejší
-          načítání a lepší výkon. Serverless architektura a CDN jsou klíčové pro
-          moderní webové aplikace.
-        </p>
-      </section>
-      <section class="grid-item">
-        <p class="item-emoji">🔒</p>
-        <h2 class="item-title">Kybernetická bezpečnost</h2>
-        <p class="item-description">
-          S rostoucí závislostí na internetu je kybernetická bezpečnost
-          důležitější než kdy dříve. Ochrana dat, šifrování a bezpečné protokoly
-          jsou nezbytné pro důvěru uživatelů a bezpečný online zážitek.
-        </p>
-      </section>
-      <section class="grid-item">
-        <p class="item-emoji">🌐</p>
-        <h2 class="item-title">Web3 & Decentralizace</h2>
-        <p class="item-description">
-          Web3 slibuje decentralizovaný internet, kde uživatelé mají větší
-          kontrolu nad svými daty a online identitou. Blockchain, kryptoměny a
-          decentralizované aplikace jsou klíčovými prvky této nové éry
-          internetu.
-        </p>
-      </section>
-      <section class="grid-item grid-triple">
-        <h2 class="item-title">Milníky moderního webu</h2>
+      </article>
+
+      <section class="grid-item grid-triple" aria-labelledby="milestones-title">
+        <h2 id="milestones-title" class="item-title">
+          {{ t("web20s.milestones.title") }}
+        </h2>
         <ul>
-          <li>
+          <li v-for="milestone in milestones" :key="milestone.year">
             <span class="blue">
-              2011 <font-awesome-icon icon="fa-solid fa-circle"
-            /></span>
-            Responzivní design
-          </li>
-          <li>
-            <span class="blue">
-              2013 <font-awesome-icon icon="fa-solid fa-circle"
-            /></span>
-            React.js od Facebooku
-          </li>
-          <li>
-            <span class="blue">
-              2015 <font-awesome-icon icon="fa-solid fa-circle"
-            /></span>
-            Představení HTTP/2
-          </li>
-          <li>
-            <span class="blue">
-              2016 <font-awesome-icon icon="fa-solid fa-circle"
-            /></span>
-            Progresivní webové aplikace (PWA)
-          </li>
-          <li>
-            <span class="blue">
-              2020 <font-awesome-icon icon="fa-solid fa-circle"
-            /></span>
-            Pandemie urychluje přechod na cloud a vzdálenou práci
-          </li>
-          <li>
-            <span class="blue">
-              2022 <font-awesome-icon icon="fa-solid fa-circle"
-            /></span>
-            ChatGPT mění pravidla hry
-          </li>
-          <li>
-            <span class="blue">
-              2024 <font-awesome-icon icon="fa-solid fa-circle"
-            /></span>
-            AI agenti a multimodální modely
+              <time :datetime="milestone.year">{{ milestone.year }}</time>
+              <font-awesome-icon icon="fa-solid fa-circle" />
+            </span>
+            <span>{{ milestone.title }}</span>
           </li>
         </ul>
       </section>
@@ -148,8 +64,40 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import Badge from "../components/Badge.vue";
 import TextGradient from "../components/TextGradient.vue";
+
+type WebBadge = {
+  label: string;
+  color: string;
+  backgroundColor: string;
+  borderColor: string;
+};
+
+type FeatureCard = {
+  id: string;
+  emoji: string;
+  title: string;
+  description: string;
+  span?: "double";
+  badges?: WebBadge[];
+  stat?: {
+    value: string;
+    label: string;
+  };
+};
+
+type Milestone = {
+  year: string;
+  title: string;
+};
+
+const { t, tm } = useI18n();
+
+const featureCards = computed(() => tm("web20s.featureCards") as FeatureCard[]);
+const milestones = computed(() => tm("web20s.milestones.items") as Milestone[]);
 </script>
 
 <style scoped>
@@ -191,19 +139,19 @@ main {
   align-items: flex-start;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;  
+  border-radius: 12px;
   background-image: url(/modern-page-BG.jpg);
   background-size: cover;
   box-sizing: border-box;
 }
-.hero-shadow{
+.hero-shadow {
   background-color: rgba(0, 0, 0, 0.445);
   width: 100%;
   height: 100%;
   padding: 2rem;
   border-radius: 12px;
 }
-.hero-content{
+.hero-content {
   padding-block: 10rem;
 }
 .hero-section h1 {
@@ -272,10 +220,11 @@ main {
   justify-content: center;
   margin: 1rem;
 }
-.item-stat h1 {
+.item-stat h3 {
   font-size: 2rem;
   font-weight: 700;
   color: #49b8f3;
+  margin: 0;
 }
 .item-stat p {
   font-size: 0.9rem;
@@ -432,7 +381,7 @@ main {
     margin: 0.5rem;
   }
 
-  .item-stat h1 {
+  .item-stat h3 {
     font-size: 1.6rem;
   }
 
