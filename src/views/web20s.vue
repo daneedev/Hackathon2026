@@ -1,20 +1,24 @@
 <template>
   <main>
-    <router-link :to="{ name: 'home' }" class="back-button"
-      >← Zpět na úvod</router-link
-    >
     <section class="hero-section">
-      <p class="hero-kicker">Moderní web</p>
-      <h1>
-        Internet
-        <TextGradient primaryColor="#49b8f3" secondaryColor="#1B5A9D"
-          >dneška</TextGradient
+      <div class="hero-shadow">
+                  <router-link :to="{ name: 'home' }" class="back-button"
+        >← Zpět na úvod</router-link
         >
-      </h1>
-      <p class="hero-subtitle">
-        Od mobilních aplikací po AI — dnešní internet je všude kolem nás.
-        Minimalistický, rychlý, propojený.
-      </p>
+        <div class="hero-content">
+          <p class="hero-kicker">Moderní web</p>
+            <h1>
+              Internet
+              <TextGradient primaryColor="#49b8f3" secondaryColor="#1B5A9D"
+                >dneška</TextGradient
+              >
+            </h1>
+            <p class="hero-subtitle">
+              Od mobilních aplikací po AI — dnešní internet je všude kolem nás.
+              Minimalistický, rychlý, propojený.
+            </p>
+        </div>
+      </div>
     </section>
     <section class="grid-container">
       <section class="grid-item grid-double">
@@ -186,11 +190,21 @@ main {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 4rem 2rem;
   background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;  
+  background-image: url(/modern-page-BG.jpg);
+  background-size: cover;
+  box-sizing: border-box;
+}
+.hero-shadow{
+  background-color: rgba(0, 0, 0, 0.445);
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
   border-radius: 12px;
-  margin: 2rem;
+}
+.hero-content{
+  padding-block: 10rem;
 }
 .hero-section h1 {
   font-size: 3rem;
@@ -209,6 +223,7 @@ main {
   color: #49b8f3;
   letter-spacing: 0.14em;
   font-size: 0.8rem;
+  margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
