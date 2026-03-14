@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Button from "../components/Button.vue";
 import TextGradient from "../components/TextGradient.vue";
@@ -10,7 +9,6 @@ import PreviewCard from "../components/PreviewCard.vue";
 import "../assets/main.css";
 import { useI18n } from "vue-i18n";
 import { useSoundPlayer } from "../composables/useSoundPlayer";
-import DialupLoading from "../components/DialupLoading.vue";
 import { useCursorEffects } from "../composables/useCursorEffects";
 const { t, tm } = useI18n();
 const { playSound } = useSoundPlayer();
@@ -18,12 +16,6 @@ import "../assets/animations.css";
 
 const { trailCanvas, cursorStyle } = useCursorEffects();
 void trailCanvas;
-
-const loading = ref(sessionStorage.getItem("dialupPlayed") !== "1");
-const done = () => {
-  loading.value = false;
-  sessionStorage.setItem("dialupPlayed", "1");
-};
 
 const router = useRouter();
 
@@ -57,7 +49,6 @@ const getHighlights = (key: string) => tm(key) as string[];
 </script>
 
 <template>
-  <DialupLoading v-if="loading" @complete="done" />
   <main :style="cursorStyle">
     <div class="cursor-glow" aria-hidden="true"></div>
     <canvas ref="trailCanvas" class="cursor-trail" aria-hidden="true"></canvas>
