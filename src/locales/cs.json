@@ -107,7 +107,6 @@
                 "description": "Disketa (nejčastěji 3,5palcová) byla v 90. letech běžným médiem pro ukládání a přenos dat. Měla kapacitu 1,44 MB, takže se na ni vešly dokumenty, menší programy nebo uložené pozice ve hrách. Používala se také pro instalaci software a přenos souborů mezi počítači. Přestože byla praktická, byla citlivá na poškození a magnetické pole."
             }
         }
-
     },
     "web10s": {
         "nav": {
@@ -155,37 +154,51 @@
             "ipod": {
                 "title": "🎵 iPod přináší hudbu přímo do kapsy",
                 "content": "Současné modely iPodu umožňují přehrávání tisíců skladeb v kompaktním a lehkém designu. Díky moderním displejům a intuitivnímu ovládání je přístup k hudbě rychlejší a pohodlnější než u starších přenosných přehrávačů z doby před rokem 2000.",
-                "comments": "34"
+                "comments": "34",
+                "commentsTitle": "Komentářů",
+                "learnMore": "Číst dál →"
             },
             "myspaceFacebook": {
                 "title": "📰 MySpace & Facebook mění sociální sítě",
                 "content": "Internet se změnil. Uživatelé už nejsou jen čtenáři – jsou tvůrci obsahu! Blogy, sociální sítě a sdílení obsahu změnily vše.",
-                "comments": "12"
+                "comments": "12",
+                "commentsTitle": "Komentářů",
+                "learnMore": "Číst dál →"
             },
             "youtube": {
                 "title": "📹 YouTube: Revoluce videa",
                 "content": "Od garáže k miliardám zhlédnutí. YouTube změnil způsob, jakým konzumujeme média. Každou minutu se nahraje 10 hodin videa!",
-                "comments": "11"
+                "comments": "11",
+                "commentsTitle": "Komentářů",
+                "learnMore": "Číst dál →"
             },
             "iphone": {
                 "title": "📱 iPhone představen!",
                 "content": "Apple právě představil revoluční zařízení. Je to iPod, telefon a internetové zařízení v jednom!",
-                "comments": "7"
+                "comments": "7",
+                "commentsTitle": "Komentářů",
+                "learnMore": "Číst dál →"
             },
             "mouse": {
                 "title": "🖱️ Nová generace počítačových myší posouvá přesnost i pohodlí",
                 "content": "Moderní počítačové myši dnes přinášejí výrazně vyšší přesnost, rychlejší odezvu a lepší ergonomii než modely z let před rokem 2000. Díky pokročilým senzorům, bezdrátovým technologiím a novým materiálům se práce i hraní na počítači stává pohodlnější a přesnější než kdy dříve.",
-                "comments": "9"
+                "comments": "9",
+                "commentsTitle": "Komentářů",
+                "learnMore": "Číst dál →"
             },
             "monitor": {
                 "title": "🖥️ Monitory nové generace přinášejí ostřejší obraz a větší pohodlí",
                 "content": "Moderní počítačové monitory dnes nabízejí výrazně vyšší rozlišení, lepší barvy a rychlejší obnovovací frekvence než modely před rokem 2000. Díky novým typům panelů a tenčím konstrukcím je práce i sledování médií příjemnější a obraz je mnohem ostřejší.",
-                "comments": "5"
+                "comments": "5",
+                "commentsTitle": "Komentářů",
+                "learnMore": "Číst dál →"
             },
             "flashDrive": {
                 "title": "💾 Flash disky mění způsob ukládání dat",
                 "content": "Současné USB flash drive nabízejí mnohem větší kapacitu a rychlejší přenos dat než starší přenosná úložiště z doby před rokem 2000. Díky malým rozměrům a jednoduchému připojení přes USB umožňují snadno přenášet soubory mezi počítači a dalšími zařízeními.",
-                "comments": "8"
+                "comments": "8",
+                "commentsTitle": "Komentářů",
+                "learnMore": "Číst dál →"
             }
         },
         "sidebar": {

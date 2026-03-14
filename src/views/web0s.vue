@@ -44,6 +44,8 @@ function playClickSound() {
             modelSrc="/models/iPod.glb"
             :rotation="Math.PI + 2"
             :scale="7"
+            :learnMore="t('web0s.news.ipod.learnMore')"
+            :commentsTitle="t('web0s.news.ipod.commentsTitle')"
           />
           <h1>{{ t("web0s.hero.title") }}</h1>
           <p>
@@ -63,12 +65,16 @@ function playClickSound() {
           :content="t('web0s.news.myspaceFacebook.content')"
           :comments="t('web0s.news.myspaceFacebook.comments')"
           modelSrc=""
+          :learnMore="t('web0s.news.myspaceFacebook.learnMore')"
+          :commentsTitle="t('web0s.news.myspaceFacebook.commentsTitle')"
         />
         <ZerosNewsCard
           :title="t('web0s.news.youtube.title')"
           :content="t('web0s.news.youtube.content')"
           :comments="t('web0s.news.youtube.comments')"
           modelSrc=""
+          :learnMore="t('web0s.news.flashDrive.learnMore')"
+          :commentsTitle="t('web0s.news.flashDrive.commentsTitle')"
         />
         <ZerosNewsModel
           :title="t('web0s.news.iphone.title')"
@@ -77,6 +83,8 @@ function playClickSound() {
           modelSrc="/models/cell-phone.glb"
           :rotation="Math.PI + 2"
           :scale="1"
+          :learnMore="t('web0s.news.iphone.learnMore')"
+          :commentsTitle="t('web0s.news.iphone.commentsTitle')"
         />
         <ZerosNewsModel
           :title="t('web0s.news.mouse.title')"
@@ -85,6 +93,8 @@ function playClickSound() {
           modelSrc="/models/computer-mouse.glb"
           :rotation="Math.PI + 9"
           :scale="0.3"
+          :learnMore="t('web0s.news.mouse.learnMore')"
+          :commentsTitle="t('web0s.news.mouse.commentsTitle')"
         />
         <ZerosNewsModel
           :title="t('web0s.news.monitor.title')"
@@ -93,6 +103,8 @@ function playClickSound() {
           modelSrc="/models/TV.glb"
           :rotation="Math.PI + 2"
           :scale="1"
+          :learnMore="t('web0s.news.monitor.learnMore')"
+          :commentsTitle="t('web0s.news.monitor.commentsTitle')"
         />
         <ZerosNewsModel
           :title="t('web0s.news.flashDrive.title')"
@@ -101,6 +113,8 @@ function playClickSound() {
           modelSrc="/models/flash-drive.glb"
           :rotation="Math.PI + 4"
           :scale="0.5"
+          :learnMore="t('web0s.news.flashDrive.learnMore')"
+          :commentsTitle="t('web0s.news.flashDrive.commentsTitle')"
         />
       </section>
       <aside>

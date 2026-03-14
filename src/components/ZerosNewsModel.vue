@@ -5,6 +5,8 @@ const props = defineProps<{
     title: string;
     content: string;
     comments: string;
+    learnMore: string;
+    commentsTitle: string;
     modelSrc: string;
     rotation: Number;
     scale: number;
@@ -15,8 +17,8 @@ const props = defineProps<{
         <h1>{{title}}</h1>
         <p>{{content}}</p>
         <div class="buttons">
-        <a class="readMore">Číst dál →</a>
-        <p class="comments">💬 {{comments}} Komentářů</p>
+        <a class="readMore">{{learnMore}}</a>
+        <p class="comments">💬 {{comments}} {{commentsTitle}}</p>
         </div>
         <!--<img :src="img">-->
       <Model :modelSrc="modelSrc" :rotation="rotation" :scale="scale"/>
