@@ -22,6 +22,8 @@ let cleanupFn = null;
 const props = defineProps({
   modelSrc: String,
   rotation: Number,
+  rotationx: Number,
+  rotationz: Number,
   scale: Number,
   modelAriaLabel: String,
 });
@@ -104,6 +106,8 @@ onMounted(() => {
       props.modelSrc,
       (gltf) => {
         gltf.scene.rotation.y = props.rotation ?? 0;
+        gltf.scene.rotation.x = props.rotationx ?? 0;
+        gltf.scene.rotation.z = props.rotationz ?? 0;
         const modelScale = props.scale ?? 1;
         gltf.scene.scale.setScalar(modelScale);
         scene.add(gltf.scene);

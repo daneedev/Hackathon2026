@@ -9,6 +9,8 @@ const props = defineProps<{
     commentsTitle: string;
     modelSrc: string;
     rotation: Number;
+    rotationx: Number;
+    rotationz: Number,
     scale: number;
 }>();
 </script>
@@ -21,7 +23,7 @@ const props = defineProps<{
         <p class="comments">💬 {{comments}} {{commentsTitle}}</p>
         </div>
         <!--<img :src="img">-->
-      <Model :modelSrc="modelSrc" :rotation="rotation" :scale="scale"/>
+      <Model :modelSrc="modelSrc" :rotation="rotation" :rotationx="rotationx" :scale="scale"/>
     </section>
 </template>
 <style scoped lang="css">
