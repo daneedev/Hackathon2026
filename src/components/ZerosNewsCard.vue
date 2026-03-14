@@ -1,28 +1,25 @@
 <script setup lang="ts">
-import Model from './Model.vue';
-
 const props = defineProps<{
-    title: string;
-    content: string;
-    comments: string;
-    modelSrc: string;
+  title: string;
+  content: string;
+  comments: string;
+  modelSrc: string;
 }>();
 </script>
 <template>
-    <section class="news-card">
-        <h1>{{title}}</h1>
-        <p>{{content}}</p>
-        <div class="buttons">
-        <a class="readMore">Číst dál →</a>
-        <p class="comments">💬 {{comments}} Komentářů</p>
-        </div>
-        <!--<img :src="img">-->
-    </section>
+  <section class="news-card">
+    <h1>{{ title }}</h1>
+    <p>{{ content }}</p>
+    <div class="buttons">
+      <a class="readMore">Číst dál →</a>
+      <p class="comments">💬 {{ comments }} Komentářů</p>
+    </div>
+    <!--<img :src="img">-->
+  </section>
 </template>
 <style scoped lang="css">
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
-.btn
-{
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap");
+.btn {
   display: flex;
   padding: 0.25rem 0.5rem;
   border-radius: 1rem;
@@ -30,7 +27,7 @@ const props = defineProps<{
   background: linear-gradient(#014cfc, #0198fc);
   color: white;
 }
-.buttons{
+.buttons {
   display: flex;
   gap: 1em;
 }
