@@ -27,18 +27,19 @@ const { t } = useI18n();
     <aside class="sidebar">
       <h2>{{ t("web90s.sidebar.navigationTitle") }}</h2>
       <nav>
-        <RouterLink @click="playClickSound" to="/">{{
+        <RouterLink to="/" @click="closeMenu">{{
           t("web90s.sidebar.home")
-        }}</RouterLink>
-        <a href="#mouse" @click="playClickSound">{{
-          t("web90s.sidebar.mouse")
-        }}</a>
-        <a href="#monitor" @click="playClickSound">{{
-          t("web90s.sidebar.monitor")
-        }}</a>
-        <a href="#floppy" @click="playClickSound">{{
-          t("web90s.sidebar.floppy")
-        }}</a>
+        }}
+        </RouterLink>
+        <RouterLink to="/web2000" @click="playClickSound">
+            {{ t("web90s.sidebar.00s") }} 
+        </RouterLink>
+        <RouterLink to="/web2010" @click="playClickSound">
+            {{ t("web90s.sidebar.10s") }}
+        </RouterLink>
+        <RouterLink to="/web2020" @click="playClickSound">
+            {{ t("web90s.sidebar.20s") }}
+        </RouterLink>
       </nav>
 
       <div class="counterBox">

@@ -128,14 +128,48 @@
             }
         }
     },
+    "start": {
+        "kicker": "Vstupní terminál",
+        "title": "Zapněte muzeum internetu",
+        "description": "Před vstupem do expozice si návštěvník naladí čtyři digitální éry internetu, od pískotu modemu a CRT obrazovek až po dnešní AI nástroje a nepřetržitě propojený web.",
+        "commandLabel": "Spouštěcí příkaz",
+        "runButton": "Run RetroNet.exe",
+        "note": "Spusťte RetroNet.exe a vstupte do expozice, kde se před vámi postupně otevřou klíčové momenty vývoje internetu.",
+        "arrowAlt": "Šipka ukazující na příkaz spuštění",
+        "previewLabel": "Náhled expozice",
+        "footerStatus": "Museum boot sequence",
+        "tags": {
+            "timeline": "Časová osa vývoje",
+            "models": "3D exponáty",
+            "atmosphere": "Dobová estetika"
+        },
+        "eras": {
+            "nineties": {
+                "label": "První připojení",
+                "description": "Pískot modemu, CRT monitory a web, který se teprve učí mluvit s masovým publikem."
+            },
+            "twoThousands": {
+                "label": "Web pro každý den",
+                "description": "Broadband, fóra a první velké platformy mění internet v běžnou součást života."
+            },
+            "twoTens": {
+                "label": "Mobilní dominance",
+                "description": "Obsah se přesouvá do kapes, roste vliv sociálních sítí a nastupuje streaming."
+            },
+            "twoTwenties": {
+                "label": "AI současnost",
+                "description": "Rychlý, propojený a algoritmicky řízený web otevírá nové možnosti i nové otázky."
+            }
+        }
+    },
     "web90s": {
         "underConstruction": "🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧 UNDER CONSTRUCTION 🚧",
         "sidebar": {
             "navigationTitle": "Navigace:",
             "home": "Domovská stránka",
-            "mouse": "Myš",
-            "monitor": "Monitor",
-            "floppy": "Disketa",
+            "00s": "2000. léta",
+            "10s": "2010. léta",
+            "20s": "2020. léta",
             "visitors": "Návštěvníků:",
             "badgePrefix": "🏆 Best viewed with",
             "badgeBrowser": "Netscape Navigator"
