@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import Button from "../components/Button.vue";
 import TextGradient from "../components/TextGradient.vue";
@@ -17,6 +17,9 @@ import "../assets/animations.css";
 
 const { trailCanvas, cursorStyle } = useCursorEffects();
 void trailCanvas;
+
+const pageRef = ref<HTMLElement | null>(null);
+let revealObserver: IntersectionObserver | null = null;
 
 const router = useRouter();
 
@@ -86,10 +89,52 @@ const navigateFromId = (id: string) => {
       break;
   }
 };
+
+onMounted(() => {
+  const revealElements =
+    pageRef.value?.querySelectorAll<HTMLElement>(".scroll-reveal");
+
+  if (!revealElements?.length) {
+    return;
+  }
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    revealElements.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        entry.target.classList.add("is-visible");
+        revealObserver?.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.18,
+      rootMargin: "0px 0px -8% 0px",
+    },
+  );
+
+  revealElements.forEach((element) => revealObserver?.observe(element));
+});
+
+onBeforeUnmount(() => {
+  revealObserver?.disconnect();
+  revealObserver = null;
+});
 </script>
 
 <template>
-  <main :style="cursorStyle">
+  <main ref="pageRef" :style="cursorStyle">
     <div class="cursor-glow" aria-hidden="true"></div>
     <canvas ref="trailCanvas" class="cursor-trail" aria-hidden="true"></canvas>
     <section class="hero-section">
@@ -159,7 +204,7 @@ const navigateFromId = (id: string) => {
       class="section-shell museum-intro"
       aria-labelledby="museum-intro-title"
     >
-      <div class="section-heading">
+      <div class="section-heading scroll-reveal">
         <p class="section-kicker">{{ t("homepage.museumReasons.eyebrow") }}</p>
         <h2 id="museum-intro-title" class="section-title">
           {{ t("homepage.museumReasons.title") }}
@@ -170,9 +215,10 @@ const navigateFromId = (id: string) => {
       </div>
       <div class="museum-grid">
         <article
-          v-for="item in museumReasons"
+          v-for="(item, index) in museumReasons"
           :key="item.title"
-          class="content-card"
+          class="content-card scroll-reveal"
+          :style="{ '--reveal-delay': `${index * 120}ms` }"
         >
           <h3>{{ item.title }}</h3>
           <p>{{ item.description }}</p>
@@ -238,13 +284,13 @@ const navigateFromId = (id: string) => {
       </Slider>
     </section>
     <footer class="home-footer">
-      <div class="footer-copy">
+      <div class="footer-copy scroll-reveal">
         <p class="section-kicker">{{ t("homepage.footer.title") }}</p>
         <p class="footer-description">
           {{ t("homepage.footer.description") }}
         </p>
       </div>
-      <div class="footer-links">
+      <div class="footer-links scroll-reveal" style="--reveal-delay: 140ms">
         <p class="footer-links-title">{{ t("homepage.footer.linksTitle") }}</p>
         <div class="footer-link-list">
           <button
@@ -406,6 +452,24 @@ main {
   box-shadow: 0 24px 40px rgba(0, 0, 0, 0.16);
 }
 
+.scroll-reveal {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+  filter: blur(6px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.75s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0);
+}
+
 .content-card h3 {
   margin: 0 0 0.7rem;
   font-size: 1.15rem;
@@ -522,6 +586,15 @@ main {
 
   .footer-link-list {
     gap: 0.55rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
   }
 }
 </style>
