@@ -1,6 +1,30 @@
+<script setup lang="ts">
+import { ref } from "vue";
+import { useSoundPlayer } from "./composables/useSoundPlayer";
+import DialupLoading from "./components/DialupLoading.vue";
+
+const emit = defineEmits<{
+  (event: "enter"): void;
+}>();
+
+const loading = ref(false);
+const { playSound } = useSoundPlayer();
+
+function enterWebsite() {
+  loading.value = true;
+  playSound("/sounds/whoosh.mp3", 4.6, 4.8);
+}
+
+function handleComplete() {
+  emit("enter");
+}
+</script>
+
 <template>
   <div>
-    <main>
+    <DialupLoading v-if="loading" @complete="handleComplete" />
+
+    <main v-else>
       <div class="start">
         <h1>Start</h1>
         <div class="start-section">
@@ -15,20 +39,6 @@
     </main>
   </div>
 </template>
-
-<script setup lang="ts">
-const emit = defineEmits<{
-  (event: "enter"): void;
-}>();
-
-import { useSoundPlayer } from "./composables/useSoundPlayer";
-const { playSound } = useSoundPlayer();
-
-function enterWebsite() {
-  emit("enter");
-  playSound("/sounds/whoosh.mp3", 4.6, 4.8);
-}
-</script>
 
 <style scoped lang="css">
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");

@@ -9,6 +9,7 @@ import PreviewCard from "../components/PreviewCard.vue";
 import "../assets/main.css";
 import { useI18n } from "vue-i18n";
 import { useSoundPlayer } from "../composables/useSoundPlayer";
+import DialupLoading from "../components/DialupLoading.vue";
 const { t, tm } = useI18n();
 const { playSound } = useSoundPlayer();
 
@@ -45,6 +46,7 @@ const getHighlights = (key: string) => tm(key) as string[];
 
 <template>
   <main>
+    <DialupLoading v-if="loading" @complete="done" />
     <section class="hero-section">
       <div class="hero-content">
         <p class="hero-kicker">{{ t("homepage.heroKicker") }}</p>
