@@ -182,6 +182,8 @@ header a {
   border-right: 2px solid #3f3f3f;
   padding-block: 1.25rem;
   width: 10rem;
+  display: flex;
+  justify-content: center;
 }
 .btn {
   display: flex;
