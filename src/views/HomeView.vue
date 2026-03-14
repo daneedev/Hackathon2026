@@ -10,8 +10,12 @@ import "../assets/main.css";
 import { useI18n } from "vue-i18n";
 import { useSoundPlayer } from "../composables/useSoundPlayer";
 import DialupLoading from "../components/DialupLoading.vue";
+import { useCursorEffects } from "../composables/useCursorEffects";
 const { t, tm } = useI18n();
 const { playSound } = useSoundPlayer();
+
+const { trailCanvas, cursorStyle } = useCursorEffects();
+void trailCanvas;
 
 const router = useRouter();
 
@@ -47,6 +51,9 @@ const getHighlights = (key: string) => tm(key) as string[];
 <template>
   <main>
     <DialupLoading v-if="loading" @complete="done" />
+  <main :style="cursorStyle">
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <canvas ref="trailCanvas" class="cursor-trail" aria-hidden="true"></canvas>
     <section class="hero-section">
       <div class="hero-content">
         <p class="hero-kicker">{{ t("homepage.heroKicker") }}</p>
@@ -173,12 +180,39 @@ const getHighlights = (key: string) => tm(key) as string[];
 
 <style scoped>
 main {
+  position: relative;
+  isolation: isolate;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: "Archivo", sans-serif;
   min-height: 100vh;
 }
+
+.cursor-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    circle 50px at var(--cursor-x) var(--cursor-y),
+    rgba(63, 163, 77, 0.26) 0%,
+    rgba(63, 163, 77, 0.12) 55%,
+    rgba(63, 163, 77, 0) 100%
+  );
+}
+
+.cursor-trail {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .hero-section {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 2rem;
@@ -229,6 +263,11 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
+}
+
+#timeline {
+  position: relative;
+  z-index: 1;
 }
 
 .nav-link {
