@@ -1,10 +1,20 @@
 <script setup>
 import { nextTick, onMounted } from "vue";
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import { useI18n } from "vue-i18n";
 import exhibitCard10s from "../components/exhibitCard10s.vue";
 
 const { t } = useI18n();
+const isMenuOpen = ref(false);
+
+const toggleMenu = () => {
+    isMenuOpen.value = !isMenuOpen.value;
+};
+
+const closeMenu = () => {
+    isMenuOpen.value = false;
+};
 
 onMounted(async () => {
     await nextTick();
@@ -24,11 +34,20 @@ const goToFirstExhibit = () => {
 <template>
     <nav>
         <header>
-            <section>
-                <RouterLink to="/">{{ t("web10s.nav.home") }}</RouterLink>
-                <RouterLink to="/web90">{{ t("web10s.nav.web90") }}</RouterLink>
-                <RouterLink to="/web2000">{{ t("web10s.nav.web2000") }}</RouterLink>
-                <RouterLink to="/web2020">{{ t("web10s.nav.present") }}</RouterLink>
+            <button
+                class="hamburger"
+                type="button"
+                :aria-expanded="isMenuOpen"
+                aria-label="Toggle navigation"
+                @click="toggleMenu"
+            >
+                ☰
+            </button>
+            <section :class="{ open: isMenuOpen }">
+                <RouterLink to="/" @click="closeMenu">{{ t("web10s.nav.home") }}</RouterLink>
+                <RouterLink to="/web90" @click="closeMenu">{{ t("web10s.nav.web90") }}</RouterLink>
+                <RouterLink to="/web2000" @click="closeMenu">{{ t("web10s.nav.web2000") }}</RouterLink>
+                <RouterLink to="/web2020" @click="closeMenu">{{ t("web10s.nav.present") }}</RouterLink>
             </section>
         </header>
     </nav>
@@ -147,6 +166,18 @@ const goToFirstExhibit = () => {
             }
         }
     }
+
+    .hamburger {
+        display: none;
+        background: transparent;
+        color: #FFFFFF;
+        border: 1px solid #4e6987;
+        border-radius: 4px;
+        padding: 0.2rem 0.55rem;
+        font-size: 1.2rem;
+        line-height: 1;
+        cursor: pointer;
+    }
     
     .heroSection {
         position: relative;
@@ -224,5 +255,44 @@ const goToFirstExhibit = () => {
 
     #first-exhibit {
         text-align: center;
+    }
+
+    @media (max-width: 750px) {
+        nav {
+            header {
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                padding: 0.75rem 1rem;
+
+                section {
+                    display: none;
+                    width: 100%;
+                    grid-template-columns: 1fr;
+                    gap: 0.35rem;
+                    margin-top: 0.65rem;
+                    padding-bottom: 0;
+
+                    &::after {
+                        display: none;
+                    }
+
+                    &.open {
+                        display: grid;
+                    }
+
+                    a {
+                        text-align: left;
+                        padding: 0.45rem 0.2rem;
+                    }
+                }
+            }
+        }
+
+        .hamburger {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 </style>
