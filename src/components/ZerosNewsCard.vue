@@ -43,7 +43,7 @@ const props = defineProps<{
   padding: 1rem;
   background-color: white;
 }
-.news-card p:first-child {
+.news-card h1 {
   font-size: 1.5rem;
   font-weight: bold;
 }

@@ -38,8 +38,10 @@ const getTags = () => tm("web0s.sidebar.tags") as string[];
             :content="t('web0s.news.ipod.content')"
             :comments="t('web0s.news.ipod.comments')"
             modelSrc="/models/iPod.glb"
+            :rotation="Math.PI + 2"
+            :scale="7"
           />
-          <p>{{ t("web0s.hero.title") }}</p>
+          <h1>{{ t("web0s.hero.title") }}</h1>
           <p>
             {{ t("web0s.hero.description") }}
           </p>
@@ -65,24 +67,32 @@ const getTags = () => tm("web0s.sidebar.tags") as string[];
           :content="t('web0s.news.iphone.content')"
           :comments="t('web0s.news.iphone.comments')"
           modelSrc="/models/cell-phone.glb"
+          :rotation="Math.PI + 2"
+          :scale="1"
         />
         <ZerosNewsModel
           :title="t('web0s.news.mouse.title')"
           :content="t('web0s.news.mouse.content')"
           :comments="t('web0s.news.mouse.comments')"
           modelSrc="/models/computer-mouse.glb"
+          :rotation="Math.PI + 9"
+          :scale="0.3"
         />
         <ZerosNewsModel
           :title="t('web0s.news.monitor.title')"
           :content="t('web0s.news.monitor.content')"
           :comments="t('web0s.news.monitor.comments')"
           modelSrc="/models/TV.glb"
+          :rotation="Math.PI + 2"
+          :scale="1"
         />
         <ZerosNewsModel
           :title="t('web0s.news.flashDrive.title')"
           :content="t('web0s.news.flashDrive.content')"
           :comments="t('web0s.news.flashDrive.comments')"
           modelSrc="/models/flash-drive.glb"
+          :rotation="Math.PI + 4"
+          :scale="0.5"
         />
       </section>
       <aside>
