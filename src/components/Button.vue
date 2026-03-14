@@ -124,4 +124,11 @@ button.web2020s:hover {
   box-shadow: 0 12px 26px rgba(27, 90, 157, 0.5);
   filter: brightness(1.07);
 }
+@media (min-width: 320px) and (max-width: 680px)
+{
+  button{
+    padding: 0.4rem 0.625rem;
+    font-size: 0.5rem;
+  }
+}
 </style>

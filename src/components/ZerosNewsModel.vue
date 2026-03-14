@@ -10,7 +10,7 @@ const props = defineProps<{
 </script>
 <template>
     <section class="news-card">
-        <p>{{title}}</p>
+        <h1>{{title}}</h1>
         <p>{{content}}</p>
         <div class="buttons">
         <a class="readMore">Číst dál →</a>
