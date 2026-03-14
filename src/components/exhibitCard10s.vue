@@ -39,7 +39,7 @@ const props = defineProps<{
 
 <style scoped>
 .exhibit-card {
-    width: 100%;
+    width: 70%;
     border: none;
     box-shadow: none;
     padding: 1.5rem 1.5rem;
@@ -58,7 +58,7 @@ const props = defineProps<{
     width: min(20rem, 100%);
     height: 20rem;
     flex-shrink: 0;
-    background-color: #425d78;
+    background-color: #658bb1;
     border-radius: 5px;
 }
 
