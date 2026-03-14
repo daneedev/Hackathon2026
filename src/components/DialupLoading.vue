@@ -1,9 +1,10 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue"
 
 const emit = defineEmits(["complete"])
 
 const step = ref(0)
+const audioEl = ref<HTMLAudioElement | null>(null)
 
 const messages = [
   "Připojování k síti...",
@@ -14,29 +15,50 @@ const messages = [
   "Načítání muzea..."
 ]
 
-let timers = []
-let completeTimer
+let timers: number[] = []
+let completeTimer: number | undefined
+let hasCompleted = false
+
+const finish = () => {
+  if (hasCompleted) return
+  hasCompleted = true
+  emit("complete")
+}
 
 onMounted(() => {
+  const audio = audioEl.value
+  if (audio) {
+    audio.volume = 0.3
+    audio.currentTime = 5
+    void audio.play().catch(() => {})
+  }
+
   timers = messages.map((_, i) =>
-    setTimeout(() => {
+    window.setTimeout(() => {
       step.value = i + 1
     }, (i + 1) * 600)
   )
 
-  completeTimer = setTimeout(() => {
-    emit("complete")
+  completeTimer = window.setTimeout(() => {
+    finish()
   }, 4200)
 })
 
 onUnmounted(() => {
-  timers.forEach(clearTimeout)
-  clearTimeout(completeTimer)
+  timers.forEach(window.clearTimeout)
+  if (completeTimer) {
+    window.clearTimeout(completeTimer)
+  }
+  const audio = audioEl.value
+  if (audio) {
+    audio.pause()
+    audio.currentTime = 0
+  }
 })
 </script>
 
 <template>
-<audio autoplay src="/sounds/modem.mp3#t=5,9.2" onloadeddata="this.volume=0.3"></audio>
+<audio ref="audioEl" src="/sounds/modem.mp3#t=5,9.2"></audio>
   <div class="dialup-overlay">
     <div class="dialup-window dialup-open">
 
