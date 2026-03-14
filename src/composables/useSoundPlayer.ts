@@ -1,7 +1,12 @@
 export function useSoundPlayer() {
-  const playSound = (url: string, startTime = 0, endTime?: number) => {
+  const playSound = (
+    url: string,
+    startTime = 0,
+    endTime?: number,
+    volume?: number,
+  ) => {
     const audio = new Audio(url);
-
+    audio.volume = volume !== undefined ? volume : 0.5;
     const safeStartTime = Math.max(0, startTime);
     const hasEndTime = typeof endTime === "number";
     const safeEndTime = hasEndTime
