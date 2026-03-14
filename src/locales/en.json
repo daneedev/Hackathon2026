@@ -31,6 +31,56 @@
             "twoTwentiesValue": "2020s",
             "twoTwentiesLabel": "AI tools and a hyper-connected web."
         },
+        "museumReasons": {
+            "eyebrow": "Why visit the museum",
+            "title": "The exhibition explains the internet as a story, not just a collection of devices",
+            "description": "The homepage now gives visitors faster context. Instead of isolated exhibits, it shows why connection speeds, online culture, and everyday digital habits changed over time.",
+            "items": [
+                {
+                    "title": "Each era placed in context",
+                    "description": "Every decade presents not only new technologies, but also how they changed communication, work, and the way people spent time online."
+                },
+                {
+                    "title": "3D models as entry points",
+                    "description": "The models are not only visual decoration. They act as orientation points that lead visitors into the authentic content and story of each era."
+                },
+                {
+                    "title": "Quick overview, deeper exploration",
+                    "description": "The homepage offers a short introduction for first-time orientation while still giving immediate access to the more detailed exhibitions of each period."
+                }
+            ]
+        },
+        "footer": {
+            "title": "Digital Museum of the Internet",
+            "description": "The project combines the visual language of each decade, interactive models, and concise interpretation so that the evolution of the internet stays understandable even for visitors without a deep background in web history.",
+            "linksTitle": "Continue exploring",
+            "links": [
+                {
+                    "id": "timeline",
+                    "label": "Go to timeline"
+                },
+                {
+                    "id": "web90",
+                    "label": "90s"
+                },
+                {
+                    "id": "web2000",
+                    "label": "2000s"
+                },
+                {
+                    "id": "web2010",
+                    "label": "2010s"
+                },
+                {
+                    "id": "web2020",
+                    "label": "Present"
+                },
+                {
+                    "id": "top",
+                    "label": "Back to top"
+                }
+            ]
+        },
         "timeline": {
             "slide90s": {
                 "title": "90s",
@@ -134,6 +184,32 @@
                 "title": "Cloud Computing and Online Services",
                 "description": "- The cloud moved data storage and computing power from local machines to online infrastructure\n- Services like Google Drive, OneDrive, and Dropbox made files accessible from anywhere in seconds\n- Web apps replaced part of traditional software and reduced the need for local installations\n- Real-time collaboration (documents, chats, spreadsheets) dramatically sped up team workflows\n- Synchronization across phone, laptop, and tablet created a seamless digital ecosystem"
             }
+        },
+        "milestones": {
+            "title": "Milestones of the 2010s",
+            "intro": "A quick look at the events that most strongly reshaped how people used the internet during the decade.",
+            "items": {
+                "2010": {
+                    "year": "2010",
+                    "title": "Instagram and mobile photo culture",
+                    "description": "Photo sharing shifted to phones, and social content started to be created primarily on mobile."
+                },
+                "2012": {
+                    "year": "2012",
+                    "title": "Rise of 4G networks",
+                    "description": "Faster mobile internet accelerated video content, real-time maps, and cloud-powered apps."
+                },
+                "2016": {
+                    "year": "2016",
+                    "title": "Live streaming boom",
+                    "description": "Live video on social platforms made real-time broadcasting accessible to everyday users and brands."
+                },
+                "2019": {
+                    "year": "2019",
+                    "title": "Short videos become the main format",
+                    "description": "Vertical short-form videos started to dominate feeds and changed how people discover new content."
+                }
+            }
         }
     },
     "web0s": {
@@ -225,6 +301,112 @@
                 "opera": "Opera🔴",
                 "safari": "Safari🧭"
             }
+        }
+    },
+    "web20s": {
+        "backButton": "← Back to home",
+        "gridAriaLabel": "Overview of present-day web topics",
+        "hero": {
+            "kicker": "Modern web",
+            "titlePrefix": "Internet",
+            "titleAccent": "today",
+            "subtitle": "From mobile apps to AI, today's internet is everywhere around us. Minimal, fast, and constantly connected."
+        },
+        "featureCards": [
+            {
+                "id": "mobile-first",
+                "emoji": "📱",
+                "title": "Mobile first",
+                "description": "Today's web is designed primarily for mobile devices. Fast loading, clear interfaces, and touch-friendly interactions are the baseline of a good user experience.",
+                "span": "double",
+                "badges": [
+                    {
+                        "label": "React",
+                        "color": "#61DAFB",
+                        "backgroundColor": "#61DAFB33",
+                        "borderColor": "#61DAFB"
+                    },
+                    {
+                        "label": "Flutter",
+                        "color": "#00C5D1",
+                        "backgroundColor": "#00C5D133",
+                        "borderColor": "#00C5D1"
+                    },
+                    {
+                        "label": "SwiftUI",
+                        "color": "#FA7343",
+                        "backgroundColor": "#FA734333",
+                        "borderColor": "#FA7343"
+                    },
+                    {
+                        "label": "Kotlin",
+                        "color": "#73C34A",
+                        "backgroundColor": "#73C34A33",
+                        "borderColor": "#73C34A"
+                    }
+                ]
+            },
+            {
+                "id": "ai",
+                "emoji": "🤖",
+                "title": "AI and personalization",
+                "description": "The modern web uses artificial intelligence for recommendations, search, and direct user assistance. Chatbots, recommendation systems, and generative models are now part of mainstream services.",
+                "stat": {
+                    "value": "5.3B",
+                    "label": "internet users"
+                }
+            },
+            {
+                "id": "cloud",
+                "emoji": "☁️",
+                "title": "Cloud and edge computing",
+                "description": "Today's web runs in the cloud and increasingly relies on edge infrastructure for lower latency. Serverless services and CDNs help deliver content without long waits."
+            },
+            {
+                "id": "security",
+                "emoji": "🔒",
+                "title": "Cybersecurity",
+                "description": "As society depends more on internet services, security becomes critical. Data protection, encryption, and secure protocols are essential for user trust and reliable platforms."
+            },
+            {
+                "id": "web3",
+                "emoji": "🌐",
+                "title": "Web3 and decentralization",
+                "description": "The decentralized web promises stronger control over data and digital identity. Blockchain, digital assets, and distributed applications illustrate one possible direction for the next stage of the internet."
+            }
+        ],
+        "milestones": {
+            "title": "Milestones of the modern web",
+            "items": [
+                {
+                    "year": "2011",
+                    "title": "Responsive design"
+                },
+                {
+                    "year": "2013",
+                    "title": "React.js released by Facebook"
+                },
+                {
+                    "year": "2015",
+                    "title": "HTTP/2 introduced"
+                },
+                {
+                    "year": "2016",
+                    "title": "Progressive Web Apps (PWA)"
+                },
+                {
+                    "year": "2020",
+                    "title": "The pandemic accelerates cloud adoption and remote work"
+                },
+                {
+                    "year": "2022",
+                    "title": "ChatGPT changes the rules"
+                },
+                {
+                    "year": "2024",
+                    "title": "AI agents and multimodal models"
+                }
+            ]
         }
     }
 }

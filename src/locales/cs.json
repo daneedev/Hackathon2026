@@ -31,6 +31,56 @@
             "twoTwentiesValue": "2020s",
             "twoTwentiesLabel": "AI nástroje a hyper-propojený web."
         },
+        "museumReasons": {
+            "eyebrow": "Proč navštívit muzeum",
+            "title": "Expozice vysvětluje internet jako příběh, ne jen sbírku techniky",
+            "description": "Homepage má nově návštěvníka rychle uvést do kontextu. Místo izolovaných exponátů ukazuje, proč se měnilo připojení, kultura webu i naše každodenní digitální návyky.",
+            "items": [
+                {
+                    "title": "Éry zasazené do souvislostí",
+                    "description": "Každá dekáda ukazuje nejen nové technologie, ale i to, jak ovlivnily způsob komunikace, práce a trávení času online."
+                },
+                {
+                    "title": "3D modely jako vstup do tématu",
+                    "description": "Modely nejsou jen vizuální doplněk. Fungují jako orientační body, přes které se návštěvník dostane k dobovému obsahu a příběhu dané éry."
+                },
+                {
+                    "title": "Rychlý přehled i hlubší průchod",
+                    "description": "Homepage nabídne stručné vysvětlení pro první orientaci a zároveň okamžitý vstup do detailnějších expozic jednotlivých období."
+                }
+            ]
+        },
+        "footer": {
+            "title": "Digitální muzeum internetu",
+            "description": "Projekt propojuje vizuální jazyk jednotlivých dekád, interaktivní modely a stručný výklad, aby byl vývoj internetu srozumitelný i pro návštěvníka, který se v historii webu běžně nepohybuje.",
+            "linksTitle": "Pokračovat",
+            "links": [
+                {
+                    "id": "timeline",
+                    "label": "Přejít na časovou osu"
+                },
+                {
+                    "id": "web90",
+                    "label": "90. léta"
+                },
+                {
+                    "id": "web2000",
+                    "label": "2000. léta"
+                },
+                {
+                    "id": "web2010",
+                    "label": "2010. léta"
+                },
+                {
+                    "id": "web2020",
+                    "label": "Současnost"
+                },
+                {
+                    "id": "top",
+                    "label": "Zpět nahoru"
+                }
+            ]
+        },
         "timeline": {
             "slide90s": {
                 "title": "90. léta",
@@ -134,6 +184,32 @@
                 "title": "Cloud computing a online služby",
                 "description": "- Cloud přesunul data a výpočetní výkon z lokálních počítačů do online infrastruktury\n- Služby jako Google Drive, OneDrive nebo Dropbox zpřístupnily soubory odkudkoli během sekund\n- Webové aplikace nahradily část klasického softwaru a snížily závislost na instalaci programů\n- Týmová spolupráce v reálném čase (dokumenty, chaty, tabulky) zásadně zrychlila pracovní procesy\n- Synchronizace mezi telefonem, notebookem a tabletem vytvořila plynulý digitální ekosystém"
             }
+        },
+        "milestones": {
+            "title": "Milníky 2010. let",
+            "intro": "Rychlý přehled událostí, které během dekády nejvíce změnily každodenní používání internetu.",
+            "items": {
+                "2010": {
+                    "year": "2010",
+                    "title": "Instagram a mobilní foto kultura",
+                    "description": "Sdílení fotek se přesunulo do telefonu a sociální obsah se začal tvořit hlavně mobilem."
+                },
+                "2012": {
+                    "year": "2012",
+                    "title": "Nástup 4G sítí",
+                    "description": "Rychlejší mobilní internet urychlil video obsah, mapy v reálném čase a cloudové aplikace."
+                },
+                "2016": {
+                    "year": "2016",
+                    "title": "Boom živého streamování",
+                    "description": "Live video na sociálních sítích přiblížilo přímé vysílání běžným uživatelům i značkám."
+                },
+                "2019": {
+                    "year": "2019",
+                    "title": "Krátká videa jako hlavní formát",
+                    "description": "Vertikální krátká videa začala dominovat feedu i způsobu, jak lidé objevují nový obsah."
+                }
+            }
         }
     },
     "web0s": {
@@ -225,6 +301,112 @@
                 "opera": "Opera🔴",
                 "safari": "Safari🧭"
             }
+        }
+    },
+    "web20s": {
+        "backButton": "← Zpět na úvod",
+        "gridAriaLabel": "Přehled témat současného webu",
+        "hero": {
+            "kicker": "Moderní web",
+            "titlePrefix": "Internet",
+            "titleAccent": "dneška",
+            "subtitle": "Od mobilních aplikací po AI je dnešní internet všude kolem nás. Minimalistický, rychlý a neustále propojený."
+        },
+        "featureCards": [
+            {
+                "id": "mobile-first",
+                "emoji": "📱",
+                "title": "Mobile first",
+                "description": "Současný web vzniká primárně pro mobilní zařízení. Rychlé načítání, jednoduché rozhraní a ovládání prstem jsou základem dobrého zážitku.",
+                "span": "double",
+                "badges": [
+                    {
+                        "label": "React",
+                        "color": "#61DAFB",
+                        "backgroundColor": "#61DAFB33",
+                        "borderColor": "#61DAFB"
+                    },
+                    {
+                        "label": "Flutter",
+                        "color": "#00C5D1",
+                        "backgroundColor": "#00C5D133",
+                        "borderColor": "#00C5D1"
+                    },
+                    {
+                        "label": "SwiftUI",
+                        "color": "#FA7343",
+                        "backgroundColor": "#FA734333",
+                        "borderColor": "#FA7343"
+                    },
+                    {
+                        "label": "Kotlin",
+                        "color": "#73C34A",
+                        "backgroundColor": "#73C34A33",
+                        "borderColor": "#73C34A"
+                    }
+                ]
+            },
+            {
+                "id": "ai",
+                "emoji": "🤖",
+                "title": "AI a personalizace",
+                "description": "Web dnes využívá umělou inteligenci pro doporučení obsahu, vyhledávání i přímou pomoc uživateli. Chatboti, doporučovací systémy a generativní modely se staly běžnou součástí služeb.",
+                "stat": {
+                    "value": "5.3B",
+                    "label": "uživatelů internetu"
+                }
+            },
+            {
+                "id": "cloud",
+                "emoji": "☁️",
+                "title": "Cloud a edge computing",
+                "description": "Současný web běží v cloudu a stále častěji využívá edge infrastrukturu pro rychlejší odezvu. Serverless služby a CDN pomáhají doručit obsah bez dlouhého čekání."
+            },
+            {
+                "id": "security",
+                "emoji": "🔒",
+                "title": "Kybernetická bezpečnost",
+                "description": "S rostoucí závislostí na internetu je bezpečnost zásadní. Ochrana dat, šifrování a bezpečné protokoly jsou nutné pro důvěru uživatelů i stabilní provoz služeb."
+            },
+            {
+                "id": "web3",
+                "emoji": "🌐",
+                "title": "Web3 a decentralizace",
+                "description": "Decentralizovaný web slibuje větší kontrolu nad daty i online identitou. Blockchain, digitální aktiva a distribuované aplikace ukazují jeden z možných směrů dalšího vývoje."
+            }
+        ],
+        "milestones": {
+            "title": "Milníky moderního webu",
+            "items": [
+                {
+                    "year": "2011",
+                    "title": "Responzivní design"
+                },
+                {
+                    "year": "2013",
+                    "title": "React.js od Facebooku"
+                },
+                {
+                    "year": "2015",
+                    "title": "Představení HTTP/2"
+                },
+                {
+                    "year": "2016",
+                    "title": "Progresivní webové aplikace (PWA)"
+                },
+                {
+                    "year": "2020",
+                    "title": "Pandemie urychluje přechod na cloud a vzdálenou práci"
+                },
+                {
+                    "year": "2022",
+                    "title": "ChatGPT mění pravidla hry"
+                },
+                {
+                    "year": "2024",
+                    "title": "AI agenti a multimodální modely"
+                }
+            ]
         }
     }
 }
