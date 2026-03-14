@@ -302,4 +302,164 @@ main {
   align-items: center;
   gap: 0.5rem;
 }
+
+@media (max-width: 1024px) {
+  .hero-content {
+    padding-block: 7rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .grid-double,
+  .grid-triple {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-shadow {
+    padding: 1.25rem;
+  }
+
+  .back-button {
+    margin: 0.5rem 0.5rem 0;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-content {
+    padding-block: 4rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .grid-double,
+  .grid-triple {
+    grid-column: span 1;
+  }
+
+  .item-title {
+    font-size: 1.25rem;
+  }
+
+  .item-emoji {
+    font-size: 1.7rem;
+  }
+
+  .badges {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .grid-item li {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-shadow {
+    padding: 0.85rem;
+    border-radius: 8px;
+  }
+
+  .hero-content {
+    padding-block: 2.2rem;
+  }
+
+  .hero-kicker {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    margin-top: 1rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.6rem;
+    line-height: 1.15;
+    word-break: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .grid-container {
+    padding: 0 0.55rem;
+    gap: 0.75rem;
+  }
+
+  .grid-item {
+    padding: 0.75rem;
+    border-radius: 10px;
+  }
+
+  .item-emoji {
+    margin: 0.5rem;
+  }
+
+  .item-title {
+    margin: 0 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.25;
+  }
+
+  .item-description {
+    margin: 0 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .badges {
+    margin: 0 0.5rem 0.5rem;
+  }
+
+  .item-stat {
+    margin: 0.5rem;
+  }
+
+  .item-stat h1 {
+    font-size: 1.6rem;
+  }
+
+  .item-stat p {
+    text-align: center;
+  }
+
+  .grid-item ul {
+    padding: 0 0.5rem 0.5rem;
+    gap: 0.55rem;
+  }
+
+  .grid-item li {
+    font-size: 0.86rem;
+    line-height: 1.35;
+    flex-wrap: wrap;
+  }
+
+  .blue {
+    gap: 0.35rem;
+    font-size: 0.84rem;
+  }
+
+  .back-button {
+    margin: 0;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.78rem;
+  }
+}
 </style>

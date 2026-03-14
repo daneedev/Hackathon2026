@@ -185,6 +185,32 @@
                 "title": "Cloud computing a online služby",
                 "description": "- Cloud přesunul data a výpočetní výkon z lokálních počítačů do online infrastruktury\n- Služby jako Google Drive, OneDrive nebo Dropbox zpřístupnily soubory odkudkoli během sekund\n- Webové aplikace nahradily část klasického softwaru a snížily závislost na instalaci programů\n- Týmová spolupráce v reálném čase (dokumenty, chaty, tabulky) zásadně zrychlila pracovní procesy\n- Synchronizace mezi telefonem, notebookem a tabletem vytvořila plynulý digitální ekosystém"
             }
+        },
+        "milestones": {
+            "title": "Milníky 2010. let",
+            "intro": "Rychlý přehled událostí, které během dekády nejvíce změnily každodenní používání internetu.",
+            "items": {
+                "2010": {
+                    "year": "2010",
+                    "title": "Instagram a mobilní foto kultura",
+                    "description": "Sdílení fotek se přesunulo do telefonu a sociální obsah se začal tvořit hlavně mobilem."
+                },
+                "2012": {
+                    "year": "2012",
+                    "title": "Nástup 4G sítí",
+                    "description": "Rychlejší mobilní internet urychlil video obsah, mapy v reálném čase a cloudové aplikace."
+                },
+                "2016": {
+                    "year": "2016",
+                    "title": "Boom živého streamování",
+                    "description": "Live video na sociálních sítích přiblížilo přímé vysílání běžným uživatelům i značkám."
+                },
+                "2019": {
+                    "year": "2019",
+                    "title": "Krátká videa jako hlavní formát",
+                    "description": "Vertikální krátká videa začala dominovat feedu i způsobu, jak lidé objevují nový obsah."
+                }
+            }
         }
     },
     "web0s": {
