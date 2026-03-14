@@ -8,7 +8,7 @@ import { useSoundPlayer } from "../composables/useSoundPlayer";
 const { playSound } = useSoundPlayer();
 
 onMounted(() => {
-  playSound("/sounds/modem.mp3", 5, 12);
+  playSound("/sounds/crt.mp3");
 });
 
 function playClickSound() {

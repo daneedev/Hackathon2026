@@ -16,6 +16,7 @@
       '--swiper-pagination-progressbar-bg-color': 'rgba(63, 163, 77, 0.25)',
       '--swiper-theme-color': 'var(--primary-color)',
     }"
+    @slide-change="playSlideChangeSound"
   >
     <slot>
       <SwiperSlide>
@@ -30,6 +31,13 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Keyboard, Navigation, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
+import { useSoundPlayer } from "../composables/useSoundPlayer";
+
+const { playSound } = useSoundPlayer();
+
+function playSlideChangeSound() {
+  playSound("/sounds/whoosh.mp3", 4.5, 4.7);
+}
 </script>
 
 <style scoped>
