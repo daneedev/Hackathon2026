@@ -40,12 +40,14 @@ const props = defineProps<{
 <style scoped>
 .exhibit-card {
     width: 70%;
+    max-width: 100%;
     border: none;
     border-radius: 4px;
     box-shadow: none;
     padding: 1.5rem 1.5rem;
     background-color: #2C3E50;
     color: #FFFFFF;
+    box-sizing: border-box;
 }
 
 .exhibit-card__content {
@@ -93,6 +95,11 @@ const props = defineProps<{
 }
 
 @media (max-width: 900px) {
+    .exhibit-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
     .exhibit-card__content {
         flex-direction: column;
         align-items: stretch;
@@ -101,6 +108,33 @@ const props = defineProps<{
     .exhibit-card__model-box {
         width: 100%;
         height: 16rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .exhibit-card {
+        padding: 0.75rem;
+        border-radius: 8px;
+    }
+
+    .exhibit-card__content {
+        gap: 0.75rem;
+    }
+
+    .exhibit-card__model-box {
+        height: 10.5rem;
+    }
+
+    .exhibit-card__text h2 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+    }
+
+    .exhibit-card__text p {
+        font-size: 0.86rem;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
     }
 }
 </style>
