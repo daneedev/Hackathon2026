@@ -31,6 +31,56 @@
             "twoTwentiesValue": "2020s",
             "twoTwentiesLabel": "AI nástroje a hyper-propojený web."
         },
+        "museumReasons": {
+            "eyebrow": "Proč navštívit muzeum",
+            "title": "Expozice vysvětluje internet jako příběh, ne jen sbírku techniky",
+            "description": "Homepage má nově návštěvníka rychle uvést do kontextu. Místo izolovaných exponátů ukazuje, proč se měnilo připojení, kultura webu i naše každodenní digitální návyky.",
+            "items": [
+                {
+                    "title": "Éry zasazené do souvislostí",
+                    "description": "Každá dekáda ukazuje nejen nové technologie, ale i to, jak ovlivnily způsob komunikace, práce a trávení času online."
+                },
+                {
+                    "title": "3D modely jako vstup do tématu",
+                    "description": "Modely nejsou jen vizuální doplněk. Fungují jako orientační body, přes které se návštěvník dostane k dobovému obsahu a příběhu dané éry."
+                },
+                {
+                    "title": "Rychlý přehled i hlubší průchod",
+                    "description": "Homepage nabídne stručné vysvětlení pro první orientaci a zároveň okamžitý vstup do detailnějších expozic jednotlivých období."
+                }
+            ]
+        },
+        "footer": {
+            "title": "Digitální muzeum internetu",
+            "description": "Projekt propojuje vizuální jazyk jednotlivých dekád, interaktivní modely a stručný výklad, aby byl vývoj internetu srozumitelný i pro návštěvníka, který se v historii webu běžně nepohybuje.",
+            "linksTitle": "Pokračovat",
+            "links": [
+                {
+                    "id": "timeline",
+                    "label": "Přejít na časovou osu"
+                },
+                {
+                    "id": "web90",
+                    "label": "90. léta"
+                },
+                {
+                    "id": "web2000",
+                    "label": "2000. léta"
+                },
+                {
+                    "id": "web2010",
+                    "label": "2010. léta"
+                },
+                {
+                    "id": "web2020",
+                    "label": "Současnost"
+                },
+                {
+                    "id": "top",
+                    "label": "Zpět nahoru"
+                }
+            ]
+        },
         "timeline": {
             "slide90s": {
                 "title": "90. léta",

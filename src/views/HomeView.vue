@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { useRouter } from "vue-router";
 import Button from "../components/Button.vue";
 import TextGradient from "../components/TextGradient.vue";
@@ -46,6 +47,45 @@ const openWeb2010 = () => {
 };
 
 const getHighlights = (key: string) => tm(key) as string[];
+
+const museumReasons = computed(
+  () =>
+    tm("homepage.museumReasons.items") as Array<{
+      title: string;
+      description: string;
+    }>,
+);
+
+const footerLinks = computed(
+  () =>
+    tm("homepage.footer.links") as Array<{
+      id: string;
+      label: string;
+    }>,
+);
+
+const navigateFromId = (id: string) => {
+  switch (id) {
+    case "timeline":
+      goToTimeline();
+      break;
+    case "web90":
+      openWeb90();
+      break;
+    case "web2000":
+      openWeb2000();
+      break;
+    case "web2010":
+      openWeb2010();
+      break;
+    case "web2020":
+      openWeb2020();
+      break;
+    case "top":
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      break;
+  }
+};
 </script>
 
 <template>
@@ -115,6 +155,30 @@ const getHighlights = (key: string) => tm(key) as string[];
         />
       </aside>
     </section>
+    <section
+      class="section-shell museum-intro"
+      aria-labelledby="museum-intro-title"
+    >
+      <div class="section-heading">
+        <p class="section-kicker">{{ t("homepage.museumReasons.eyebrow") }}</p>
+        <h2 id="museum-intro-title" class="section-title">
+          {{ t("homepage.museumReasons.title") }}
+        </h2>
+        <p class="section-description">
+          {{ t("homepage.museumReasons.description") }}
+        </p>
+      </div>
+      <div class="museum-grid">
+        <article
+          v-for="item in museumReasons"
+          :key="item.title"
+          class="content-card"
+        >
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      </div>
+    </section>
     <section id="timeline">
       <Slider>
         <SwiperSlide>
@@ -173,6 +237,28 @@ const getHighlights = (key: string) => tm(key) as string[];
         </SwiperSlide>
       </Slider>
     </section>
+    <footer class="home-footer">
+      <div class="footer-copy">
+        <p class="section-kicker">{{ t("homepage.footer.title") }}</p>
+        <p class="footer-description">
+          {{ t("homepage.footer.description") }}
+        </p>
+      </div>
+      <div class="footer-links">
+        <p class="footer-links-title">{{ t("homepage.footer.linksTitle") }}</p>
+        <div class="footer-link-list">
+          <button
+            v-for="link in footerLinks"
+            :key="link.id"
+            class="footer-link"
+            type="button"
+            @click="navigateFromId(link.id)"
+          >
+            {{ link.label }}
+          </button>
+        </div>
+      </div>
+    </footer>
   </main>
 </template>
 
@@ -268,9 +354,127 @@ main {
   animation: fadeInDown 0.8s ease-out;
 }
 
+.section-shell {
+  position: relative;
+  z-index: 1;
+  padding: 0 clamp(1rem, 4vw, 3rem) 4.5rem;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 1.75rem;
+}
+
+.section-kicker {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+}
+
+.section-title {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  line-height: 1.08;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.section-description {
+  margin: 0.85rem 0 0;
+  max-width: 62ch;
+  color: #a8b0aa;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.museum-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.content-card {
+  border: 1px solid rgba(53, 94, 63, 0.9);
+  border-radius: 18px;
+  padding: 1.25rem;
+  background: linear-gradient(
+    160deg,
+    rgba(18, 31, 21, 0.92),
+    rgba(8, 10, 8, 0.98)
+  );
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.16);
+}
+
+.content-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.15rem;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.content-card p {
+  margin: 0;
+  color: #a8b0aa;
+  line-height: 1.7;
+}
+
 #timeline {
   position: relative;
   z-index: 1;
+}
+
+.home-footer {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  padding: 3rem clamp(1rem, 4vw, 3rem) 3.5rem;
+  border-top: 1px solid rgba(53, 94, 63, 0.8);
+  background: linear-gradient(
+    180deg,
+    rgba(10, 16, 11, 0.2),
+    rgba(6, 8, 6, 0.9)
+  );
+}
+
+.footer-description {
+  margin: 0;
+  max-width: 60ch;
+  color: #a8b0aa;
+  line-height: 1.7;
+}
+
+.footer-links-title {
+  margin: 0 0 0.85rem;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1rem;
+}
+
+.footer-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-link {
+  border: 1px solid rgba(53, 94, 63, 0.85);
+  border-radius: 999px;
+  background: rgba(18, 31, 21, 0.82);
+  color: #e7f6e9;
+  padding: 0.65rem 1rem;
+  font: inherit;
+  cursor: var(--btn-cursor, url("/cursor-32.png") 3 3, pointer);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.footer-link:hover {
+  transform: translateY(-1px);
+  border-color: var(--primary-color);
+  background: rgba(29, 49, 33, 0.92);
 }
 
 .nav-link {
@@ -293,8 +497,31 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .museum-grid,
+  .home-footer {
+    grid-template-columns: 1fr;
+  }
+
   .hero-actions {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-shell {
+    padding-bottom: 3.5rem;
+  }
+
+  .content-card {
+    padding: 1rem;
+  }
+
+  .home-footer {
+    padding-top: 2.5rem;
+  }
+
+  .footer-link-list {
+    gap: 0.55rem;
   }
 }
 </style>

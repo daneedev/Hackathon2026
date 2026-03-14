@@ -31,6 +31,56 @@
             "twoTwentiesValue": "2020s",
             "twoTwentiesLabel": "AI tools and a hyper-connected web."
         },
+        "museumReasons": {
+            "eyebrow": "Why visit the museum",
+            "title": "The exhibition explains the internet as a story, not just a collection of devices",
+            "description": "The homepage now gives visitors faster context. Instead of isolated exhibits, it shows why connection speeds, online culture, and everyday digital habits changed over time.",
+            "items": [
+                {
+                    "title": "Each era placed in context",
+                    "description": "Every decade presents not only new technologies, but also how they changed communication, work, and the way people spent time online."
+                },
+                {
+                    "title": "3D models as entry points",
+                    "description": "The models are not only visual decoration. They act as orientation points that lead visitors into the authentic content and story of each era."
+                },
+                {
+                    "title": "Quick overview, deeper exploration",
+                    "description": "The homepage offers a short introduction for first-time orientation while still giving immediate access to the more detailed exhibitions of each period."
+                }
+            ]
+        },
+        "footer": {
+            "title": "Digital Museum of the Internet",
+            "description": "The project combines the visual language of each decade, interactive models, and concise interpretation so that the evolution of the internet stays understandable even for visitors without a deep background in web history.",
+            "linksTitle": "Continue exploring",
+            "links": [
+                {
+                    "id": "timeline",
+                    "label": "Go to timeline"
+                },
+                {
+                    "id": "web90",
+                    "label": "90s"
+                },
+                {
+                    "id": "web2000",
+                    "label": "2000s"
+                },
+                {
+                    "id": "web2010",
+                    "label": "2010s"
+                },
+                {
+                    "id": "web2020",
+                    "label": "Present"
+                },
+                {
+                    "id": "top",
+                    "label": "Back to top"
+                }
+            ]
+        },
         "timeline": {
             "slide90s": {
                 "title": "90s",
