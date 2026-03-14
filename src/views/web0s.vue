@@ -3,11 +3,15 @@ import ZerosNewsCard from "../components/ZerosNewsCard.vue";
 import ZerosNewsModel from "../components/ZerosNewsModel.vue";
 import percentageBar from "../components/percentageBar.vue";
 import { useI18n } from "vue-i18n";
+import { useSoundPlayer } from "../composables/useSoundPlayer";
 
-import { useRouter } from "vue-router";
-const router = useRouter();
 const { t, tm } = useI18n();
 const getTags = () => tm("web0s.sidebar.tags") as string[];
+
+const { playSound } = useSoundPlayer();
+function playClickSound() {
+  playSound("/sounds/mouse-click.mp3", 0.7, 0.9);
+}
 </script>
 <template>
   <div class="container">
@@ -15,18 +19,18 @@ const getTags = () => tm("web0s.sidebar.tags") as string[];
       <div class="header-content">
         <a href="#" class="logo">{{ t("web0s.header.logo") }}</a>
         <div class="header-navigations">
-          <button class="nav-btn" @click="() => router.push('/')">
+          <RouterLink class="nav-btn" to="/" @click="playClickSound">
             {{ t("web0s.header.home") }}
-          </button>
-          <button class="nav-btn" @click="() => router.push('/web90')">
+          </RouterLink>
+          <RouterLink class="nav-btn" to="/web90" @click="playClickSound">
             {{ t("web0s.header.nav90s") }}
-          </button>
-          <button class="nav-btn" @click="() => router.push('/web2010')">
+          </RouterLink>
+          <RouterLink class="nav-btn" to="/web10" @click="playClickSound">
             {{ t("web0s.header.nav10s") }}
-          </button>
-          <button class="nav-btn" @click="() => router.push('/web2020')">
+          </RouterLink>
+          <RouterLink class="nav-btn" to="/web20" @click="playClickSound">
             {{ t("web0s.header.nav20s") }}
-          </button>
+          </RouterLink>
         </div>
       </div>
     </header>
@@ -46,8 +50,12 @@ const getTags = () => tm("web0s.sidebar.tags") as string[];
             {{ t("web0s.hero.description") }}
           </p>
           <div class="buttons">
-            <button class="btn">{{ t("web0s.hero.likeButton") }}</button>
-            <button class="btn">{{ t("web0s.hero.shareButton") }}</button>
+            <button class="btn" @click="playClickSound">
+              {{ t("web0s.hero.likeButton") }}
+            </button>
+            <button class="btn" @click="playClickSound">
+              {{ t("web0s.hero.shareButton") }}
+            </button>
           </div>
         </section>
         <ZerosNewsCard
@@ -270,66 +278,61 @@ aside {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 320px) and (max-width: 680px)
-{
-  header{
+@media (min-width: 320px) and (max-width: 680px) {
+  header {
     width: 100%;
     justify-content: flex-start;
   }
-  .header-content{
+  .header-content {
     width: 100%;
   }
-  .logo{
+  .logo {
     font-size: 1.25rem;
     display: flex;
   }
-  .header-navigations
-  {
+  .header-navigations {
     display: flex;
     justify-content: flex-end;
   }
-  .header-content button{
+  .header-content button {
     font-size: 0.75rem;
   }
-  main{
+  main {
     width: 100%;
   }
-  .news-card p:first-child{
+  .news-card p:first-child {
     font-size: 1.25rem;
   }
-  .news-card{
+  .news-card {
     font-size: 0.75rem;
   }
-  .nav-btn
-  {
+  .nav-btn {
     width: 3rem;
   }
-  aside p, div{
+  aside p,
+  div {
     font-size: 0.5rem;
   }
-  .tags .tag p{
+  .tags .tag p {
     font-size: 0.5rem;
   }
 }
-@media (min-width: 681px) and (max-width: 1100px)
-{
-  header{
+@media (min-width: 681px) and (max-width: 1100px) {
+  header {
     width: 100%;
     justify-content: flex-start;
   }
-  .header-content{
+  .header-content {
     width: 100%;
   }
-  .header-navigations
-  {
+  .header-navigations {
     display: flex;
     justify-content: flex-end;
   }
-  main{
+  main {
     width: 100%;
   }
-  .nav-btn
-  {
+  .nav-btn {
     width: 5rem;
   }
 }
